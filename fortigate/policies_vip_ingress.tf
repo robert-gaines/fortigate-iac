@@ -52,6 +52,10 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "all"
   }
 
+  internet_service_name {
+    name = "ALL"
+  }
+
   dstaddr {
     name = "webserver-vip-group"
   }
@@ -67,6 +71,5 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   srcintf {
     name = "virtual-wan-link"
   }
-
 
 }
