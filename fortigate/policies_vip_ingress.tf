@@ -62,38 +62,6 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "Botnet-C&C.Server"
   }
 
-  internet_service_name {
-    name = "BinaryEdge-Scanner"
-  }
-
-  internet_service_name {
-    name = "Censys-Scanner"
-  }
-
-  internet_service_name {
-    name = "CriminalIP-Scanner"
-  }
-
-  internet_service_name {
-    name = "LeakIX-Scanner"
-  }
-
-  internet_service_name {
-    name = "Recyber-Scanner"
-  }
-
-  internet_service_name {
-    name = "Stretchoid-Scanner"
-  }
-
-  internet_service_name {
-    name = "Tenable-Tenable.io.CloudScanner"
-  }
-
-  internet_service_name {
-    name = "UK.NCSC-Scanner"
-  }
-
   srcintf {
     name = "virtual-wan-link"
   }
