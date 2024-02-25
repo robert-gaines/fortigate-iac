@@ -23,12 +23,12 @@ resource "fortios_system_externalresource" "honeypot-intruders" {
   type         = "address"
 }
 
-resource "fortios_system_externalresource" "abusech-urlhaus" {
-  name         = "abusech-urlhaus"
+resource "fortios_system_externalresource" "checkpoint-tor-nodes" {
+  name         = "checkpoint-tor-nodes"
   refresh_rate = 15
-  resource     = "https://urlhaus.abuse.ch/downloads/text_online/"
+  resource     = "https://secureupdates.checkpoint.com/IP-list/TOR.txt"
   status       = "enable"
-  type         = "domain"
+  type         = "address"
 }
 
 resource "fortios_system_externalresource" "firehol-blocklist" {
