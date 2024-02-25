@@ -58,7 +58,7 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "webservers"
   }
 
-  srcaddr {
+  internet_service_name {
     name = "Botnet-C&C.Server"
   }
 
