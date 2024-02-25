@@ -35,3 +35,37 @@ resource "fortios_firewall_policy" "permit-wan-to-webserver" {
     name = "virtual-wan-link"
   }
 }
+
+
+resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
+  action             = "deny"
+  logtraffic         = "all"
+  name               = "deny-threat-objects-to-webserver"
+  schedule           = "always"
+  nat                = "disable"
+  internet_service   = "enable"
+
+  dstaddr {
+    name = "webserver-vip-group"
+  }
+
+  dstintf {
+    name = "webservers"
+  }
+
+  service {
+    name = "HTTP"
+  }
+
+  service {
+    name = "HTTPS"
+  }
+
+  srcaddr {
+    name = "PermittedCountries"
+  }
+
+  srcintf {
+    name = "virtual-wan-link"
+  }
+}
