@@ -197,8 +197,7 @@ resource "fortios_firewall_policy" "deny-threat-feeds-to-webserver" {
   logtraffic           = "disable"
   name                 = "deny-threat-feeds-to-webserver"
   schedule             = "always"
-  nat                  = "disable"
-  internet_service_src = "enable"  
+  nat                  = "disable" 
   block_notification   = "enable"
 
   dstaddr {
