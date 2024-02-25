@@ -81,6 +81,58 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "InterneTTL-Scanner"
   }
 
+  internet_service_src_name {
+    name = "LeakIX-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "NetScout-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Recyber-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Shadowserver-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Shodan-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Stretchoid-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Tenable-Tenable.io.Cloud.Scanner"
+  }
+
+  internet_service_src_name {
+    name = "UK.NCSC-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Tor-Exit.Node"
+  }
+
+  internet_service_src_name {
+    name = "Tor-Relay.Node"
+  }
+
+  internet_service_src_name {
+    name = "Malicious-Malicious.Server"
+  }
+
+  internet_service_src_name {
+    name = "Proxy-Proxy.Server"
+  }
+
+  internet_service_src_name {
+    name = "VPN-Anonymous.VPN"
+  }
+
   srcintf {
     name = "virtual-wan-link"
   }
@@ -90,5 +142,53 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   }
 }
 
+resource "fortios_firewall_policy" "deny-cloud-providers-to-webserver" {
+  action               = "deny"
+  logtraffic           = "disable"
+  name                 = "deny-cloud-providers-to-webserver"
+  schedule             = "always"
+  nat                  = "disable"
+  internet_service_src = "enable"  
+  block_notification   = "enable"
 
+  dstaddr {
+    name = "webserver-vip-group"
+  }
+
+  dstintf {
+    name = "webservers"
+  }
+
+  internet_service_src_name {
+    name = "DigitalOcean-DigitalOcean.Platform"
+  }
+
+  internet_service_src_name {
+    name = "Google-Google.Cloud"
+  }
+
+  internet_service_src_name {
+    name = "Amazon-AWS"
+  }
+
+  internet_service_src_name {
+    name = "Hosting-Bulletproof.Hosting"
+  }
+
+  internet_service_src_name {
+    name = "Akamai-Linode.Cloud"
+  }
+
+  internet_service_src_name {
+    name = "OVHcloud-OVHcloud"
+  }
+
+  srcintf {
+    name = "virtual-wan-link"
+  }
+
+  service {
+    name = "ALL"
+  }
+}
 
