@@ -36,7 +36,7 @@ resource "fortios_firewall_policy" "permit-wan-to-webserver" {
   }
 }
 
-
+/*
 resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   action             = "deny"
   logtraffic         = "disable"
@@ -72,4 +72,35 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "virtual-wan-link"
   }
 
+}
+*/
+
+resource "fortios_firewall_policy" "deny-botnet-to-webserver" {
+  name               = "deny-botnet-to-webserver"
+  action             = "deny"
+  logtraffic         = "all"
+  schedule           = "always"
+  nat                = "disable"
+  internet_service   = "enable"
+  block_notification = "enable"
+
+  service {
+    name = "ALL"  # Assuming you want to block all services
+  }
+
+  srcaddr {
+    name = "Botnet-C&C.Server"  # Assuming this is the name of the predefined address object representing the Botnet service
+  }
+
+  dstaddr {
+    name = "webserver-vip-group"  # Assuming this is the group containing your web server's address
+  }
+
+  dstintf {
+    name = "webservers"  # Assuming this is the interface facing your web server
+  }
+
+  srcintf {
+    name = "virtual-wan-link"  # Assuming this is the interface facing the internet
+  }
 }
