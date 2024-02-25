@@ -95,10 +95,6 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   }
 
   internet_service_name {
-    name = "Shadowserver-Scanner"
-  }
-
-  internet_service_name {
     name = "Shodan-Scanner"
   }
 
