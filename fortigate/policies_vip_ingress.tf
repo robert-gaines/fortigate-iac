@@ -44,7 +44,9 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   schedule           = "always"
   nat                = "disable"
   internet_service   = "enable"
-  block_notification = "enable"
+  internet_service_src = "enable"
+  block_notification   = "enable"
+
 
   service {
     name = "all"
@@ -58,7 +60,7 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "webservers"
   }
 
-  internet_service_name {
+  internet_service_src_name {
     name = "Botnet-C&C.Server"
   }
 
