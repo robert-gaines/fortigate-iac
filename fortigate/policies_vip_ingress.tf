@@ -36,26 +36,15 @@ resource "fortios_firewall_policy" "permit-wan-to-webserver" {
   }
 }
 
-/*
 resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
-  action             = "deny"
-  logtraffic         = "disable"
-  name               = "deny-threat-objects-to-webserver"
-  schedule           = "always"
-  nat                = "disable"
-  internet_service   = "enable"
-  internet_service_src = "enable"
+  action               = "deny"
+  logtraffic           = "disable"
+  name                 = "deny-threat-objects-to-webserver"
+  schedule             = "always"
+  nat                  = "disable"
+  internet_service_src = "enable"  
   block_notification   = "enable"
 
-
-  service {
-    name = "all"
-  }
-
-  internet_service_name {
-    name = "ALL"
-  }
-
   dstaddr {
     name = "webserver-vip-group"
   }
@@ -68,39 +57,34 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "Botnet-C&C.Server"
   }
 
-  srcintf {
-    name = "virtual-wan-link"
-  }
-
-}
-*/
-
-resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
-  action             = "deny"
-  logtraffic         = "disable"
-  name               = "deny-threat-objects-to-webserver"
-  schedule           = "always"
-  nat                = "disable"
-  internet_service_src = "enable"  # Specify that we are using internet service in the source
-  block_notification = "enable"
-
-  dstaddr {
-    name = "webserver-vip-group"
-  }
-
-  dstintf {
-    name = "webservers"
+  internet_service_src_name {
+    name = "BinaryEdge-Scanner"
   }
 
   internet_service_src_name {
-    name = "Botnet-C&C.Server"
+    name = "Censys-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "CriminalIP-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Cyber.Casa-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Internet.Census.Group-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "InterneTTL-Scanner"
   }
 
   srcintf {
     name = "virtual-wan-link"
   }
 
-  # Deny all services
   service {
     name = "ALL"
   }
