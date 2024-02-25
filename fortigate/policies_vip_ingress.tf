@@ -75,32 +75,44 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
 }
 */
 
-resource "fortios_firewall_policy" "deny-botnet-to-webserver" {
-  name               = "deny-botnet-to-webserver"
+resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
+  name               = "deny-threat-objects-to-webserver"
   action             = "deny"
-  logtraffic         = "all"
+  logtraffic         = "disable"
   schedule           = "always"
   nat                = "disable"
   internet_service   = "enable"
-  block_notification = "enable"
+  internet_service_src = "enable"
+  block_notification   = "enable"
 
-  service {
-    name = "ALL"  # Assuming you want to block all services
-  }
-
-  srcaddr {
-    name = "Botnet-C&C.Server"  # Assuming this is the name of the predefined address object representing the Botnet service
-  }
-
-  dstaddr {
-    name = "webserver-vip-group"  # Assuming this is the group containing your web server's address
+  srcintf {
+    name = "virtual-wan-link"  # Incoming (ingress) interface
   }
 
   dstintf {
-    name = "webservers"  # Assuming this is the interface facing your web server
+    name = "webservers"  # Outgoing (egress) interface
   }
 
-  srcintf {
-    name = "virtual-wan-link"  # Assuming this is the interface facing the internet
+  srcaddr {
+    name = "Botnet-C&C.Server"  # Source address representing the Botnet
   }
+
+  dstaddr {
+    name = "webserver-vip-group"  # Destination address representing your web server
+  }
+
+  service {
+    name = "ALL"  # Service and service group names
+  }
+
+  internet_service_src_name {
+    name = "Botnet-C&C.Server"  # Internet Service source name
+  }
+
+  internet_service_name {
+    name = "ALL"  # Internet Service name
+  }
+
+  status = "enable"  # Enable the policy
 }
+
