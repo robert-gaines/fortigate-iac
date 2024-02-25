@@ -62,6 +62,10 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "Botnet-C&C.Server"
   }
 
+  srcaddr {
+    name = "all"
+  }
+
   srcintf {
     name = "virtual-wan-link"
   }
