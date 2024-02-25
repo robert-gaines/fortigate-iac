@@ -87,10 +87,6 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   }
 
   internet_service_name {
-    name = "NetScout-Scanner"
-  }
-
-  internet_service_name {
     name = "Recyber-Scanner"
   }
 
