@@ -39,7 +39,7 @@ resource "fortios_firewall_policy" "permit-wan-to-webserver" {
 
 resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   action             = "deny"
-  logtraffic         = "all"
+  logtraffic         = "disable"
   name               = "deny-threat-objects-to-webserver"
   schedule           = "always"
   nat                = "disable"
@@ -60,10 +60,6 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
 
   internet_service_name {
     name = "Botnet-C&C.Server"
-  }
-
-  srcaddr {
-    name = "all"
   }
 
   srcintf {
