@@ -38,7 +38,7 @@ resource "fortios_firewall_policy" "permit-wan-to-webserver" {
 
 resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   action               = "deny"
-  logtraffic           = "disable"
+  logtraffic           = "all"
   name                 = "deny-threat-objects-to-webserver"
   schedule             = "always"
   nat                  = "disable"
@@ -144,7 +144,7 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
 
 resource "fortios_firewall_policy" "deny-cloud-providers-to-webserver" {
   action               = "deny"
-  logtraffic           = "disable"
+  logtraffic           = "all"
   name                 = "deny-cloud-providers-to-webserver"
   schedule             = "always"
   nat                  = "disable"
@@ -194,7 +194,7 @@ resource "fortios_firewall_policy" "deny-cloud-providers-to-webserver" {
 
 resource "fortios_firewall_policy" "deny-threat-feeds-to-webserver" {
   action               = "deny"
-  logtraffic           = "disable"
+  logtraffic           = "all"
   name                 = "deny-threat-feeds-to-webserver"
   schedule             = "always"
   nat                  = "disable" 
