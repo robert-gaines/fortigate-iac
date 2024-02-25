@@ -75,10 +75,6 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   }
 
   internet_service_name {
-    name = "Internet.Census.Group-Scanner"
-  }
-
-  internet_service_name {
     name = "LeakIX-Scanner"
   }
 
