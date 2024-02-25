@@ -53,7 +53,7 @@ resource "fortios_logsyslogd3_setting" "syslog-config-three" {
     status        = "enable"
     enc_algorithm = "disable"
     mode          = "udp"
-    port          = "6543"
+    port          = "514"
     server        = "10.128.10.7"
     facility      =  "local7"
     interface     = "servers"

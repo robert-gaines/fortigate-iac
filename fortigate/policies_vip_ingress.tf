@@ -81,6 +81,7 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   name               = "deny-threat-objects-to-webserver"
   schedule           = "always"
   nat                = "disable"
+  internet_service_src = "enable"  # Specify that we are using internet service in the source
   block_notification = "enable"
 
   dstaddr {
@@ -104,5 +105,6 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
     name = "ALL"
   }
 }
+
 
 
