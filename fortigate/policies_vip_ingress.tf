@@ -192,3 +192,33 @@ resource "fortios_firewall_policy" "deny-cloud-providers-to-webserver" {
   }
 }
 
+resource "fortios_firewall_policy" "deny-threat-feeds-to-webserver" {
+  action               = "deny"
+  logtraffic           = "disable"
+  name                 = "deny-threat-feeds-to-webserver"
+  schedule             = "always"
+  nat                  = "disable"
+  internet_service_src = "enable"  
+  block_notification   = "enable"
+
+  dstaddr {
+    name = "webserver-vip-group"
+  }
+
+  dstintf {
+    name = "webservers"
+  }
+
+  srcaddr {
+    name = "feodo-botnet-c2"
+  }  
+
+  srcintf {
+    name = "virtual-wan-link"
+  }
+
+  service {
+    name = "ALL"
+  }
+}
+
