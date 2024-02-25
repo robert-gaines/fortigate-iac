@@ -209,8 +209,28 @@ resource "fortios_firewall_policy" "deny-threat-feeds-to-webserver" {
   }
 
   srcaddr {
-    name = "feodo-botnet-c2"
+    name = "proofpoint-emerging-threats"
   }  
+
+  srcaddr {
+    name = "feodo-botnet-c2"
+  }
+
+  srcaddr {
+    name = "honeypot-intruders"
+  }  
+
+  srcaddr {
+    name = "checkpoint-tor-nodes"
+  }    
+
+  srcaddr {
+    name = "firehol-blocklist"
+  }    
+
+  srcaddr {
+    name = "cymru-bogons"
+  }   
 
   srcintf {
     name = "virtual-wan-link"
