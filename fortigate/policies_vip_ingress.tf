@@ -83,7 +83,7 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   }
 
   internet_service_name {
-    name = "InternetTTL-Scanner"
+    name = "InterneTTL-Scanner"
   }
 
   internet_service_name {
