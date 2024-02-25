@@ -76,43 +76,33 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
 */
 
 resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
-  name               = "deny-threat-objects-to-webserver"
   action             = "deny"
   logtraffic         = "disable"
+  name               = "deny-threat-objects-to-webserver"
   schedule           = "always"
   nat                = "disable"
-  internet_service   = "enable"
-  internet_service_src = "enable"
-  block_notification   = "enable"
+  block_notification = "enable"
 
-  srcintf {
-    name = "virtual-wan-link"  # Incoming (ingress) interface
+  dstaddr {
+    name = "webserver-vip-group"
   }
 
   dstintf {
-    name = "webservers"  # Outgoing (egress) interface
-  }
-
-  srcaddr {
-    name = "Botnet-C&C.Server"  # Source address representing the Botnet
-  }
-
-  dstaddr {
-    name = "webserver-vip-group"  # Destination address representing your web server
-  }
-
-  service {
-    name = "ALL"  # Service and service group names
+    name = "webservers"
   }
 
   internet_service_src_name {
-    name = "Botnet-C&C.Server"  # Internet Service source name
+    name = "Botnet-C&C.Server"
   }
 
-  internet_service_name {
-    name = "ALL"  # Internet Service name
+  srcintf {
+    name = "virtual-wan-link"
   }
 
-  status = "enable"  # Enable the policy
+  # Deny all services
+  service {
+    name = "ALL"
+  }
 }
+
 
