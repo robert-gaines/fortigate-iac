@@ -63,7 +63,7 @@ resource "fortios_firewall_policy" "deny-threat-objects-to-webserver" {
   }
 
   srcaddr {
-    name = "ALL"
+    name = "all"
   }
 
   srcintf {
