@@ -464,6 +464,12 @@ resource "fortios_firewall_address" "MalwareBot_04282024_38_68_52_153" {
     comment  = "AndroxGhOst.Malware-04282024"
 }
 
+resource "fortios_firewall_address" "WebReconVPS_04282024_104_36_85_120" {
+    name     = "104.36.85.120"
+    subnet   = "104.36.85.120"
+    comment  = "RedoubtNET-VPS-04282024"
+}
+
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     allow_routing = "disable"
     color         = 6
@@ -473,6 +479,10 @@ resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
 
     member {
         name = fortios_firewall_address.MalwareBot_04282024_38_68_52_153.name
+    }
+
+    member {
+        name = fortios_firewall_address.WebReconVPS_04282024_104_36_85_120.name
     }
 
 }

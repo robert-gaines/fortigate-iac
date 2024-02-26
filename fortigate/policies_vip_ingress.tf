@@ -241,3 +241,32 @@ resource "fortios_firewall_policy" "deny-threat-feeds-to-webserver" {
   }
 }
 
+resource "fortios_firewall_policy" "deny-misc-threats-to-webserver" {
+  action               = "deny"
+  logtraffic           = "all"
+  name                 = "deny-misc-threats-to-webserver"
+  schedule             = "always"
+  nat                  = "disable" 
+  block_notification   = "enable"
+
+  dstaddr {
+    name = "webserver-vip-group"
+  }
+
+  dstintf {
+    name = "webservers"
+  }
+
+  srcaddr {
+    name = "SupplementaryBlockList"
+  }   
+
+  srcintf {
+    name = "virtual-wan-link"
+  }
+
+  service {
+    name = "ALL"
+  }
+}
+
