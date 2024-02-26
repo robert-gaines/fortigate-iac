@@ -458,7 +458,7 @@ resource "fortios_firewall_addrgrp" "SecurityServers" {
 
 # Supplementary Blocklist #
 
-resource "fortios_firewall_address" "38.68.52.153" {
+resource "fortios_firewall_address" "MalwareBot_04282024_38_68_52_153" {
     name     = "38.68.52.153"
     subnet   = "38.68.52.153/32"
     comment  = "AndroxGhOst.Malware-04282024"
@@ -472,7 +472,7 @@ resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     visibility    = "enable"
 
     member {
-        name = fortios_firewall_address.38.68.52.153.name
+        name = fortios_firewall_address.MalwareBot_04282024_38_68_52_153.name
     }
 
 }
