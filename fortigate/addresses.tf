@@ -466,7 +466,7 @@ resource "fortios_firewall_address" "MalwareBot_04282024_38_68_52_153" {
 
 resource "fortios_firewall_address" "WebReconVPS_04282024_104_36_85_120" {
     name     = "104.36.85.120"
-    subnet   = "104.36.85.120"
+    subnet   = "104.36.85.120/32"
     comment  = "RedoubtNET-VPS-04282024"
 }
 
