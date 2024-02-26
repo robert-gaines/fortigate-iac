@@ -456,3 +456,23 @@ resource "fortios_firewall_addrgrp" "SecurityServers" {
 
 }
 
+# Supplementary Blocklist #
+
+resource "fortios_firewall_address" "38.68.52.153" {
+    name     = "38.68.52.153"
+    subnet   = "38.68.52.153/32"
+    comment  = "AndroxGhOst.Malware-04282024"
+}
+
+resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
+    allow_routing = "disable"
+    color         = 6
+    exclude       = "disable"
+    name          = "SupplementaryBlockList"
+    visibility    = "enable"
+
+    member {
+        name = fortios_firewall_address.38.68.52.153.name
+    }
+
+}
