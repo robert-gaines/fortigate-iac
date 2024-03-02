@@ -13,8 +13,8 @@ provider "fortios" {
     insecure = "true"
 }
 
-resource "fortios_system_sdwan_zone" "sdwan_zone" {
-  name = "SDWAN" 
+resource "fortios_system_zone" "servers" {
+    intrazone = "deny"
+    name      = "servers"
 }
-
 

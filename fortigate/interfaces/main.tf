@@ -41,3 +41,17 @@ resource "fortios_system_interface" "wan2" {
   ip         = "0.0.0.0 0.0.0.0"
 }
 
+resource "fortios_system_sdwan" "sdwan" {
+  
+  members {
+    interface = "wan1"
+    zone = "virtual-wan-link"
+    weight = 255
+  }
+
+  members {
+    interface = "wan2"
+    zone = "virtual-wan-link"
+    weight = 1
+  }
+}
