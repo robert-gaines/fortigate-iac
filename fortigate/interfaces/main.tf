@@ -24,9 +24,10 @@ resource "fortios_system_interface" "fortilink_interface" {
 }
 
 resource "fortios_system_interface" "wan1-interface" {
-  name       = "wan1"
+  name       = "wan1-test"
   vdom       = "root"  # Specify the VDOM for the interface
   type       = "physical"
+  mode       = "static"
   role       = "wan"
   interface  = "wan1"  # Specify the name of the interface
   ip         = "192.168.255.1 255.255.255.192"
@@ -36,14 +37,14 @@ resource "fortios_system_interface" "wan2-interface" {
   name       = "wan2"
   vdom       = "root"  # Specify the VDOM for the interface
   type       = "physical"
+  mode       = "static"
   role       = "wan"
   interface  = "wan2"  # Specify the name of the interface
   ip         = "0.0.0.0 0.0.0.0"
-  allowaccess = "ping"
 }
 
 resource "fortios_system_virtualwanlink" "trname" {
-  status            = "enable"
+  status = "enable"
 
   members {
     interface = "wan1"
