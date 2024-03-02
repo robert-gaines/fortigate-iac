@@ -23,12 +23,12 @@ terraform_apply:
   tags:
     - residence-iac
 
-terraform_destroy:
-  before_script:
-    - cd /tmp/residence-iac/fortigate
-  stage: destroy
-  script:
-    - terraform init -migrate-state -lock=false -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
-    - terraform destroy --auto-approve
-  tags:
-    - residence-iac
+# terraform_destroy:
+#   before_script:
+#     - cd /tmp/residence-iac/fortigate
+#   stage: destroy
+#   script:
+#     - terraform init -migrate-state -lock=false -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
+#     - terraform destroy --auto-approve
+#   tags:
+#     - residence-iac
