@@ -6,12 +6,7 @@ stages:
 terraform:
   stage: plan
   script:
-    - terraform init \
-        -backend-config="address=$TF_BACKEND_ADDRESS" \
-        -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" \
-        -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" \
-        -backend-config="username=$TF_BACKEND_USERNAME" \
-        -backend-config="password=$TF_BACKEND_PASSWORD"
+    - terraform init -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
     - terraform plan
   tags:
     - residence-iac
@@ -19,12 +14,7 @@ terraform:
 terraform_apply:
   stage: apply
   script:
-    - terraform init \
-        -backend-config="address=$TF_BACKEND_ADDRESS" \
-        -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" \
-        -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" \
-        -backend-config="username=$TF_BACKEND_USERNAME" \
-        -backend-config="password=$TF_BACKEND_PASSWORD"
+    - terraform init terraform init -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
     - terraform apply --auto-approve
   tags:
     - residence-iac
@@ -32,12 +22,7 @@ terraform_apply:
 terraform_destroy:
   stage: destroy
   script:
-    - terraform init \
-        -backend-config="address=$TF_BACKEND_ADDRESS" \
-        -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" \
-        -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" \
-        -backend-config="username=$TF_BACKEND_USERNAME" \
-        -backend-config="password=$TF_BACKEND_PASSWORD"
+    - terraform init terraform init -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
     - terraform destroy --auto-approve
   tags:
     - residence-iac
