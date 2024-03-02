@@ -12,7 +12,7 @@ provider "fortios" {
     insecure = "true"
 }
 
-resource "fortios_system_global" "res-phy-prd-fwp" {
+resource "fortios_system_global" "res-phy-prd-fwp-global" {
     hostname = "res-phy-prd-fwp"
     alias    = "FGT60ETK20049899"
     timezone = "04"
