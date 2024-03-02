@@ -13,7 +13,7 @@ provider "fortios" {
     insecure = "true"
 }
 
-resource "fortios_system_zone" "servers" {
+resource "fortios_system_zone" "server-zone" {
     intrazone = "deny"
     name      = "servers"
 }
