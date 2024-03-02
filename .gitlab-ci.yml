@@ -13,6 +13,8 @@ terraform:
         -backend-config="username=$TF_BACKEND_USERNAME" \
         -backend-config="password=$TF_BACKEND_PASSWORD"
     - terraform plan
+  tags:
+    - residence-iac
 
 terraform_apply:
   stage: apply
@@ -24,6 +26,8 @@ terraform_apply:
         -backend-config="username=$TF_BACKEND_USERNAME" \
         -backend-config="password=$TF_BACKEND_PASSWORD"
     - terraform apply --auto-approve
+  tags:
+    - residence-iac
 
 terraform_destroy:
   stage: destroy
@@ -35,3 +39,5 @@ terraform_destroy:
         -backend-config="username=$TF_BACKEND_USERNAME" \
         -backend-config="password=$TF_BACKEND_PASSWORD"
     - terraform destroy --auto-approve
+  tags:
+    - residence-iac
