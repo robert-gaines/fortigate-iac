@@ -12,20 +12,14 @@ provider "fortios" {
     insecure = "true"
 }
 
-resource "fortios_system_interface" "fortilink" {
-  fortilink          = "enable"
-  fortilink_stacking = "enable"
-  switch_controller_source_ip = "192.168.254.1"
-  defaultgw    = "enable"
-  distance     = 5
-  ip           = "192.168.254.1 255.255.255.252"
-  mtu          = 1500
-  mtu_override = "disable"
-  name         = "port1"
-  type         = "fortlink"
-  vdom         = "root"
-  mode         = "static"
-  vlanid       = 4094
-  allowaccess = "ping https ssh"
-  description  = "TF - FortiLink Configuration"
+resource "fortios_system_interface" "fortilink_interface" {
+  name          = "fortilink"
+  vdom          = "root"  # Specify the VDOM for the FortiLink interface
+  type          = "physical"
+  role          = "lan"
+  interface     = "port1"  # Specify the interface where the FortiLink connection is configured
+  vlanid        = 4094    # Specify the VLAN ID for the FortiLink interface
+  ip            = "192.168.254.1 255.255.255.252"  # Specify the IP address for the FortiLink interface
+  allowaccess   = "ping https ssh"  # Specify the allowed access for the FortiLink interface
 }
+
