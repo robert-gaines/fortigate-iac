@@ -41,3 +41,14 @@ resource "fortios_system_interface" "wan2-interface" {
   ip         = "0.0.0.0 0.0.0.0"
 }
 
+resource "fortios_system_virtualwanlink" "trname" {
+  status            = "enable"
+
+  members {
+    interface = "wan1"
+  }
+
+  members {
+    interface = "wan2"
+  }
+}
