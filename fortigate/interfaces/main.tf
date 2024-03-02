@@ -15,7 +15,7 @@ provider "fortios" {
 resource "fortios_system_interface" "fortilink_interface" {
   name          = "fortilink"
   vdom          = "root"  # Specify the VDOM for the FortiLink interface
-  type          = "fortilink"
+  type          = "physical"
   role          = "lan"
   interface     = "port1"  # Specify the interface where the FortiLink connection is configured
   ip            = "192.168.254.1 255.255.255.252"  # Specify the IP address for the FortiLink interface
