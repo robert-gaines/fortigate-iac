@@ -23,7 +23,7 @@ resource "fortios_system_interface" "fortilink_interface" {
   
 }
 
-resource "fortios_system_interface" "wan1" {
+resource "fortios_system_interface" "wan1-interface" {
   name       = "wan1"
   vdom       = "root"  # Specify the VDOM for the interface
   type       = "physical"
@@ -32,7 +32,7 @@ resource "fortios_system_interface" "wan1" {
   ip         = "192.168.255.1 255.255.255.192"
 }
 
-resource "fortios_system_interface" "wan2" {
+resource "fortios_system_interface" "wan2-interface" {
   name       = "wan2"
   vdom       = "root"  # Specify the VDOM for the interface
   type       = "physical"
@@ -41,17 +41,3 @@ resource "fortios_system_interface" "wan2" {
   ip         = "0.0.0.0 0.0.0.0"
 }
 
-resource "fortios_system_sdwan" "sdwan" {
-  
-  members {
-    interface = "wan1"
-    zone = "virtual-wan-link"
-    weight = 255
-  }
-
-  members {
-    interface = "wan2"
-    zone = "virtual-wan-link"
-    weight = 1
-  }
-}
