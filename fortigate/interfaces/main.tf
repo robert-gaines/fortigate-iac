@@ -39,6 +39,7 @@ resource "fortios_system_interface" "wan2-interface" {
   role       = "wan"
   interface  = "wan2"  # Specify the name of the interface
   ip         = "0.0.0.0 0.0.0.0"
+  allowaccess = "ping"
 }
 
 resource "fortios_system_virtualwanlink" "trname" {
