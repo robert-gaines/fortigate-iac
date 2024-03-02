@@ -16,6 +16,6 @@ resource "fortios_system_global" "res-phy-prd-fwp-global" {
     hostname = "res-phy-prd-fwp"
     alias    = "FGT60ETK20049899"
     language = "english"
-
+    switch_controller = "enabled"
 }
 
