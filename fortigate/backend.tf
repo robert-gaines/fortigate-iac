@@ -5,5 +5,7 @@ terraform {
     unlock_address = "${var.TF_BACKEND_ADDRESS}/lock"
     username       = var.TF_BACKEND_USERNAME
     password       = var.TF_BACKEND_PASSWORD
+    lock_method    = "POST"
+    unlock_method  = "DELETE"
   }
 }
