@@ -12,3 +12,7 @@ provider fortios {
     insecure = "true"
 }
 
+resource "fortios_firewall_address" "res-phy-prd-fwp" {
+    name = "res-phy-prd-fwp"
+}
+
