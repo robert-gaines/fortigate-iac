@@ -34,7 +34,7 @@ resource "fortios_system_interface" "servers" {
 
 resource "fortios_system_interface" "workstations" {
   ip          = "10.128.20.1 255.255.255.240"
-  name        = "v20-workstations"
+  name        = "v20-wkstns"
   role        = "lan"
   type        = "vlan"
   vlanid      = 20  
