@@ -1,5 +1,8 @@
-resource "fortios_firewall_ips_custom" "ips-primary" {
+resource "fortios_ips_sensor" "ips-primary" {
   name         = "ips-primary"
-  description  = "Flow Based IPS Profile"
-  mode         = "flow"
+  comment      = "Primary IPS Profile"
+  block_malicious_url = "enable"
+  extended_log = "enable"
+  scan_botnet_connections = "block"
+  
 }
