@@ -1,4 +1,4 @@
-resource "fortios_antivirus_profile" "av-flow" {
+resource "fortios_antivirus_profile" "av_flow" {
   av_block_log          = "enable"
   av_virus_log          = "enable"
   extended_log          = "disable"
