@@ -20,7 +20,7 @@ resource "fortios_application_list" "app-control-primary" {
   entries {
     action = "block"
     category {
-      id= "2,6,7,8"
+      id = 2
     }
   }  
 
