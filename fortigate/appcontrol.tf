@@ -9,7 +9,7 @@ resource "fortios_application_group" "app-control-primary" {
 }
 
 
-resource "fortios_firewall_application_list" "app-list-primary" {
+resource "fortios_application_list" "app-list-primary" {
   app_replacemsg             = "enable"
   deep_app_inspection        = "enable"
   enforce_default_app_port   = "disable"
