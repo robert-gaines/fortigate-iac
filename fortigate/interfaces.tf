@@ -44,3 +44,55 @@ resource "fortios_system_interface" "workstations" {
   interface   = "fortilink"
   color       = 3
 }
+
+resource "fortios_system_interface" "management" {
+  ip          = "10.128.30.1 255.255.255.252"
+  name        = "v30-management"
+  role        = "lan"
+  type        = "vlan"
+  vlanid      = 30  
+  vdom        = "root"
+  mode        = "static"
+  status      = "up"
+  interface   = "fortilink"
+  color       = 9
+}
+
+resource "fortios_system_interface" "webservers" {
+  ip          = "10.128.40.1 255.255.255.252"
+  name        = "v40-webservers"
+  role        = "lan"
+  type        = "vlan"
+  vlanid      = 40  
+  vdom        = "root"
+  mode        = "static"
+  status      = "up"
+  interface   = "fortilink"
+  color       = 21
+}
+
+resource "fortios_system_interface" "administration" {
+  ip          = "10.128.50.1 255.255.255.252"
+  name        = "v50-admin"
+  role        = "lan"
+  type        = "vlan"
+  vlanid      = 50  
+  vdom        = "root"
+  mode        = "static"
+  status      = "up"
+  interface   = "fortilink"
+  color       = 6
+}
+
+resource "fortios_system_interface" "deception" {
+  ip          = "10.128.60.1 255.252.252.0"
+  name        = "v60-deception"
+  role        = "lan"
+  type        = "vlan"
+  vlanid      = 60  
+  vdom        = "root"
+  mode        = "static"
+  status      = "up"
+  interface   = "fortilink"
+  color       = 9
+}
