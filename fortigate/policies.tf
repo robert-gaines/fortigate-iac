@@ -4,12 +4,14 @@ resource "fortios_firewall_policy" "permit-workstations-to-wan" {
   logtraffic         = "all"
   name               = "permit-workstations-to-wan"
   schedule           = "always"
+  nat                = "enable"
   utm_status         = "enable" 
   inspection_mode    = "flow" 
   av_profile         = "av-flow"
   ips_sensor         = "ips-primary"  
   webfilter_profile  = "webfilter-primary"
   application_list   = "app-control-primary"
+  ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
     name = "all"
@@ -36,6 +38,6 @@ resource "fortios_firewall_policy" "permit-workstations-to-wan" {
   }
 
   srcintf {
-    name = "fortilink"
+    name = "workstations"
   }
 }
