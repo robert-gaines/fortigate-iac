@@ -13,8 +13,4 @@ resource "fortios_application_list" "app-control-primary" {
   other_application_log      = "disable"
   unknown_application_action = "pass"
   unknown_application_log    = "disable"
-  #
-  p2p_black_list             = "skype,edonkey,bittorrent"
-  p2p_block_list             = "skype,edonkey,bittorrent"  
-
 }
