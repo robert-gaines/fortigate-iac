@@ -94,5 +94,5 @@ resource "fortios_system_interface" "deception" {
   mode        = "static"
   status      = "up"
   interface   = "fortilink"
-  color       = 9
+  color       = 10
 }
