@@ -14,12 +14,12 @@ provider "fortios" {
 
 resource "fortios_system_global" "res-phy-prd-fwp-global" {
     hostname = "res-phy-prd-fwp"
+    gui_theme = "onyx"
 }
 
 resource "fortios_ips_global" "res-phy-prd-fwpglobal-ips" {
   anomaly_mode           = "continuous"
   database               = "regular"
   fail_open              = "disable"
-
 }
 
