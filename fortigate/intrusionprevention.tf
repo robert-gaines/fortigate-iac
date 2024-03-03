@@ -11,7 +11,7 @@ resource "fortios_ips_sensor" "ips-primary" {
     log_packet = "enable"
     log_attack_context = "enable"
     default_status = "all"
-    severity = "critical"
+    severity = "high,critical"
   }
 
 #   filter {
