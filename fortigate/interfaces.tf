@@ -12,7 +12,7 @@ resource "fortios_system_interface" "dmz" {
 resource "fortios_system_interface" "fortilink" {
   ip          = "192.168.254.1 255.255.255.252"
   name        = "port1"
-  role        = "fortilink"
+  role        = "lan"
   type        = "physical"
   vdom        = "root"
   mode        = "static"
