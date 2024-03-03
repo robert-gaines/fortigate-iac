@@ -20,6 +20,10 @@ resource "fortios_firewall_policy" "permit-workstations-to-wan" {
   }
 
   service {
+    name = "DNS"
+  }
+
+  service {
     name = "HTTP"
   }
 
@@ -32,6 +36,6 @@ resource "fortios_firewall_policy" "permit-workstations-to-wan" {
   }
 
   srcintf {
-    name = "v20-wkstn"
+    name = "v20-wkstns"
   }
 }
