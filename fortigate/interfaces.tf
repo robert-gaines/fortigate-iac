@@ -29,5 +29,18 @@ resource "fortios_system_interface" "servers" {
   mode        = "static"
   status      = "up"
   interface   = "fortilink"
+  color       = 2
 }
 
+resource "fortios_system_interface" "workstations" {
+  ip          = "10.128.20.1 255.255.255.240"
+  name        = "v20-workstations"
+  role        = "lan"
+  type        = "vlan"
+  vlanid      = 20  
+  vdom        = "root"
+  mode        = "static"
+  status      = "up"
+  interface   = "fortilink"
+  color       = 3
+}
