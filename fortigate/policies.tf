@@ -20,7 +20,11 @@ resource "fortios_firewall_policy" "permit-workstations-to-wan" {
   }
 
   service {
-    name = ["HTTP","HTTPS"]
+    name = "HTTP"
+  }
+
+  service {
+    name = "HTTPS"
   }
 
   srcaddr {
