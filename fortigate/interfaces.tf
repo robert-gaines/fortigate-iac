@@ -19,4 +19,14 @@ resource "fortios_system_interface" "wan1" {
   status      = "up"
 }
 
+resource "fortios_system_interface" "servers" {
+  ip          = "10.128.10.1 255.255.255.0"
+  name        = "v10-servers"
+  role        = "lan"
+  type        = "vlan"
+  vlanid      = 10  
+  vdom        = "root"
+  mode        = "static"
+  status      = "up"
+}
 
