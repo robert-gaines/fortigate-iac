@@ -5,4 +5,5 @@ resource "fortios_antivirus_profile" "av-flow" {
   inspection_mode       = "flow-based"
   name                  = "av-flow"
   scan_mode             = "default"
+  comment               = "Flow Based AntiVirus Profile" 
 }
