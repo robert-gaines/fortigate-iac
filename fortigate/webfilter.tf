@@ -4,6 +4,7 @@ resource "fortios_webfilter_profile" "webfilter-primary" {
   inspection_mode               = "flow-based"
   log_all_url                   = "disable"
   name                          = "webfilter-primary"
+  comment                       = "Primary Web Filter - Flow Based"
   post_action                   = "normal"
   web_content_log               = "enable"
   web_extended_all_action_log   = "disable"
