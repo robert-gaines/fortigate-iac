@@ -23,6 +23,21 @@ resource "fortios_system_interface" "fortilink_interface" {
   
 }
 
+resource "fortios_systemdhcp_server" "fortilink-dhcp-server" {
+  dns_service = "default"
+  fosid       = 1
+  interface   = "port1"
+  netmask     = "255.255.255.252"
+  status      = "enable"
+  timezone    = "04"
+
+  ip_range {
+    end_ip   = "192.168.254.2"
+    id       = 1
+    start_ip = "192.168.254.2"
+  }
+}
+
 resource "fortios_system_interface" "dmz-interface" {
     name = "dmz"
     vdom = "root"
@@ -50,14 +65,3 @@ resource "fortios_system_interface" "wan2-interface" {
   ip         = "0.0.0.0 0.0.0.0"
 }
 
-resource "fortios_system_virtualwanlink" "virtual-wan-link-interface" {
-  status = "enable"
-
-  members {
-    interface = "wan1"
-  }
-
-  members {
-    interface = "wan2"
-  }
-}
