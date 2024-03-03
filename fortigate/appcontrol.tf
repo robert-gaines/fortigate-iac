@@ -18,8 +18,10 @@ resource "fortios_application_list" "app-control-primary" {
   p2p_block_list             = "skype,edonkey,bittorrent"
   #
   entries {
-    id = 2
     action = "block"
+    category {
+      id= "2,6,7,8"
+    }
   }  
 
 }
