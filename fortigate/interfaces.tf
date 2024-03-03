@@ -28,5 +28,6 @@ resource "fortios_system_interface" "servers" {
   vdom        = "root"
   mode        = "static"
   status      = "up"
+  interface   = "fortilink"
 }
 
