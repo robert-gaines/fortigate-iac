@@ -85,7 +85,7 @@ resource "fortios_system_interface" "administration" {
 }
 
 resource "fortios_system_interface" "deception" {
-  ip          = "10.128.60.1 255.252.252.0"
+  ip          = "10.128.60.1 255.255.252.0"
   name        = "v60-deception"
   role        = "lan"
   type        = "vlan"
