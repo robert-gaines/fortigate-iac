@@ -5,11 +5,14 @@ resource "fortios_ips_sensor" "ips-primary" {
   extended_log = "enable"
   scan_botnet_connections = "block"
   
-#   entries {
-#     action = "block"
-#     log = "enable"
-#     log_packet = "enable"
-#   }
+  entries {
+    action = "block"
+    log = "enable"
+    log_packet = "enable"
+    log_attack_context = "enable"
+    default_status = "all"
+    severity = "critical"
+  }
 
 #   filter {
 #     severity = "low"
