@@ -3,7 +3,7 @@ resource "fortios_system_zone" "servers" {
   name      = "servers"
 }
 
-resource "fortios_system_zone" "servers" {
+resource "fortios_system_zone" "workstations" {
   intrazone = "deny"
   name      = "workstations"
 }
