@@ -206,7 +206,7 @@ resource "fortios_firewall_policy" "permit-administration-to-servers" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-workstations-to-administration" {
+resource "fortios_firewall_policy" "permit-workstations-to-admin" {
   action             = "accept"
   logtraffic         = "all"
   name               = "permit-workstations-to-administration"
