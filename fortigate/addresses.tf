@@ -73,3 +73,39 @@ resource "fortios_firewall_address" "UnitedStates" {
     type    = "geo"
     country = "US"
 }
+
+resource "fortios_firewall_address" "Canada" {
+    name    = "Canada"
+    type    = "geo"
+    country = "CA"
+}
+
+resource "fortios_firewall_address" "Russia" {
+    name    = "Russia"
+    type    = "geo"
+    country = "RU"
+}
+
+resource "fortios_firewall_address" "China" {
+    name    = "China"
+    type    = "geo"
+    country = "CN"
+}
+
+resource "fortios_firewall_address" "NorthKorea" {
+    name    = "NorthKorea"
+    type    = "geo"
+    country = "KP"
+}
+
+resource "fortios_firewall_address" "SouthKorea" {
+    name    = "SouthKorea"
+    type    = "geo"
+    country = "KR"
+}
+
+resource "fortios_firewall_address" "Iran" {
+    name    = "Iran"
+    type    = "geo"
+    country = "IR"
+}
