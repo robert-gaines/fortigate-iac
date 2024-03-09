@@ -6,7 +6,7 @@ resource "fortios_logsyslogd_setting" "syslog-config-one" {
     mode          = "udp"
     port          = "514"
     server        = "10.128.10.5"
-    facility      =  "local7,syslog"
+    facility      =  "local7"
     interface     = "servers"
     source_ip     = "10.128.10.1"
 }
