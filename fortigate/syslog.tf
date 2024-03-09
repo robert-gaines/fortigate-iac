@@ -23,7 +23,7 @@ resource "fortios_logsyslogd_filter" "syslog-filter-one" {
   ssh               = "enable"
 }
 
-resource "fortios_logsyslogd_setting" "syslog-config-two" {
+resource "fortios_logsyslogd2_setting" "syslog-config-two" {
     status        = "enable"
     enc_algorithm = "disable"
     mode          = "udp"
@@ -34,7 +34,7 @@ resource "fortios_logsyslogd_setting" "syslog-config-two" {
     source_ip     = "10.128.10.1"
 }
 
-resource "fortios_logsyslogd_filter" "syslog-filter-two" {
+resource "fortios_logsyslogd2_filter" "syslog-filter-two" {
   anomaly           = "enable"
   dns               = "enable"
   filter_type       = "include"
