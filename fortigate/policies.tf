@@ -194,7 +194,7 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 
   service {
-    name = "All"
+    name = "ALL"
   }
 
   srcaddr {
