@@ -112,11 +112,15 @@ resource "fortios_firewall_address" "Iran" {
 
 # Address Object Groups #
 
-resource "fortios_firewall_addrgroup" "ThreatActorCountries" {
-    name    = "ThreatActorCountries"
-    color   = 5
-    member  = {
-        name = fortios_firewall_address.Russia.Russia
-    }
+resource "fortios_firewall_addrgrp" "ThreatActorCountries" {
+  allow_routing = "disable"
+  color         = 5
+  exclude       = "disable"
+  name          = "ThreatActorCountries"
+  visibility    = "enable"
+
+  member {
+            name = fortios_firewall_address.Russia.Russia
+  }
 }
 
