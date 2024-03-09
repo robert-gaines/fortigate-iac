@@ -71,5 +71,5 @@ resource "fortios_firewall_address" "res-phy-prd-rpi-1" {
 resource "fortios_firewall_address" "UnitedStates" {
     name    = "UnitedStates"
     type    = "geo"
-    country = ["US"]
+    country = "US"
 }
