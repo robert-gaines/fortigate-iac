@@ -120,7 +120,7 @@ resource "fortios_firewall_addrgrp" "ThreatActorCountries" {
   visibility    = "enable"
 
   member {
-            name = fortios_firewall_address.Russia.Russia
+            name = fortios_firewall_address.Russia.name
   }
 }
 
