@@ -109,3 +109,14 @@ resource "fortios_firewall_address" "Iran" {
     type    = "geo"
     country = "IR"
 }
+
+# Address Object Groups #
+
+resource "fortios_firewall_addrgroup" "ThreatActorCountries" {
+    name    = "ThreatActorCountries"
+    color   = 5
+    member  = {
+        name = fortios_firewall_address.Russia.Russia
+    }
+}
+
