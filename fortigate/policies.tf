@@ -42,6 +42,46 @@ resource "fortios_firewall_policy" "permit-workstations-to-wan" {
   }
 }
 
+# Server Policies #
+
+
+resource "fortios_firewall_policy" "permit-servers-to-ubuntu" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-servers-to-ubuntu"
+  schedule           = "always"
+  nat                = "enable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "ports.ubuntu.com"
+  }
+
+  dstintf {
+    name = "virtual-wan-link"
+  }
+
+  service {
+    name = "HTTP"
+  }
+
+  service {
+    name = "HTTPS"
+  }
+
+  srcaddr {
+    name = "servers"
+  }
+
+  srcintf {
+    name = "servers"
+  }
+}
+
 resource "fortios_firewall_policy" "permit-servers-to-wan" {
   action             = "accept"
   logtraffic         = "all"

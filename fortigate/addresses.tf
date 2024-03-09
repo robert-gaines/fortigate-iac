@@ -66,6 +66,14 @@ resource "fortios_firewall_address" "res-phy-prd-rpi-1" {
     subnet   = "10.128.50.2/32"
 }
 
+# FQDN Objects #
+
+resource "fortios_firewall_address" "Ubuntu-FQDN" {
+    name = "ports.ubuntu.com"
+    type = "fqdn"
+    fqdn = "ports.ubuntu.com"
+}
+
 # Country Address Objects #
 
 resource "fortios_firewall_address" "UnitedStates" {
