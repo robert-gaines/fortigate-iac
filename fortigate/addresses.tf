@@ -121,6 +121,33 @@ resource "fortios_firewall_addrgrp" "ThreatActorCountries" {
 
   member {
             name = fortios_firewall_address.Russia.name
-  }
+         }
+  member {
+            name = fortios_firewall_address.China.name
+         }
+  member {
+            name = fortios_firewall_address.Iran.name
+         }
+  member {
+            name = fortios_firewall_address.NorthKorea.name
+         }
+  member {
+            name = fortios_firewall_address.SouthKorea.name
+         }
+}
+
+resource "fortios_firewall_addrgrp" "PermittedCountries" {
+  allow_routing = "disable"
+  color         = 19
+  exclude       = "disable"
+  name          = "PermittedCountries"
+  visibility    = "enable"
+
+  member {
+            name = fortios_firewall_address.UnitedStates.name
+         }
+  member {
+            name = fortios_firewall_address.Canada.name
+         }
 }
 
