@@ -1,6 +1,6 @@
 
 
-resource "fortios_log_syslogd_setting" "syslog-config-one" {
+resource "fortios_logsyslogd_setting" "syslog-config-one" {
     enc_algorithm = "disable"
     mode          = "udp"
     port          = "514"
