@@ -209,7 +209,7 @@ resource "fortios_firewall_policy" "permit-administration-to-servers" {
 resource "fortios_firewall_policy" "permit-workstations-to-admin" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-workstations-to-administration"
+  name               = "permit-workstations-to-admin"
   schedule           = "always"
   nat                = "disable"
   utm_status         = "enable" 
