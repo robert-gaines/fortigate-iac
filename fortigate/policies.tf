@@ -171,10 +171,10 @@ resource "fortios_firewall_policy" "permit-workstations-to-servers" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-administration-to-servers" {
+resource "fortios_firewall_policy" "permit-admin-to-servers" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-administration-to-servers"
+  name               = "permit-admin-to-servers"
   schedule           = "always"
   nat                = "disable"
   utm_status         = "enable" 
