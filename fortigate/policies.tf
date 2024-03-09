@@ -85,6 +85,49 @@ resource "fortios_firewall_policy" "permit-servers-to-wan" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-administration-to-wan" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-administration-to-wan"
+  schedule           = "always"
+  nat                = "enable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  webfilter_profile  = "webfilter-primary"
+  application_list   = "app-control-primary"
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "all"
+  }
+
+  dstintf {
+    name = "virtual-wan-link"
+  }
+
+  service {
+    name = "DNS"
+  }
+
+  service {
+    name = "HTTP"
+  }
+
+  service {
+    name = "HTTPS"
+  }
+
+  srcaddr {
+    name = "administration"
+  }
+
+  srcintf {
+    name = "administration"
+  }
+}
+
 resource "fortios_firewall_policy" "permit-workstations-to-servers" {
   action             = "accept"
   logtraffic         = "all"
@@ -117,6 +160,76 @@ resource "fortios_firewall_policy" "permit-workstations-to-servers" {
 
   service {
     name = "HTTPS"
+  }
+
+  srcaddr {
+    name = "workstations"
+  }
+
+  srcintf {
+    name = "workstations"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-administration-to-servers" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-administration-to-servers"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  webfilter_profile  = "webfilter-primary"
+  application_list   = "app-control-primary"
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "servers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "All"
+  }
+
+  srcaddr {
+    name = "administration"
+  }
+
+  srcintf {
+    name = "administration"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-workstations-to-administration" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-workstations-to-administration"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  webfilter_profile  = "webfilter-primary"
+  application_list   = "app-control-primary"
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "administration"
+  }
+
+  dstintf {
+    name = "administration"
+  }
+
+  service {
+    name = "SSH"
   }
 
   srcaddr {
