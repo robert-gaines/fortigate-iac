@@ -57,7 +57,7 @@ resource "fortios_firewall_policy" "permit-servers-to-wan" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
-    name = "all"
+    name = "PermittedCountries"
   }
 
   dstintf {
@@ -100,7 +100,7 @@ resource "fortios_firewall_policy" "permit-administration-to-wan" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
-    name = "all"
+    name = "PermittedCountries"
   }
 
   dstintf {
