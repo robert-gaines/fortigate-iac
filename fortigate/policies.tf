@@ -151,15 +151,7 @@ resource "fortios_firewall_policy" "permit-workstations-to-servers" {
   }
 
   service {
-    name = "DNS"
-  }
-
-  service {
-    name = "HTTP"
-  }
-
-  service {
-    name = "HTTPS"
+    name = "ALL"
   }
 
   srcaddr {
