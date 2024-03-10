@@ -1,6 +1,5 @@
-resource "fortios_firewall_vip" "example_vip" {
+resource "fortios_firewall_vip" "webserver-vip-https" {
   name             = "res-vrt-prd-wsr:443"
-  extintf          = "virtual-wan-link"
   extip            = "192.168.255.1"
   extport          = "443" 
   color            = 21
