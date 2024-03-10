@@ -61,18 +61,18 @@ resource "fortios_firewall_address" "deception" {
 
 # Host Address Objects #
 
-resource "fortios_firewall_address" "res-phy-prd-pmx-1" {
-    name     = "res-phy-prd-pmx-1"
+resource "fortios_firewall_address" "res-phy-prd-hvr-pmx-1" {
+    name     = "res-phy-prd-hvr-pmx-1"
     subnet   = "10.128.10.11/32"
 }
 
-resource "fortios_firewall_address" "res-phy-prd-pmx-2" {
-    name     = "res-phy-prd-pmx-2"
+resource "fortios_firewall_address" "res-phy-prd-hvr-pmx-2" {
+    name     = "res-phy-prd-hvr-pmx-2"
     subnet   = "10.128.10.12/32"
 }
 
-resource "fortios_firewall_address" "res-phy-prd-pmx-3" {
-    name     = "res-phy-prd-pmx-3"
+resource "fortios_firewall_address" "res-phy-prd-hvr-pmx-3" {
+    name     = "res-phy-prd-hvr-pmx-3"
     subnet   = "10.128.10.13/32"
 }
 
