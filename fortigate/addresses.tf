@@ -76,6 +76,21 @@ resource "fortios_firewall_address" "res-phy-prd-pmx-3" {
     subnet   = "10.128.10.13/32"
 }
 
+resource "fortios_firewall_address" "res-vrt-prd-spk" {
+    name     = "res-vrt-prd-spk"
+    subnet   = "10.128.10.5/32"
+}
+
+resource "fortios_firewall_address" "res-vrt-prd-ssr" {
+    name     = "res-vrt-prd-ssr"
+    subnet   = "10.128.10.6/32"
+}
+
+resource "fortios_firewall_address" "res-vrt-prd-wsr" {
+    name     = "res-vrt-prd-wsr"
+    subnet   = "10.128.40.2/32"
+}
+
 resource "fortios_firewall_address" "res-phy-prd-rpi-1" {
     name     = "res-phy-prd-rpi-1"
     subnet   = "10.128.50.2/32"
