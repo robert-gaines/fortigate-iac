@@ -195,6 +195,10 @@ resource "fortios_firewall_policy" "permit-administration-to-wan" {
   }
 
   service {
+    name = "NTP"
+  }
+
+  service {
     name = "HTTP"
   }
 
