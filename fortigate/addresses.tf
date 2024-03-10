@@ -159,16 +159,22 @@ resource "fortios_firewall_address" "Proxmox-FQDN" {
     fqdn = "proxmox.com"
 }
 
-resource "fortios_firewall_address" "Ubuntu-FQDN" {
-    name = "ports.ubuntu.com"
-    type = "fqdn"
-    fqdn = "ports.ubuntu.com"
-}
-
 resource "fortios_firewall_address" "ProxmoxForum-FQDN" {
     name = "forum.proxmox.com"
     type = "fqdn"
     fqdn = "forum.proxmox.com"
+}
+
+resource "fortios_firewall_address" "ProxmoxPVE-FQDN" {
+    name = "pve.proxmox.com"
+    type = "fqdn"
+    fqdn = "pve.proxmox.com"
+}
+
+resource "fortios_firewall_address" "Ubuntu-FQDN" {
+    name = "ports.ubuntu.com"
+    type = "fqdn"
+    fqdn = "ports.ubuntu.com"
 }
 
 resource "fortios_firewall_address" "Protonmail-FQDN-1" {
@@ -280,6 +286,9 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
          }
   member {
             name = fortios_firewall_address.ProxmoxForum-FQDN.name
+         }
+  member {
+            name = fortios_firewall_address.ProxmoxPVE-FQDN.name
          }
   member {
             name = fortios_firewall_address.Ubuntu-FQDN.name
