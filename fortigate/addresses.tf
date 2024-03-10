@@ -61,9 +61,79 @@ resource "fortios_firewall_address" "deception" {
 
 # Host Address Objects #
 
+resource "fortios_firewall_address" "res-phy-prd-pmx-1" {
+    name     = "res-phy-prd-pmx-1"
+    subnet   = "10.128.10.11/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-pmx-2" {
+    name     = "res-phy-prd-pmx-2"
+    subnet   = "10.128.10.12/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-pmx-3" {
+    name     = "res-phy-prd-pmx-3"
+    subnet   = "10.128.10.13/32"
+}
+
 resource "fortios_firewall_address" "res-phy-prd-rpi-1" {
     name     = "res-phy-prd-rpi-1"
     subnet   = "10.128.50.2/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-2" {
+    name     = "res-phy-prd-rpi-2"
+    subnet   = "10.128.10.22/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-3" {
+    name     = "res-phy-prd-rpi-3"
+    subnet   = "10.128.10.23/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-4" {
+    name     = "res-phy-prd-rpi-4"
+    subnet   = "10.128.10.24/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-5" {
+    name     = "res-phy-prd-rpi-5"
+    subnet   = "10.128.10.25/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-6" {
+    name     = "res-phy-prd-rpi-6"
+    subnet   = "10.128.10.26/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-7" {
+    name     = "res-phy-prd-rpi-7"
+    subnet   = "10.128.10.27/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-8" {
+    name     = "res-phy-prd-rpi-8"
+    subnet   = "10.128.10.28/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-9" {
+    name     = "res-phy-prd-rpi-9"
+    subnet   = "10.128.60.2/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-10" {
+    name     = "res-phy-prd-rpi-10"
+    subnet   = "10.128.60.3/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-11" {
+    name     = "res-phy-prd-rpi-11"
+    subnet   = "10.128.60.4/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-rpi-12" {
+    name     = "res-phy-prd-rpi-12"
+    subnet   = "10.128.60.5/32"
 }
 
 # FQDN Objects #
@@ -72,6 +142,18 @@ resource "fortios_firewall_address" "Ubuntu-FQDN" {
     name = "ports.ubuntu.com"
     type = "fqdn"
     fqdn = "ports.ubuntu.com"
+}
+
+resource "fortios_firewall_address" "Protonmail-FQDN-1" {
+    name = "protonmail.com"
+    type = "fqdn"
+    fqdn = "protonmail.com"
+}
+
+resource "fortios_firewall_address" "Protonmail-FQDN-2" {
+    name = "mail.proton.me"
+    type = "fqdn"
+    fqdn = "mail.proton.me"
 }
 
 # Country Address Objects #
