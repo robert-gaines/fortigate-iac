@@ -262,3 +262,24 @@ resource "fortios_firewall_addrgrp" "PermittedCountries" {
          }
 }
 
+resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
+  allow_routing = "disable"
+  color         = 15
+  exclude       = "disable"
+  name          = "PermittedForeignHosts"
+  visibility    = "enable"
+
+  member {
+            name = fortios_firewall_address.Proxmox-FQDN.name
+         }
+  member {
+            name = fortios_firewall_address.Ubuntu-FQDN.name
+         }
+  member {
+            name = fortios_firewall_address.Protonmail-FQDN-1.name
+         }
+  member {
+            name = fortios_firewall_address.Protonmail-FQDN-2.name
+         }
+}
+
