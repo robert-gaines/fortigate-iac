@@ -165,6 +165,12 @@ resource "fortios_firewall_address" "Ubuntu-FQDN" {
     fqdn = "ports.ubuntu.com"
 }
 
+resource "fortios_firewall_address" "ProxmoxForum-FQDN" {
+    name = "forum.proxmox.com"
+    type = "fqdn"
+    fqdn = "forum.proxmox.com"
+}
+
 resource "fortios_firewall_address" "Protonmail-FQDN-1" {
     name = "protonmail.com"
     type = "fqdn"
@@ -271,6 +277,9 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
 
   member {
             name = fortios_firewall_address.Proxmox-FQDN.name
+         }
+  member {
+            name = fortios_firewall_address.ProxmoxForum-FQDN.name
          }
   member {
             name = fortios_firewall_address.Ubuntu-FQDN.name
