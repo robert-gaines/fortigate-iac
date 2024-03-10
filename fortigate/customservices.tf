@@ -25,9 +25,9 @@ resource "fortios_firewallservice_group" "security-service-agents" {
     name              = "security-service-agents"
 
     member {
-                name = fortios_firewallservice_custom.splunk-forwarder.name
+                name  = fortios_firewallservice_custom.splunk-forwarder.name
            }
     member {
-                name = fortios_firewallservice_custom.wazuh-agent.name
+                name  = fortios_firewallservice_custom.wazuh-agent.name
            }
 }
