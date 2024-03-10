@@ -267,7 +267,7 @@ resource "fortios_firewall_policy" "permit-webservers-to-servers" {
   }
 
   service {
-    name = "ALL"
+    name = "security-service-agents"
   }
 
   srcaddr {
