@@ -153,6 +153,12 @@ resource "fortios_firewall_address" "res-phy-prd-rpi-12" {
 
 # FQDN Objects #
 
+resource "fortios_firewall_address" "Proxmox-FQDN" {
+    name = "proxmox.com"
+    type = "fqdn"
+    fqdn = "proxmox.com"
+}
+
 resource "fortios_firewall_address" "Ubuntu-FQDN" {
     name = "ports.ubuntu.com"
     type = "fqdn"
