@@ -152,6 +152,10 @@ resource "fortios_firewall_policy" "permit-servers-to-wan" {
   }
 
   service {
+    name = "NTP"
+  }
+
+  service {
     name = "HTTP"
   }
 
@@ -192,10 +196,6 @@ resource "fortios_firewall_policy" "permit-administration-to-wan" {
 
   service {
     name = "DNS"
-  }
-
-  service {
-    name = "NTP"
   }
 
   service {
