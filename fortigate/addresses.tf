@@ -470,6 +470,12 @@ resource "fortios_firewall_address" "WebReconVPS_04282024_104_36_85_120" {
     comment  = "RedoubtNET-VPS-04282024"
 }
 
+resource "fortios_firewall_address" "CARINet_WebAttacks_71_6_134_230" {
+    name     = "71.6.134.230"
+    subnet   = "71.6.134.230/32"
+    comment  = "CARINet_WebAttacks_05132024"
+}
+
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     allow_routing = "disable"
     color         = 6
@@ -483,6 +489,10 @@ resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
 
     member {
         name = fortios_firewall_address.WebReconVPS_04282024_104_36_85_120.name
+    }
+
+    member {
+        name = fortios_firewall_address.CARINet_WebAttacks_71_6_134_230.name
     }
 
 }
