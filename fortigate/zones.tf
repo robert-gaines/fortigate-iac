@@ -28,6 +28,11 @@ resource "fortios_system_zone" "deception" {
   name      = "deception"
 }
 
+resource "fortios_system_zone" "wireless" {
+  intrazone = "deny"
+  name      = "deception"
+}
+
 resource "fortios_system_zone" "vpn" {
   intrazone = "deny"
   name      = "vpn"
