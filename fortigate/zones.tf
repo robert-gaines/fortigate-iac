@@ -30,7 +30,7 @@ resource "fortios_system_zone" "deception" {
 
 resource "fortios_system_zone" "wireless" {
   intrazone = "deny"
-  name      = "deception"
+  name      = "wireless"
 }
 
 resource "fortios_system_zone" "vpn" {
