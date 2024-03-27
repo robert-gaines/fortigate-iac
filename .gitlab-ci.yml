@@ -5,7 +5,7 @@ stages:
 terraform:
   stage: plan
   before_script:
-    - cd /home/administrator/residence-iac/fortigate
+    - cd /tmp/residence-iac/fortigate
   script:
     - export TF_VAR_FORTIOS_TOKEN="$TF_FORTIOS_TOKEN"
     - terraform init -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
@@ -16,7 +16,7 @@ terraform:
 terraform_apply:
   stage: apply
   before_script:
-  - cd /home/administrator/residence-iac/fortigate
+  - cd /tmp/residence-iac/fortigate
   script:
     - export TF_VAR_FORTIOS_TOKEN="$TF_FORTIOS_TOKEN"
     - terraform init -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
