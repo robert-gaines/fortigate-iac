@@ -96,3 +96,16 @@ resource "fortios_system_interface" "deception" {
   interface   = "fortilink"
   color       = 10
 }
+
+resource "fortios_system_interface" "wireless" {
+  ip          = "10.128.70.1 255.255.252.0"
+  name        = "v70-wireless"
+  role        = "lan"
+  type        = "vlan"
+  vlanid      = 70  
+  vdom        = "root"
+  mode        = "static"
+  status      = "up"
+  interface   = "fortilink"
+  color       = 13
+}
