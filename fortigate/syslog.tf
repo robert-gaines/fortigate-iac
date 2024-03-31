@@ -45,3 +45,26 @@ resource "fortios_logsyslogd2_filter" "syslog-filter-two" {
   sniffer_traffic   = "enable"
   ssh               = "enable"
 }
+
+resource "fortios_logsyslogd3_setting" "syslog-config-three" {
+    status        = "enable"
+    enc_algorithm = "disable"
+    mode          = "udp"
+    port          = "1514"
+    server        = "10.128.10.7"
+    facility      =  "local7"
+    interface     = "servers"
+    source_ip     = "10.128.10.1"
+}
+
+resource "fortios_logsyslogd3_filter" "syslog-filter-three" {
+  anomaly           = "enable"
+  dns               = "enable"
+  filter_type       = "include"
+  forward_traffic   = "enable"
+  local_traffic     = "enable"
+  multicast_traffic = "enable"
+  severity          = "information"
+  sniffer_traffic   = "enable"
+  ssh               = "enable"
+}
