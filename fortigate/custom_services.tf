@@ -1,4 +1,14 @@
 
+resource "fortios_firewallservice_custom" "LDAPS" {
+  color               = 0
+  category            = "General" 
+  name                = "LDAPS"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "636"
+  visibility          = "enable"
+}
+
 resource "fortios_firewallservice_custom" "splunk-forwarder" {
   color               = 0
   category            = "General" 
@@ -17,17 +27,4 @@ resource "fortios_firewallservice_custom" "wazuh-agent" {
   protocol_number     = 6
   tcp_portrange       = "1514-1515"
   visibility          = "enable"
-}
-
-resource "fortios_firewallservice_group" "security-service-agents" {
-
-    color             = 0
-    name              = "security-service-agents"
-
-    member {
-                name  = fortios_firewallservice_custom.splunk-forwarder.name
-           }
-    member {
-                name  = fortios_firewallservice_custom.wazuh-agent.name
-           }
 }
