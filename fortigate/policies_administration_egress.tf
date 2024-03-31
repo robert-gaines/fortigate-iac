@@ -40,3 +40,44 @@ resource "fortios_firewall_policy" "permit-administration-to-wan" {
     name = "administration"
   }
 }
+
+resource "fortios_firewall_policy" "permit-administration-to-webservers" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-administration-to-webservers"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "webservers"
+  }
+
+  dstintf {
+    name = "webservers"
+  }
+
+  service {
+    name = "SSH"
+  }
+
+  service {
+    name = "HTTP"
+  }
+
+  service {
+    name = "HTTPS"
+  }
+
+  srcaddr {
+    name = "administration"
+  }
+
+  srcintf {
+    name = "administration"
+  }
+}
