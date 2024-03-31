@@ -8,8 +8,22 @@ resource "fortios_waf_profile" "waf-primary" {
     log                     = "enable"
     default_allowed_methods = "get"
   }
+
+  signature {
+    main_class {
+      id       = "50000000"
+      log      = "enable"
+      severity = "medium"
+    }
+  }
+
+  constraint {
+    method {
+      action   = "allow"
+      log      = "enable"
+      status   = "enable"
+      severity = "low"
+    }
+  }
 }
 
-resource "fortios_waf_signature" "waf-primary-signatures" {
-  fosid = "50000000"
-}
