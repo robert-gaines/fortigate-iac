@@ -4,7 +4,7 @@ resource "fortios_firewall_policy" "permit-webserver-to-wan" {
   logtraffic         = "all"
   name               = "permit-webserver-to-wan"
   schedule           = "always"
-  nat                = "disable"
+  nat                = "enable"
   utm_status         = "enable" 
   inspection_mode    = "flow" 
   av_profile         = "av-flow"
@@ -44,5 +44,5 @@ resource "fortios_firewall_policy" "permit-webserver-to-wan" {
   srcintf {
     name = "webservers"
   }
-  
+
 }
