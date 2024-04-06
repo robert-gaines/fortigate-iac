@@ -1,6 +1,7 @@
 
 
 resource "fortios_logsyslogd_setting" "syslog-config-one" {
+    # Splunk
     status        = "enable"
     enc_algorithm = "disable"
     mode          = "udp"
@@ -24,6 +25,7 @@ resource "fortios_logsyslogd_filter" "syslog-filter-one" {
 }
 
 resource "fortios_logsyslogd2_setting" "syslog-config-two" {
+    # Wazuh
     status        = "enable"
     enc_algorithm = "disable"
     mode          = "udp"
@@ -47,10 +49,11 @@ resource "fortios_logsyslogd2_filter" "syslog-filter-two" {
 }
 
 resource "fortios_logsyslogd3_setting" "syslog-config-three" {
+    # ELK
     status        = "enable"
     enc_algorithm = "disable"
     mode          = "udp"
-    port          = "1514"
+    port          = "6543"
     server        = "10.128.10.7"
     facility      =  "local7"
     interface     = "servers"

@@ -9,7 +9,8 @@ resource "fortios_firewall_policy" "permit-wan-to-webserver" {
   inspection_mode    = "flow" 
   av_profile         = "av-flow"
   ips_sensor         = "ips-primary"  
-  ssl_ssh_profile    = "certificate-inspection-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"
+  waf_profile        = "waf-primary"  
 
   dstaddr {
     name = "webserver-vip-group"
