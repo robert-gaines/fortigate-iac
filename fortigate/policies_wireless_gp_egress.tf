@@ -36,11 +36,15 @@ resource "fortios_firewall_policy" "permit-general-purpose-to-wan" {
     name = "HTTPS"
   }
 
+  service {
+    name = "DNS"
+  }
+
   srcaddr {
     name = "all"
   }
 
   srcintf {
-    name = "general-purpose"
+    name = "wireless"
   }
 }
