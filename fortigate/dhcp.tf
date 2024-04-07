@@ -17,7 +17,7 @@ resource "fortios_systemdhcp_server" "wireless-wkn-dhcp" {
   # Workstations WLAN DHCP Server
   dns_service = "default"
   ntp_service = "default"
-  fosid       = 1
+  fosid       = 2
   interface   = "res-nwk-sid-wkn"
   netmask     = "255.255.255.240"
   status      = "enable"
@@ -33,7 +33,7 @@ resource "fortios_systemdhcp_server" "wireless-iot-dhcp" {
   # IoT WLAN DHCP Server
   dns_service = "default"
   ntp_service = "default"
-  fosid       = 1
+  fosid       = 3
   interface   = "res-nwk-sid-iot"
   netmask     = "255.255.255.192"
   status      = "enable"
@@ -49,7 +49,7 @@ resource "fortios_systemdhcp_server" "wireless-gpn-dhcp" {
   # General Purpose WLAN DHCP Server
   dns_service = "default"
   ntp_service = "default"
-  fosid       = 1
+  fosid       = 4
   interface   = "res-nwk-sid-gpn"
   netmask     = "255.255.255.240"
   status      = "enable"
