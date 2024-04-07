@@ -102,10 +102,10 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-wireless-workstations-to-domain-controller" {
+resource "fortios_firewall_policy" "permit-wlan-wkstn-to-dc" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-wireless-workstations-to-domain-controller"
+  name               = "permit-wlan-wkstn-to-dc"
   schedule           = "always"
   nat                = "disable"
   utm_status         = "enable" 
@@ -137,10 +137,10 @@ resource "fortios_firewall_policy" "permit-wireless-workstations-to-domain-contr
   }
 }
 
-resource "fortios_firewall_policy" "permit-wireless-workstations-to-storage" {
+resource "fortios_firewall_policy" "permit-wlan-wkstn-to-nas" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-wireless-workstations-to-storage"
+  name               = "permit-wlan-wkstn-to-nas"
   schedule           = "always"
   nat                = "disable"
   utm_status         = "enable" 
