@@ -128,6 +128,10 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-dc" {
     name = "Windows AD"
   }
 
+  service {
+    name = "DNS"
+  }
+
   srcaddr {
     name = "wireless-workstations"
   }
@@ -172,38 +176,4 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-nas" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-wlan-mgmt-to-radius" {
-  action             = "accept"
-  logtraffic         = "all"
-  name               = "permit-wlan-mgmt-to-radius"
-  schedule           = "always"
-  nat                = "disable"
-  utm_status         = "enable" 
-  inspection_mode    = "flow" 
-  av_profile         = "av-flow"
-  ips_sensor         = "ips-primary"  
-  webfilter_profile  = "webfilter-primary"
-  application_list   = "app-control-primary"
-  ssl_ssh_profile    = "certificate-inspection-primary"  
-
-  dstaddr {
-    name = "res-vrt-prd-dss"
-  }
-
-  dstintf {
-    name = "servers"
-  }
-
-  service {
-    name = "RADIUS"
-  }
-
-  srcaddr {
-    name = "wireless-management"
-  }
-
-  srcintf {
-    name = "wireless"
-  }
-}
 
