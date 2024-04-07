@@ -59,6 +59,48 @@ resource "fortios_firewall_address" "deception" {
   visibility           = "enable"
 }
 
+# Wireless Network Address Objects
+
+resource "fortios_firewall_address" "wireless-management" {
+  allow_routing        = "disable"
+  end_ip               = "255.255.252.0"
+  name                 = "wireless-management"
+  start_ip             = "10.128.70.0"
+  subnet               = "10.128.70.0 255.255.255.252"
+  type                 = "ipmask"
+  visibility           = "enable"
+}
+
+resource "fortios_firewall_address" "wireless-workstations" {
+  allow_routing        = "disable"
+  end_ip               = "255.255.252.0"
+  name                 = "wireless-workstations"
+  start_ip             = "10.128.80.0"
+  subnet               = "10.128.80.0 255.255.255.240"
+  type                 = "ipmask"
+  visibility           = "enable"
+}
+
+resource "fortios_firewall_address" "wireless-iot" {
+  allow_routing        = "disable"
+  end_ip               = "255.255.255.192"
+  name                 = "wireless-iot"
+  start_ip             = "10.128.90.0"
+  subnet               = "10.128.90.0 255.255.255.192"
+  type                 = "ipmask"
+  visibility           = "enable"
+}
+
+resource "fortios_firewall_address" "wireless-general-purpose" {
+  allow_routing        = "disable"
+  end_ip               = "255.255.255.240"
+  name                 = "wireless-general-purpose"
+  start_ip             = "10.128.100.0"
+  subnet               = "10.128.100.0 255.255.255.240"
+  type                 = "ipmask"
+  visibility           = "enable"
+}
+
 # Host Address Objects #
 
 resource "fortios_firewall_address" "res-phy-prd-hvr-pmx-1" {
