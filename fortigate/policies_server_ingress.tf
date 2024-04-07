@@ -152,7 +152,7 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-nas" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
-    name = "res-prd-prd-nas"
+    name = "res-phy-prd-nas"
   }
 
   dstintf {
