@@ -73,7 +73,7 @@ resource "fortios_firewall_address" "wireless-management" {
 
 resource "fortios_firewall_address" "wireless-workstations" {
   allow_routing        = "disable"
-  end_ip               = "255.255.252.0"
+  end_ip               = "255.255.255.240"
   name                 = "wireless-workstations"
   start_ip             = "10.128.80.0"
   subnet               = "10.128.80.0 255.255.255.240"
