@@ -13,7 +13,7 @@ resource "fortios_systemdhcp_server" "v70-wireless-dhcp" {
   }
 }
 
-resource "fortios_systemdhcp_server" "wireless-iot-dhcp" {
+resource "fortios_systemdhcp_server" "wireless-wkn-dhcp" {
   # Workstations WLAN DHCP Server
   dns_service = "default"
   ntp_service = "default"
