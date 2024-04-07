@@ -23,9 +23,9 @@ resource "fortios_systemdhcp_server" "wireless-wkn-dhcp" {
   status      = "enable"
 
   ip_range {
-    end_ip   = "10.128.80.2"
+    end_ip   = "10.128.80.14"
     id       = 1
-    start_ip = "10.128.80.14"
+    start_ip = "10.128.80.2"
   }
 }
 
@@ -39,9 +39,9 @@ resource "fortios_systemdhcp_server" "wireless-iot-dhcp" {
   status      = "enable"
 
   ip_range {
-    end_ip   = "10.128.90.2"
+    end_ip   = "10.128.90.62"
     id       = 1
-    start_ip = "10.128.90.62"
+    start_ip = "10.128.90.2"
   }
 }
 
@@ -55,8 +55,8 @@ resource "fortios_systemdhcp_server" "wireless-gpn-dhcp" {
   status      = "enable"
 
   ip_range {
-    end_ip   = "10.128.100.2"
+    end_ip   = "10.128.100.14"
     id       = 1
-    start_ip = "10.128.100.14"
+    start_ip = "10.128.100.2"
   }
 }
