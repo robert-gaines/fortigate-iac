@@ -13,7 +13,7 @@ resource "fortios_firewall_policy" "permit-general-purpose-to-wan" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
-    name = "all"
+    name = "PermittedCountries"
   }
   dstintf {
     name = "virtual-wan-link"

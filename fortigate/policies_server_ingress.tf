@@ -102,3 +102,73 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-wireless-workstations-to-domain-controller" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wireless-workstations-to-domain-controller"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  webfilter_profile  = "webfilter-primary"
+  application_list   = "app-control-primary"
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-dss"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "Windows AD"
+  }
+
+  srcaddr {
+    name = "wireless-workstations"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-wireless-workstations-to-storage" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wireless-workstations-to-storage"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  webfilter_profile  = "webfilter-primary"
+  application_list   = "app-control-primary"
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-prd-prd-nas"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "SMB"
+  }
+
+  srcaddr {
+    name = "wireless-workstations"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+
