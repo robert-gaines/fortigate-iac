@@ -1,7 +1,7 @@
-resource "fortios_firewall_policy" "permit-general-purpose-to-wan" {
+resource "fortios_firewall_policy" "permit-wireless-iot-to-wan" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-general-purpose-to-wan"
+  name               = "permit-wireless-iot-to-wan"
   schedule           = "always"
   nat                = "enable"
   utm_status         = "enable" 
@@ -13,7 +13,7 @@ resource "fortios_firewall_policy" "permit-general-purpose-to-wan" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
-    name = "all"
+    name = "PermittedCountries"
   }
   dstintf {
     name = "virtual-wan-link"
@@ -31,10 +31,9 @@ resource "fortios_firewall_policy" "permit-general-purpose-to-wan" {
     name = "DNS"
   }
   srcaddr {
-    name = "wireless-general-purpose"
+    name = "wireless-iot"
   }
   srcintf {
     name = "wireless"
   }
 }
-

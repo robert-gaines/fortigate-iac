@@ -63,7 +63,7 @@ resource "fortios_firewall_address" "deception" {
 
 resource "fortios_firewall_address" "wireless-management" {
   allow_routing        = "disable"
-  end_ip               = "255.255.252.0"
+  end_ip               = "255.255.255.252"
   name                 = "wireless-management"
   start_ip             = "10.128.70.0"
   subnet               = "10.128.70.0 255.255.255.252"
