@@ -19,6 +19,7 @@ resource "fortios_systemdhcp_server" "wireless-wkn-dhcp" {
   interface   = "res-nwk-sid-wkn"
   netmask     = "255.255.255.240"
   status      = "enable"
+  default_gateway = "default"
 
   ip_range {
     end_ip   = "10.128.80.14"
