@@ -57,16 +57,10 @@ resource "fortios_firewall_policy" "permit-wireless-workstations-to-wan" {
     name = "virtual-wan-link"
   }
   service {
-    name = "NTP"
-  }
-  service {
     name = "HTTP"
   }
   service {
     name = "HTTPS"
-  }
-  service {
-    name = "DNS"
   }
   srcaddr {
     name = "wireless-workstations"
