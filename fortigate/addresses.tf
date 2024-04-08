@@ -406,7 +406,7 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
 
 resource "fortios_firewall_addrgrp" "SecurityServers" {
     allow_routing = "disable"
-    color         = 20
+    color         = 21
     exclude       = "disable"
     name          = "SecurityServers"
     visibility    = "enable"
