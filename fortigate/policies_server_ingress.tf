@@ -58,6 +58,10 @@ resource "fortios_firewall_policy" "permit-webservers-to-servers" {
     name = "security-service-agents"
   }
 
+    service {
+    name = "DNS"
+  }
+
   srcaddr {
     name = "webservers"
   }
