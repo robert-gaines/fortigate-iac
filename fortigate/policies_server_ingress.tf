@@ -58,8 +58,8 @@ resource "fortios_firewall_policy" "permit-webservers-to-servers" {
     name = "security-service-agents"
   }
 
-    service {
-    name = "DNS"
+  service {
+    name = "identity-management-services"
   }
 
   srcaddr {

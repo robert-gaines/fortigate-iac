@@ -28,3 +28,13 @@ resource "fortios_firewallservice_custom" "wazuh-agent" {
   tcp_portrange       = "1514-1515"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "elastic-agent" {
+  color               = 0
+  category            = "General" 
+  name                = "elastic-agent-agent"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "8220"
+  visibility          = "enable"
+}
