@@ -138,6 +138,16 @@ resource "fortios_firewall_address" "res-vrt-prd-ssr" {
     subnet   = "10.128.10.6/32"
 }
 
+resource "fortios_firewall_address" "res-phy-prd-nsm" {
+    name     = "res-phy-prd-nsm"
+    subnet   = "10.128.10.7/32"
+}
+
+resource "fortios_firewall_address" "res-vrt-prd-wzh" {
+    name     = "res-vrt-prd-wzh"
+    subnet   = "10.128.10.8/32"
+}
+
 resource "fortios_firewall_address" "res-phy-prd-idm" {
     name     = "res-vrt-prd-idm"
     subnet   = "10.128.10.10/32"
@@ -244,6 +254,30 @@ resource "fortios_firewall_address" "Protonmail-FQDN-2" {
     name = "mail.proton.me"
     type = "fqdn"
     fqdn = "mail.proton.me"
+}
+
+resource "fortios_firewall_address" "Protonmail-FQDN-3" {
+    name = "*.proton.mail"
+    type = "fqdn"
+    fqdn = "*.proton.mail"
+}
+
+resource "fortios_firewall_address" "Protonmail-FQDN-4" {
+    name = "*.proton.me"
+    type = "fqdn"
+    fqdn = "*.proton.me"
+}
+
+resource "fortios_firewall_address" "Stamus-Threat-Intel" {
+    name = "ti.stamus-networks.io"
+    type = "fqdn"
+    fqdn = "ti.stamus-networks.io"
+}
+
+resource "fortios_firewall_address" "Elastic-Artifacts" {
+    name = "artifacts.elastic.co"
+    type = "fqdn"
+    fqdn = "artifacts.elastic.co"
 }
 
 # Country Address Objects #
@@ -356,5 +390,36 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
   member {
             name = fortios_firewall_address.Protonmail-FQDN-2.name
          }
+  member {
+            name = fortios_firewall_address.Protonmail-FQDN-3.name
+         }
+  member {
+            name = fortios_firewall_address.Protonmail-FQDN-4.name
+         }
+  member {
+            name = fortios_firewall_address.Stamus-Threat-Intel.name
+         }
+  member {
+            name = fortios_firewall_address.Elastic-Artifacts.name
+         }
+}
+
+resource "fortios_firewall_addrgrp" "SecurityServers" {
+    allow_routing = "disable"
+    color         = 20
+    exclude       = "disable"
+    name          = "SecurityServers"
+    visibility    = "enable"
+
+    member {
+        name = fortios_firewall_address.res-vrt-prd-spk.name
+    }
+    member {
+        name = fortios_firewall_address.res-phy-prd-nsm.name
+    }
+    member {
+        name = fortios_firewall_address.res-vrt-prd-wzh.name
+    }
+
 }
 

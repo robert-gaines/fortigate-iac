@@ -153,8 +153,6 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-nas" {
   inspection_mode    = "flow" 
   av_profile         = "av-flow"
   ips_sensor         = "ips-primary"  
-  webfilter_profile  = "webfilter-primary"
-  application_list   = "app-control-primary"
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
@@ -171,6 +169,72 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-nas" {
 
   srcaddr {
     name = "wireless-workstations"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-wlan-wkstn-to-sec-svrs" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wlan-wkstn-to-sec-svrs"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "SecurityServers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "security-service-agents"
+  }
+
+  srcaddr {
+    name = "wireless-workstations"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-wlan-gpn-to-sec-svrs" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wlan-gpn-to-sec-svrs"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "SecurityServers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "security-service-agents"
+  }
+
+  srcaddr {
+    name = "wireless-general-purpose"
   }
 
   srcintf {

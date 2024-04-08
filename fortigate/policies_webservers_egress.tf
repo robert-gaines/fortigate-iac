@@ -66,14 +66,6 @@ resource "fortios_firewall_policy" "permit-webserver-to-wan" {
     name = "HTTPS"
   }
 
-  service {
-    name = "DNS"
-  }
-
-  service {
-    name = "NTP"
-  }
-
   srcaddr {
     name = "webservers"
   }
