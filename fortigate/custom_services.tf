@@ -38,3 +38,23 @@ resource "fortios_firewallservice_custom" "elastic-agent" {
   tcp_portrange       = "8220"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "kibana-default-web" {
+  color               = 0
+  category            = "General" 
+  name                = "kibana-default-web"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "5601"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "splunk-web-interface" {
+  color               = 0
+  category            = "General" 
+  name                = "splunk-web-interface"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "8000"
+  visibility          = "enable"
+}

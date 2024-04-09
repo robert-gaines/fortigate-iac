@@ -420,6 +420,9 @@ resource "fortios_firewall_addrgrp" "SecurityServers" {
     member {
         name = fortios_firewall_address.res-vrt-prd-wzh.name
     }
+    member {
+        name = fortios_firewall_address.res-vrt-prd-ssr.name
+    }
 
 }
 
