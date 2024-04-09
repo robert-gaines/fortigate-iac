@@ -263,7 +263,7 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-sec-consoles" {
   }
 
   service {
-    name = "security-service-consoles"
+    name = "security-server-consoles"
   }
 
   srcaddr {
