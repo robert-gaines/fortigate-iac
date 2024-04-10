@@ -209,6 +209,43 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-sec-svrs" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-wlan-gpn-to-dns" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wlan-gpn-to-dns"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-dss"
+  }
+
+  dstaddr {
+    name = "res-vrt-prd-idm"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "DNS"
+  }
+
+  srcaddr {
+    name = "wireless-general-purpose"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+
 resource "fortios_firewall_policy" "permit-wlan-gpn-to-sec-svrs" {
   action             = "accept"
   logtraffic         = "all"

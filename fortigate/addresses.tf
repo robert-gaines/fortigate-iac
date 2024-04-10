@@ -268,6 +268,12 @@ resource "fortios_firewall_address" "Protonmail-FQDN-4" {
     fqdn = "*.proton.me"
 }
 
+resource "fortios_firewall_address" "Protonmail-FQDN-5" {
+    name = "account.proton.me"
+    type = "fqdn"
+    fqdn = "account.proton.me"
+}
+
 resource "fortios_firewall_address" "Stamus-Threat-Intel" {
     name = "ti.stamus-networks.io"
     type = "fqdn"
@@ -395,6 +401,9 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
          }
   member {
             name = fortios_firewall_address.Protonmail-FQDN-4.name
+         }
+  member {
+            name = fortios_firewall_address.Protonmail-FQDN-5.name
          }
   member {
             name = fortios_firewall_address.Stamus-Threat-Intel.name

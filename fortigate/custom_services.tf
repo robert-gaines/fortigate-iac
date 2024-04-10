@@ -39,6 +39,16 @@ resource "fortios_firewallservice_custom" "elastic-agent" {
   visibility          = "enable"
 }
 
+resource "fortios_firewallservice_custom" "elastic-web" {
+  color               = 0
+  category            = "General" 
+  name                = "elastic-web"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "9200"
+  visibility          = "enable"
+}
+
 resource "fortios_firewallservice_custom" "kibana-default-web" {
   color               = 0
   category            = "General" 

@@ -13,6 +13,9 @@ resource "fortios_firewallservice_group" "security-service-agents" {
     member {
                 name  = fortios_firewallservice_custom.elastic-agent.name
            }
+    member {
+                name  = fortios_firewallservice_custom.elastic-web.name
+           }
 }
 
 resource "fortios_firewallservice_group" "security-server-consoles" {
