@@ -6,11 +6,10 @@ resource "fortios_firewall_policy" "permit-wan-to-webserver" {
   schedule           = "always"
   nat                = "disable"
   utm_status         = "enable" 
-  inspection_mode    = "proxy" 
-  av_profile         = "av-proxy"
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
   ips_sensor         = "ips-primary"  
-  ssl_ssh_profile    = "certificate-inspection-primary"
-  waf_profile        = "waf-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary" 
 
   dstaddr {
     name = "webserver-vip-group"
