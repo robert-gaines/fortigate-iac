@@ -312,3 +312,36 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-sec-consoles" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-wlan-wkstn-to-server-consoles" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wlan-wkstn-to-server-consoles"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "servers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "server-web-consoles"
+  }
+
+  srcaddr {
+    name = "wireless-workstations"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+

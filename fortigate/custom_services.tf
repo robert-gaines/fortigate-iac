@@ -68,3 +68,23 @@ resource "fortios_firewallservice_custom" "splunk-web-interface" {
   tcp_portrange       = "8000"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "proxmox-console" {
+  color               = 0
+  category            = "General" 
+  name                = "proxmox-console"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "8006"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "synology-console" {
+  color               = 0
+  category            = "General" 
+  name                = "synology-console"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "5001"
+  visibility          = "enable"
+}

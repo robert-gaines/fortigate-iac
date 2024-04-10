@@ -33,3 +33,18 @@ resource "fortios_firewallservice_group" "security-server-consoles" {
      member {   name = "HTTPS" }
 } 
 
+resource "fortios_firewallservice_group" "server-web-consoles" {
+
+    color             = 0
+    name              = "server-web-consoles"
+
+    member  {
+                name  = fortios_firewallservice_custom.proxmox-console.name
+            }
+    member  {
+                name  = fortios_firewallservice_custom.synology-console.name
+            }
+     member {   name = "HTTP" }
+     member {   name = "HTTPS" }
+} 
+
