@@ -312,10 +312,10 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-sec-consoles" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-wlan-wkstn-to-server-consoles" {
+resource "fortios_firewall_policy" "permit-wlan-wkstn-to-svr-web" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-wlan-wkstn-to-server-consoles"
+  name               = "permit-wlan-wkstn-to-svr-web"
   schedule           = "always"
   nat                = "disable"
   utm_status         = "enable" 
