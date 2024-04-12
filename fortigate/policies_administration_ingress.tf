@@ -51,7 +51,7 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-admin" {
   }
 
   dstintf {
-    name = "servers"
+    name = "administration"
   }
 
   service {
