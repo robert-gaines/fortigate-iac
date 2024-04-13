@@ -103,10 +103,12 @@ resource "fortios_firewall_address" "wireless-general-purpose" {
 
 # Host Address Objects #
 
-resource "fortios_firewall_address" "res-phy-prd-swp" {
-    name   = "res-phy-prd-swp"
-    subnet = "192.168.254.2/32"
-}
+# Switch OBJ is current a DHCP reservation
+# bound to the MAC
+# resource "fortios_firewall_address" "res-phy-prd-swp" {
+#     name   = "res-phy-prd-swp"
+#     subnet = "192.168.254.2/32"
+# }
 
 resource "fortios_firewall_address" "res-phy-prd-wap" {
     name   = "res-phy-prd-wap"
@@ -296,6 +298,12 @@ resource "fortios_firewall_address" "Elastic-Artifacts" {
     fqdn = "artifacts.elastic.co"
 }
 
+resource "fortios_firewall_address" "Synology-MYDS" {
+    name = "myds.synology.com"
+    type = "fqdn"
+    fqdn = "myds.synology.com"
+}
+
 # Country Address Objects #
 
 resource "fortios_firewall_address" "UnitedStates" {
@@ -420,6 +428,9 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
          }
   member {
             name = fortios_firewall_address.Elastic-Artifacts.name
+         }
+  member {
+            name = fortios_firewall_address.Synology-MYDS.name
          }
 }
 
