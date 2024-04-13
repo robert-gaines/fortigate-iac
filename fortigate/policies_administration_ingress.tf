@@ -9,8 +9,6 @@ resource "fortios_firewall_policy" "permit-workstations-to-admin" {
   inspection_mode    = "flow" 
   av_profile         = "av-flow"
   ips_sensor         = "ips-primary"  
-  webfilter_profile  = "webfilter-primary"
-  application_list   = "app-control-primary"
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
@@ -51,7 +49,7 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-admin" {
   }
 
   dstintf {
-    name = "servers"
+    name = "administration"
   }
 
   service {

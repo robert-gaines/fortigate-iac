@@ -71,6 +71,43 @@ resource "fortios_firewall_policy" "permit-webservers-to-servers" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-deception-to-servers" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-deception-to-servers"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "servers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "security-service-agents"
+  }
+
+  service {
+    name = "identity-management-services"
+  }
+
+  srcaddr {
+    name = "deception"
+  }
+
+  srcintf {
+    name = "deception"
+  }
+}
+
 resource "fortios_firewall_policy" "permit-admin-to-servers" {
   action             = "accept"
   logtraffic         = "all"
@@ -202,6 +239,43 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-sec-svrs" {
 
   srcaddr {
     name = "wireless-workstations"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-wlan-mgt-to-dns" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wlan-mgt-to-dns"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-phy-prd-wap"
+  }
+
+  dstaddr {
+    name = "servers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "DNS"
+  }
+
+  srcaddr {
+    name = "wireless-general-purpose"
   }
 
   srcintf {

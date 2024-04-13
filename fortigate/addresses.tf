@@ -103,6 +103,16 @@ resource "fortios_firewall_address" "wireless-general-purpose" {
 
 # Host Address Objects #
 
+resource "fortios_firewall_address" "res-phy-prd-swp" {
+    name   = "res-phy-prd-swp"
+    subnet = "192.168.254.2/32"
+}
+
+resource "fortios_firewall_address" "res-phy-prd-wap" {
+    name   = "res-phy-prd-wap"
+    subnet = "10.128.70.2/32"
+}
+
 resource "fortios_firewall_address" "res-phy-prd-hvr-pmx-1" {
     name     = "res-phy-prd-hvr-pmx-1"
     subnet   = "10.128.10.11/32"
