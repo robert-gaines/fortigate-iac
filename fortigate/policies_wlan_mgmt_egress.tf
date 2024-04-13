@@ -1,8 +1,8 @@
 
-resource "fortios_firewall_policy" "permit-deception-to-fgn-hosts" {
+resource "fortios_firewall_policy" "permit-wlan-mgt-to-fgn-hosts" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-deception-to-fgn-hosts"
+  name               = "permit-wlan-mgt-to-fgn-hosts"
   schedule           = "always"
   nat                = "enable"
   utm_status         = "enable" 
@@ -20,19 +20,7 @@ resource "fortios_firewall_policy" "permit-deception-to-fgn-hosts" {
   }
 
   service {
-    name = "DNS"
-  }
-
-  service {
     name = "NTP"
-  }
-
-  service {
-    name = "HTTP"
-  }
-
-  service {
-    name = "HTTPS"
   }
 
   srcaddr {
