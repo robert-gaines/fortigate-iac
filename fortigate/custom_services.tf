@@ -88,3 +88,23 @@ resource "fortios_firewallservice_custom" "synology-console" {
   tcp_portrange       = "5001"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "prometheus-exporter" {
+  color               = 0
+  category            = "General" 
+  name                = "prometheus-exporter"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "9100"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "prometheus-windows-exporter" {
+  color               = 0
+  category            = "General" 
+  name                = "prometheus-windows-exporter"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "9182"
+  visibility          = "enable"
+}
