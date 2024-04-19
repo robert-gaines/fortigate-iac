@@ -56,7 +56,7 @@ resource "fortios_firewall_policy" "permit-prometheus-to-deception" {
   }
 
   srcaddr {
-    name = "sres-phy-prd-rpi-3"
+    name = "res-phy-prd-rpi-3"
   }
 
   srcintf {
