@@ -4,6 +4,7 @@
 provider "registry.terraform.io/fortinetdev/fortios" {
   version = "1.19.0"
   hashes = [
+    "h1:TrqoDqqaNT0MkfMCaKqQ/eJwAhgGzwq6BfZKPj16dPM=",
     "h1:qarCDuzLRheYfryFnXyJVGTepLYMxuLrQgeRV43JkQ0=",
     "zh:1b3feda29c88a2f3b2d1650a11a16909378ee6b73eee9e6de25bebf229c37e77",
     "zh:3107ce0bdb82e1f30fae161eda6de37f0e4190224195a4049062f8eedc90492e",
