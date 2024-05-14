@@ -103,12 +103,10 @@ resource "fortios_firewall_address" "wireless-general-purpose" {
 
 # Host Address Objects #
 
-# Switch OBJ is current a DHCP reservation
-# bound to the MAC
-# resource "fortios_firewall_address" "res-phy-prd-swp" {
-#     name   = "res-phy-prd-swp"
-#     subnet = "192.168.254.2/32"
-# }
+resource "fortios_firewall_address" "res-phy-prd-swp" {
+     name   = "res-phy-prd-swp"
+     subnet = "192.168.254.2/32"
+}
 
 resource "fortios_firewall_address" "res-phy-prd-wap" {
     name   = "res-phy-prd-wap"
