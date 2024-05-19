@@ -72,7 +72,7 @@ resource "fortios_system_interface" "webservers" {
 }
 
 resource "fortios_system_interface" "administration" {
-  ip          = "10.128.50.1 255.255.255.252"
+  ip          = "10.128.50.1 255.255.255.240"
   name        = "v50-admin"
   role        = "lan"
   type        = "vlan"

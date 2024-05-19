@@ -168,6 +168,11 @@ resource "fortios_firewall_address" "res-vrt-prd-wsr" {
     subnet   = "10.128.40.2/32"
 }
 
+resource "fortios_firewall_address" "res-vrt-prd-swn" {
+    name     = "res-vrt-prd-swn"
+    subnet   = "10.128.50.3/32"
+}
+
 resource "fortios_firewall_address" "res-phy-prd-rpi-1" {
     name     = "res-phy-prd-rpi-1"
     subnet   = "10.128.50.2/32"
