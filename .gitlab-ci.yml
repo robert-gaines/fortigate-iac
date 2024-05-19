@@ -5,10 +5,10 @@ stages:
 terraform:
   stage: plan
   before_script:
-    - cd C:\Users\robert.gaines\Desktop\residence-iac\fortigate
+    - cd /code/residence-iac/fortigate
   script:
-    - $env:TF_VAR_FORTIOS_TOKEN = "$env:TF_FORTIOS_TOKEN"
-    - terraform init -backend-config="address=$env:TF_BACKEND_ADDRESS" -backend-config="lock_address=$env:TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$env:TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$env:TF_BACKEND_USERNAME" -backend-config="password=$env:TF_BACKEND_PASSWORD"
+    - export TF_VAR_FORTIOS_TOKEN="$TF_FORTIOS_TOKEN"
+    - terraform init -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
     - terraform plan
   tags:
     - residence-iac
@@ -16,10 +16,13 @@ terraform:
 terraform_apply:
   stage: apply
   before_script:
-    - cd C:\Users\robert.gaines\Desktop\residence-iac\fortigate
+  - cd /code/residence-iac/fortigate
   script:
-    - $env:TF_VAR_FORTIOS_TOKEN = "$env:TF_FORTIOS_TOKEN"
-    - terraform init -backend-config="address=$env:TF_BACKEND_ADDRESS" -backend-config="lock_address=$env:TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$env:TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$env:TF_BACKEND_USERNAME" -backend-config="password=$env:TF_BACKEND_PASSWORD"
+    - export TF_VAR_FORTIOS_TOKEN="$TF_FORTIOS_TOKEN"
+    - terraform init -backend-config="address=$TF_BACKEND_ADDRESS" -backend-config="lock_address=$TF_BACKEND_LOCK_ADDRESS" -backend-config="unlock_address=$TF_BACKEND_UNLOCK_ADDRESS" -backend-config="username=$TF_BACKEND_USERNAME" -backend-config="password=$TF_BACKEND_PASSWORD"
     - terraform apply --auto-approve
   tags:
     - residence-iac
+
+
+
