@@ -41,10 +41,10 @@ resource "fortios_firewall_address" "webservers" {
 
 resource "fortios_firewall_address" "administration" {
   allow_routing        = "disable"
-  end_ip               = "255.255.255.252"
+  end_ip               = "255.255.255.240"
   name                 = "administration"
   start_ip             = "10.128.50.0"
-  subnet               = "10.128.50.0 255.255.255.252"
+  subnet               = "10.128.50.0 255.255.255.240"
   type                 = "ipmask"
   visibility           = "enable"
 }
