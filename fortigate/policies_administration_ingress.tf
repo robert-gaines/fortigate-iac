@@ -65,6 +65,39 @@ resource "fortios_firewall_policy" "permit-wlan-wkstn-to-admin" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-wlan-wkstn-rdp-swn" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wlan-wkstn-rdp-swn"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-swn"
+  }
+
+  dstintf {
+    name = "administration"
+  }
+
+  service {
+    name = "RDP"
+  }
+
+  srcaddr {
+    name = "wireless-workstations"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+
 resource "fortios_firewall_policy" "permit-prometheus-to-admin" {
   action             = "accept"
   logtraffic         = "all"
