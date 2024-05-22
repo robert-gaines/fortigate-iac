@@ -2,7 +2,7 @@ resource "fortios_vpnssl_settings" "ra-vpn-config" {
   status                = "enable"
   login_attempt_limit   = 3
   login_block_time      = 60
-  login_timeout         = 0
+  login_timeout         = 30
   auth_timeout          = 0
   idle_timeout          = 0
   port                  = 4343
