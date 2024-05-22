@@ -473,10 +473,10 @@ resource "fortios_firewall_address" "WebReconVPS_04282024_104_36_85_120" {
     comment  = "RedoubtNET-VPS-04282024"
 }
 
-resource "fortios_firewall_address" "CARINet_WebAttacks_71_6_134_230" {
-    name     = "71.6.134.230"
-    subnet   = "71.6.134.230/32"
-    comment  = "CARINet_WebAttacks_05132024"
+resource "fortios_firewall_address" "CARINet_CIDR_Range_One" {
+    name     = "CARINet_CIDR_Range_One"
+    subnet   = "71.6.128.0/17"
+    comment  = "CARINet_CIDR_Range_One"
 }
 
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
@@ -495,7 +495,7 @@ resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     }
 
     member {
-        name = fortios_firewall_address.CARINet_WebAttacks_71_6_134_230.name
+        name = fortios_firewall_address.CARINet_CIDR_Range_One.name
     }
 
 }
