@@ -6,7 +6,7 @@ resource "fortios_vpnssl_settings" "ra-vpn-config" {
   auth_timeout          = 0
   idle_timeout          = 0
   port                  = 4343
-  servercert            = "Fortinet_CA_SSL"
+  servercert            = "Fortinet_Factory"
   tlsv1_3               = "enable"
   ssl_min_proto_ver     = "tls1-3"
   ciphersuite           = "TLS-AES-256-GCM-SHA384"
