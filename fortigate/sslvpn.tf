@@ -17,7 +17,15 @@ resource "fortios_vpnssl_settings" "ra-vpn-config" {
   dtls_min_proto_ver = "dtls1-2"
   reqclientcert = "enable"
 
+  source_interface {
+    name = "wan1"
+  }
+
   source_address {
     name = "PermittedCountries"
+  }
+
+  tunnel_ip_pools {
+    name = "ssl-vpn-address-range"
   }
 }
