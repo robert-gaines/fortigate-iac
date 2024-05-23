@@ -12,7 +12,7 @@ resource "fortios_firewall_policy" "permit-workstations-to-admin" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
-    name = "administration"
+    name = "res-phy-prd-rpi-1"
   }
 
   dstintf {
@@ -29,6 +29,39 @@ resource "fortios_firewall_policy" "permit-workstations-to-admin" {
 
   srcintf {
     name = "workstations"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-workstations-rdp-swn" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-workstations-rdp-swn"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-swn"
+  }
+
+  dstintf {
+    name = "administration"
+  }
+
+  service {
+    name = "RDP"
+  }
+
+  srcaddr {
+    name = "workstations"
+  }
+
+  srcintf {
+    name = "wireless"
   }
 }
 
