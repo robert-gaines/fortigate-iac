@@ -1,3 +1,12 @@
+resource "fortios_firewall_address" "DMZ" {
+  allow_routing        = "disable"
+  end_ip               = "255.255.255.192"
+  name                 = "DMZ"
+  start_ip             = "192.168.255.0"
+  subnet               = "192.168.255.0 255.255.255.192"
+  type                 = "ipmask"
+  visibility           = "enable"
+}
 
 resource "fortios_firewall_address" "servers" {
   allow_routing        = "disable"
