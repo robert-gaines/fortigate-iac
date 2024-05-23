@@ -15,6 +15,7 @@ resource "fortios_vpnssl_settings" "ra-vpn-config" {
   algorithm = "high"
   dtls_tunnel = "enable"
   dtls_min_proto_ver = "dtls1-2"
+  reqclientcert = "enable"
 
   source_address {
     name = "PermittedCountries"
