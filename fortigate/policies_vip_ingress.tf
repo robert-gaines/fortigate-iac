@@ -183,6 +183,10 @@ resource "fortios_firewall_policy" "deny-cloud-providers-to-webserver" {
     name = "OVHcloud-OVHcloud"
   }
 
+  internet_service_src_name {
+    name = "Alibaba-Alibaba.Cloud"
+  }
+
   srcintf {
     name = "virtual-wan-link"
   }
