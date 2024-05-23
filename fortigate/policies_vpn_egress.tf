@@ -44,4 +44,8 @@ resource "fortios_firewall_policy" "permit-vpn-clients-to-wan" {
   srcintf {
     name = "vpn"
   }
+
+  groups {
+    name = "vpn-users"
+  }
 }

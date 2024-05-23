@@ -30,4 +30,8 @@ resource "fortios_firewall_policy" "permit-vpn-clients-to-admin" {
   srcintf {
     name = "vpn"
   }
+
+  groups {
+    name = "vpn-users"
+  }
 }
