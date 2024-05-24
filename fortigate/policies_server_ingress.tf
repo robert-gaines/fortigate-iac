@@ -135,7 +135,7 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 
   service {
-    name = "DNS"
+    name = "identity-management-services"
   }
 
   service {
@@ -180,7 +180,7 @@ resource "fortios_firewall_policy" "permit-swn-to-adds" {
   }
 
   service {
-    name = "identity-management-services"
+    name = "Windows AD"
   }
 
   service {
