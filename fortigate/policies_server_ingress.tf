@@ -139,7 +139,11 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 
   service {
-    name = "Windows AD"
+    name = "server-web-consoles"
+  }
+
+  service {
+    name = "security-server-consoles"
   }
 
   service {
@@ -148,6 +152,39 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
 
   srcaddr {
     name = "administration"
+  }
+
+  srcintf {
+    name = "administration"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-swn-to-adds" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-swn-to-adds"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-dss"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "identity-management-services"
+  }
+
+  srcaddr {
+    name = "res-vrt-prd-swn"
   }
 
   srcintf {
