@@ -159,6 +159,39 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-wlan-admin-to-nas" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-admin-to-nas"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-phy-prd-nas"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "SMB"
+  }
+
+  srcaddr {
+    name = "res-vrt-prd-swn"
+  }
+
+  srcintf {
+    name = "administration"
+  }
+}
+
 resource "fortios_firewall_policy" "permit-swn-to-adds" {
   action             = "accept"
   logtraffic         = "all"
