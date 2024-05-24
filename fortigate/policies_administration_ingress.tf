@@ -61,7 +61,7 @@ resource "fortios_firewall_policy" "permit-workstations-rdp-swn" {
   }
 
   srcintf {
-    name = "wireless"
+    name = "workstations"
   }
 }
 
