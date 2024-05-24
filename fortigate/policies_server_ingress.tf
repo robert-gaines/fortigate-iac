@@ -183,6 +183,10 @@ resource "fortios_firewall_policy" "permit-swn-to-adds" {
     name = "identity-management-services"
   }
 
+  services {
+    name = "adds-dynamic-range"
+  }
+
   srcaddr {
     name = "res-vrt-prd-swn"
   }
