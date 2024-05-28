@@ -109,10 +109,20 @@ resource "fortios_firewallservice_custom" "prometheus-windows-exporter" {
   visibility          = "enable"
 }
 
-resource "fortios_firewallservice_custom" "adds-dynamic-range" {
+resource "fortios_firewallservice_custom" "ephemeral-range-tcp" {
   color               = 0
   category            = "General" 
-  name                = "adds-dynamic-range"
+  name                = "ephemeral-range"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "1024-49151"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "dynamic-range-tcp" {
+  color               = 0
+  category            = "General" 
+  name                = "dynamic-range"
   protocol            = "TCP"
   protocol_number     = 6
   tcp_portrange       = "49152-65535"
