@@ -213,11 +213,7 @@ resource "fortios_firewall_policy" "permit-swn-to-adds" {
   }
 
   service {
-    name = "Windows AD"
-  }
-
-  service {
-    name = "adds-dynamic-range"
+    name = "ALL"
   }
 
   srcaddr {
