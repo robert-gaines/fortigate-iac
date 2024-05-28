@@ -81,8 +81,6 @@ resource "fortios_firewall_policy" "permit-deception-to-servers" {
   inspection_mode    = "flow" 
   av_profile         = "av-flow"
   ips_sensor         = "ips-primary"  
-  webfilter_profile  = "webfilter-primary"
-  application_list   = "app-control-primary"
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
@@ -103,6 +101,39 @@ resource "fortios_firewall_policy" "permit-deception-to-servers" {
 
   srcaddr {
     name = "deception"
+  }
+
+  srcintf {
+    name = "deception"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-deception-to-jenkins" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-deception-to-jenkins"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-cds"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "ephemeral-range-tcp"
+  }
+
+  srcaddr {
+    name = "res-phy-prd-rpi-9"
   }
 
   srcintf {
