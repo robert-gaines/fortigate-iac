@@ -15,6 +15,11 @@ provider "fortios" {
 resource "fortios_system_global" "res-phy-prd-fwp-global" {
     hostname = "res-phy-prd-fwp"
     gui_theme = "onyx"
+    admin_port     = 8000
+    admin_sport    = 8443
+    admin_ssh_port = 8222
+    admin_telnet   = 8223
+    admin_forticloud_sso_login = "disable"
 }
 
 resource "fortios_ips_global" "res-phy-prd-fwpglobal-ips" {
