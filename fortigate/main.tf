@@ -15,7 +15,7 @@ provider "fortios" {
 resource "fortios_system_global" "res-phy-prd-fwp-global" {
     hostname = "res-phy-prd-fwp"
     gui_theme = "onyx"
-    admin_port        = 8000
+    admin_port        = 8080
     admin_sport       = 8443
     admin_ssh_port    = 8222
     admin_telnet_port = 8223
