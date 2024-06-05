@@ -109,6 +109,46 @@ resource "fortios_firewallservice_custom" "prometheus-windows-exporter" {
   visibility          = "enable"
 }
 
+resource "fortios_firewallservice_custom" "BACNET" {
+  color               = 0
+  category            = "General" 
+  name                = "BACNET"
+  protocol            = "UDP"
+  protocol_number     = 17
+  udp_portrange       = "47808"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "ETHERNETIP" {
+  color               = 0
+  category            = "General" 
+  name                = "ETHERNETIP"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "44818"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "MODBUS" {
+  color               = 0
+  category            = "General" 
+  name                = "MODBUS"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "502"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "S7-PLC" {
+  color               = 0
+  category            = "General" 
+  name                = "S7-PLC"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "102"
+  visibility          = "enable"
+}
+
 resource "fortios_firewallservice_custom" "ephemeral-range-tcp" {
   color               = 0
   category            = "General" 
