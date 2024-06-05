@@ -109,15 +109,15 @@ resource "fortios_firewallservice_custom" "prometheus-windows-exporter" {
   visibility          = "enable"
 }
 
-resource "fortios_firewallservice_custom" "BACNET" {
-  color               = 0
-  category            = "General" 
-  name                = "BACNET"
-  protocol            = "UDP"
-  protocol_number     = 17
-  udp_portrange       = "47808"
-  visibility          = "enable"
-}
+# resource "fortios_firewallservice_custom" "BACNET" {
+#   color               = 0
+#   category            = "General" 
+#   name                = "BACNET"
+#   protocol            = "UDP"
+#   protocol_number     = 17
+#   udp_portrange       = "47808"
+#   visibility          = "enable"
+# }
 
 resource "fortios_firewallservice_custom" "ETHERNETIP" {
   color               = 0
