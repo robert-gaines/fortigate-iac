@@ -274,3 +274,35 @@ resource "fortios_firewall_policy" "deny-misc-threats-to-webserver" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-wan-to-honeypots" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-wan-to-honeypots"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary" 
+
+  dstaddr {
+    name = "honeypot-vip-group"
+  }
+
+  dstintf {
+    name = "deception"
+  }
+
+  service {
+    name = "honeypot-services"
+  }
+
+  srcaddr {
+    name = "all"
+  }
+
+  srcintf {
+    name = "virtual-wan-link"
+  }
+}
