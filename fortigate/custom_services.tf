@@ -114,7 +114,7 @@ resource "fortios_firewallservice_custom" "BACNET" {
   category            = "General" 
   name                = "BACNET"
   protocol            = "UDP"
-  protocol_number     = 17
+  # protocol_number     = 17
   udp_portrange       = "47808"
   visibility          = "enable"
 }
