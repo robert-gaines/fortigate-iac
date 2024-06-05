@@ -257,6 +257,28 @@ resource "fortios_firewall_address" "res-phy-prd-rpi-12" {
     subnet   = "10.128.60.5/32"
 }
 
+# Honeypot Objects
+
+resource "fortios_firewall_address" "honeypot-conpot-plc" {
+    name     = "honeypot-conpot-plc"
+    subnet   = "10.128.60.15/32"
+}
+
+resource "fortios_firewall_address" "honeypot-conpot-ethernetip" {
+    name     = "honeypot-conpot-ethernetip"
+    subnet   = "10.128.60.14/32"
+}
+
+resource "fortios_firewall_address" "honeypot-conpot-bacnet" {
+    name     = "honeypot-conpot-bacnet"
+    subnet   = "10.128.60.13/32"
+}
+
+resource "fortios_firewall_address" "honeypot-conpot-modbus" {
+    name     = "honeypot-conpot-modbus"
+    subnet   = "10.128.60.11/32"
+}
+
 # FQDN Objects #
 
 resource "fortios_firewall_address" "Proxmox-FQDN" {
