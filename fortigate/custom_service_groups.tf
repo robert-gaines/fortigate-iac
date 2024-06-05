@@ -54,7 +54,7 @@ resource "fortios_firewallservice_group" "honeypot-services" {
     name              = "honeypot-services"
 
     member {
-                name  = fortios_firewallservice_custom.BACENT.name
+                name  = fortios_firewallservice_custom.BACNET.name
            }
     member {
                 name  = fortios_firewallservice_custom.MODBUS.name
