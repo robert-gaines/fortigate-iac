@@ -164,10 +164,10 @@ resource "fortios_firewall_policy" "permit-prometheus-to-admin" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-prometheus-to-win-exporter" {
+resource "fortios_firewall_policy" "permit-prm-to-win-exporter" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-prometheus-to-win-exporter"
+  name               = "permit-prm-to-win-exporter"
   schedule           = "always"
   nat                = "disable"
   utm_status         = "enable" 
