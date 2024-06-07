@@ -163,3 +163,36 @@ resource "fortios_firewall_policy" "permit-prometheus-to-admin" {
     name = "servers"
   }
 }
+
+resource "fortios_firewall_policy" "permit-prometheus-to-win-exporter" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-prometheus-to-win-exporter"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-phy-prd-swn"
+  }
+
+  dstintf {
+    name = "administration"
+  }
+
+  service {
+    name = "prometheus-windows-exporter"
+  }
+
+  srcaddr {
+    name = "res-phy-prd-rpi-3"
+  }
+
+  srcintf {
+    name = "servers"
+  }
+}
