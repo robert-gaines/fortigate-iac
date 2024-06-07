@@ -164,35 +164,35 @@ resource "fortios_firewall_policy" "permit-prometheus-to-admin" {
   }
 }
 
-# resource "fortios_firewall_policy" "permit-adm-win-exporter" {
-#   action             = "accept"
-#   logtraffic         = "all"
-#   name               = "permit-adm-win-exporter"
-#   schedule           = "always"
-#   nat                = "disable"
-#   utm_status         = "enable" 
-#   inspection_mode    = "flow" 
-#   av_profile         = "av-flow"
-#   ips_sensor         = "ips-primary"  
-#   ssl_ssh_profile    = "certificate-inspection-primary"  
+resource "fortios_firewall_policy" "permit-adm-win-exporter" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-adm-win-exporter"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
 
-#   dstaddr {
-#     name = "res-phy-prd-swn"
-#   }
+  dstaddr {
+    name = "res-vrt-prd-swn"
+  }
 
-#   dstintf {
-#     name = "administration"
-#   }
+  dstintf {
+    name = "administration"
+  }
 
-#   service {
-#     name = "prometheus-windows-exporter"
-#   }
+  service {
+    name = "prometheus-windows-exporter"
+  }
 
-#   srcaddr {
-#     name = "res-phy-prd-rpi-3"
-#   }
+  srcaddr {
+    name = "res-phy-prd-rpi-3"
+  }
 
-#   srcintf {
-#     name = "servers"
-#   }
-# }
+  srcintf {
+    name = "servers"
+  }
+}
