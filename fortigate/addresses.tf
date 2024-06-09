@@ -279,6 +279,15 @@ resource "fortios_firewall_address" "honeypot-conpot-modbus" {
     subnet   = "10.128.60.11/32"
 }
 
+resource "fortios_firewall_address" "honeypot-range" {
+  allow_routing        = "disable"
+  name                 = "honeypot-range"
+  start_ip             = "10.128.60.6"
+  end_ip               = "10.128.63.254"
+  type                 = "iprange"
+  visibility           = "enable"
+}
+
 # FQDN Objects #
 
 resource "fortios_firewall_address" "Proxmox-FQDN" {
@@ -501,6 +510,30 @@ resource "fortios_firewall_addrgrp" "SecurityServers" {
     }
     member {
         name = fortios_firewall_address.res-vrt-prd-ssr.name
+    }
+
+}
+
+# Deception Physical Hosts #
+
+resource "fortios_firewall_addrgrp" "deception-hosts" {
+    allow_routing = "disable"
+    color         = 21
+    exclude       = "disable"
+    name          = "deception-hosts"
+    visibility    = "enable"
+
+    member {
+        name = fortios_firewall_address.res-phy-prd-rpi-9.name
+    }
+    member {
+        name = fortios_firewall_address.res-phy-prd-rpi-10.name
+    }
+    member {
+        name = fortios_firewall_address.res-phy-prd-rpi-11.name
+    }
+    member {
+        name = fortios_firewall_address.res-phy-prd-rpi-12.name
     }
 
 }
