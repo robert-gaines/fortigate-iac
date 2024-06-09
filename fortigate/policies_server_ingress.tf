@@ -232,6 +232,10 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 
   service {
+    name = "puppet-primary"
+  }
+
+  service {
     name = "identity-management-services"
   }
 
