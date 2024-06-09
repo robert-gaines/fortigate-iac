@@ -168,3 +168,13 @@ resource "fortios_firewallservice_custom" "dynamic-range-tcp" {
   tcp_portrange       = "49152-65535"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "puppet-primary" {
+  color               = 0
+  category            = "General" 
+  name                = "puppet-primary"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "8140"
+  visibility          = "enable"
+}
