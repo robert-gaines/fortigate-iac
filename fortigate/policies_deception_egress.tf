@@ -37,7 +37,7 @@ resource "fortios_firewall_policy" "permit-deception-to-wan" {
   }
 
   srcaddr {
-    name = "deception"
+    name = "deception-hosts"
   }
 
   srcintf {
@@ -76,7 +76,7 @@ resource "fortios_firewall_policy" "permit-deception-to-fgn-hosts" {
   }
 
   srcaddr {
-    name = "deception"
+    name = "deception-hosts"
   }
 
   srcintf {

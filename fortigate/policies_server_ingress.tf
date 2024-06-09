@@ -100,7 +100,7 @@ resource "fortios_firewall_policy" "permit-deception-to-servers" {
   }
 
   srcaddr {
-    name = "deception"
+    name = "deception-hosts"
   }
 
   srcintf {
