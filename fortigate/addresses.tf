@@ -384,6 +384,18 @@ resource "fortios_firewall_address" "OpenVAS-Wildcard-FQDN" {
     fqdn = "*.openvas.org"
 }
 
+resource "fortios_firewall_address" "greenbone-community-feed" {
+    name = "feed.community.greenbone.net"
+    type = "fqdn"
+    fqdn = "feed.community.greenbone.net"
+}
+
+resource "fortios_firewall_address" "openvas-feed" {
+    name = "feed.openvas.org"
+    type = "fqdn"
+    fqdn = "feed.openvas.org"
+}
+
 # Country Address Objects #
 
 resource "fortios_firewall_address" "UnitedStates" {
