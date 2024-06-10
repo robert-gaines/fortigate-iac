@@ -506,6 +506,9 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
   member {
             name = fortios_firewall_address.Synology-MYDS.name
          }
+  member {
+            name = fortios_firewall_address.Greenbone-Wildcard-FQDN.name
+         }
 }
 
 resource "fortios_firewall_addrgrp" "SecurityServers" {
