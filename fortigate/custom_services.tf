@@ -178,3 +178,13 @@ resource "fortios_firewallservice_custom" "puppet-primary" {
   tcp_portrange       = "8140"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "RSYNC" {
+  color               = 0
+  category            = "General" 
+  name                = "RSYNC"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "873"
+  visibility          = "enable"
+}

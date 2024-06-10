@@ -372,6 +372,12 @@ resource "fortios_firewall_address" "Synology-MYDS" {
     fqdn = "myds.synology.com"
 }
 
+resource "fortios_firewall_address" "Greenbone-Wildcard-FQDN" {
+    name = "*.greenbone.net"
+    type = "fqdn"
+    fqdn = "*.greenbone.net"
+}
+
 # Country Address Objects #
 
 resource "fortios_firewall_address" "UnitedStates" {
