@@ -558,7 +558,7 @@ resource "fortios_firewall_addrgrp" "SecurityServers" {
 
 resource "fortios_firewall_addrgrp" "deception-hosts" {
     allow_routing = "disable"
-    color         = 21
+    color         = 11
     exclude       = "disable"
     name          = "deception-hosts"
     visibility    = "enable"

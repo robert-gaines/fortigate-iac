@@ -115,6 +115,10 @@ resource "fortios_firewall_policy" "permit-workstations-to-dmz" {
     name = "HTTPS"
   }
 
+  service {
+    name = "RDP"
+  }
+
   srcaddr {
     name = "workstations"
   }
