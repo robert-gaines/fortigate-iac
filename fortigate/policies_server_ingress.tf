@@ -450,10 +450,6 @@ resource "fortios_firewall_policy" "permit-wlan-mgt-to-dns" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
-    name = "res-phy-prd-wap"
-  }
-
-  dstaddr {
     name = "servers"
   }
 
@@ -467,6 +463,10 @@ resource "fortios_firewall_policy" "permit-wlan-mgt-to-dns" {
 
   srcaddr {
     name = "wireless-general-purpose"
+  }
+
+  srcaddr {
+    name = "res-phy-prd-wap"
   }
 
   srcintf {
