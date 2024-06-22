@@ -67,3 +67,19 @@ resource "fortios_firewallservice_group" "honeypot-services" {
            }
 }
 
+resource "fortios_firewallservice_group" "print-services" {
+
+    color             = 0
+    name              = "print-services"
+
+    member {
+                name  = fortios_firewallservice_custom.LinePrinterRead.name
+           }
+    member {
+                name  = fortios_firewallservice_custom.IPP.name
+           }
+    member {   name = "SNMP" }
+    member {   name = "HTTP" }
+    member {   name = "HTTPS" }
+}
+
