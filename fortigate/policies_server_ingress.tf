@@ -232,7 +232,7 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 
   service {
-    name = "puppet-primary"
+    name = "SMB"
   }
 
   service {

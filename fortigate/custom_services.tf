@@ -209,3 +209,12 @@ resource "fortios_firewallservice_custom" "IPP" {
   visibility          = "enable"
 }
 
+resource "fortios_firewallservice_custom" "velociraptor-web" {
+  color               = 0
+  category            = "General" 
+  name                = "velociraptor-web"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "8889"
+  visibility          = "enable"
+}
