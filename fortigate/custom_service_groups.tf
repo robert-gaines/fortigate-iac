@@ -20,17 +20,20 @@ resource "fortios_firewallservice_group" "security-service-agents" {
 
 resource "fortios_firewallservice_group" "security-server-consoles" {
 
-    color             = 0
-    name              = "security-server-consoles"
+     color             = 0
+     name              = "security-server-consoles"
 
-    member  {
+     member  {
                 name  = fortios_firewallservice_custom.kibana-default-web.name
-            }
-    member  {
+             }
+     member  {
                 name  = fortios_firewallservice_custom.splunk-web-interface.name
-            }
-     member {   name = "HTTP" }
-     member {   name = "HTTPS" }
+             }
+     member  {
+                name  = fortios_firewallservice_custom.velociraptor-web.name
+             }
+     member  {   name = "HTTP" }
+     member  {   name = "HTTPS" }
 } 
 
 resource "fortios_firewallservice_group" "server-web-consoles" {
