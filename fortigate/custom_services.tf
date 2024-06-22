@@ -188,3 +188,24 @@ resource "fortios_firewallservice_custom" "RSYNC" {
   tcp_portrange       = "873"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "LinePrinterRead" {
+  color               = 0
+  category            = "General" 
+  name                = "LinePrinterRead"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "9100"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "IPP" {
+  color               = 0
+  category            = "General" 
+  name                = "IPP"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "631"
+  visibility          = "enable"
+}
+
