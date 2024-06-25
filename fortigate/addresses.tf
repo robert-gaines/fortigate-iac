@@ -645,4 +645,12 @@ resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
         name = fortios_firewall_address.CARINet_CIDR_Range_One.name
     }
 
+    member {
+        name = fortios_firewall_address.CogentCO_Hostile_VPS.name
+    }
+
+    member {
+        name = fortios_firewall_address.IO_Hostile_VPS.name
+    }
+
 }
