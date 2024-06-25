@@ -621,9 +621,9 @@ resource "fortios_firewall_address" "CogentCO_Hostile_VPS" {
 }
 
 resource "fortios_firewall_address" "Ionos_Hostile_VPS" {
-    name     = "CogentCO_Hostile_VPS"
+    name     = "Ionos_Hostile_VPS"
     subnet   = "66.179.248.0/21"
-    comment  = "CogentCO_Hostile_VPS"
+    comment  = "Ionos_Hostile_VPS"
 }
 
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
