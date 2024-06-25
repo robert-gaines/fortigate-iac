@@ -172,6 +172,14 @@ resource "fortios_firewall_policy" "deny-cloud-providers-to-webserver" {
   }
 
   internet_service_src_name {
+    name = "Tencent-Other"
+  }
+
+  internet_service_src_name {
+    name = "Microsoft-Other"
+  }
+
+  internet_service_src_name {
     name = "Hosting-Bulletproof.Hosting"
   }
 
@@ -264,6 +272,40 @@ resource "fortios_firewall_policy" "deny-misc-threats-to-webserver" {
   srcaddr {
     name = "SupplementaryBlockList"
   }   
+
+  srcintf {
+    name = "virtual-wan-link"
+  }
+
+  service {
+    name = "ALL"
+  }
+}
+
+resource "fortios_firewall_policy" "deny-legit-scanners-to-hps" {
+  action               = "deny"
+  logtraffic           = "all"
+  name                 = "deny-legit-scanners-to-hps"
+  schedule             = "always"
+  nat                  = "disable"
+  internet_service_src = "enable"  
+  block_notification   = "enable"
+
+  dstaddr {
+    name = "honeypot-vip-group"
+  }
+
+  dstintf {
+    name = "deception"
+  }
+
+  internet_service_src_name {
+    name = "Censys-Scanner"
+  }
+
+  internet_service_src_name {
+    name = "Shodan-Scanner"
+  }
 
   srcintf {
     name = "virtual-wan-link"

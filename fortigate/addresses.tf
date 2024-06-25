@@ -614,6 +614,18 @@ resource "fortios_firewall_address" "CARINet_CIDR_Range_One" {
     comment  = "CARINet_CIDR_Range_One"
 }
 
+resource "fortios_firewall_address" "CogentCO_Hostile_VPS" {
+    name     = "CogentCO_Hostile_VPS"
+    subnet   = "38.104.100.0/24"
+    comment  = "CogentCO_Hostile_VPS"
+}
+
+resource "fortios_firewall_address" "Ionos_Hostile_VPS" {
+    name     = "CogentCO_Hostile_VPS"
+    subnet   = "66.179.248.0/21"
+    comment  = "CogentCO_Hostile_VPS"
+}
+
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     allow_routing = "disable"
     color         = 6
