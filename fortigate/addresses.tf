@@ -650,7 +650,7 @@ resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     }
 
     member {
-        name = fortios_firewall_address.IO_Hostile_VPS.name
+        name = fortios_firewall_address.Ionos_Hostile_VPS.name
     }
 
 }
