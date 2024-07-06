@@ -626,6 +626,24 @@ resource "fortios_firewall_address" "Ionos_Hostile_VPS" {
     comment  = "Ionos_Hostile_VPS"
 }
 
+resource "fortios_firewall_address" "Sneaker_Server_CIDR_One" {
+    name     = "Sneaker_Server_CIDR_One"
+    subnet   = "162.210.245.0/24"
+    comment  = "Malicious Web Activity - 07062024"
+}
+
+resource "fortios_firewall_address" "Virtuo_CIDR_Range_One" {
+    name    = "Virtuo_CIDR_Range_One"
+    subnet  = "83.147.52.0/22"
+    comment = "Malicious Web Activity - 07062024"
+}
+
+resource "fortios_firewall_address" "Godaddy_CIDR_Range_One" {
+    name    = "Godaddy_CIDR_Range_One"
+    subnet  = "72.167.32.0/20"
+    comment = "Malicious Web Activity - 07062024"
+}
+
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     allow_routing = "disable"
     color         = 6
