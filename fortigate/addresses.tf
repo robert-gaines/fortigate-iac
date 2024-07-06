@@ -671,4 +671,16 @@ resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
         name = fortios_firewall_address.Ionos_Hostile_VPS.name
     }
 
+    member {
+        name = fortios_firewall_address.Sneaker_Server_CIDR_One.name
+    }
+
+    member {
+        name = fortios_firewall_address.Virtuo_CIDR_Range_One.name
+    }
+
+    member {
+        name = fortios_firewall_address.Godaddy_CIDR_Range_One.name
+    }
+
 }
