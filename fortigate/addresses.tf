@@ -557,9 +557,6 @@ resource "fortios_firewall_addrgrp" "SecurityServers" {
         name = fortios_firewall_address.res-vrt-prd-ssr.name
     }
     member {
-        name = fortios_firewall_address.res-vrt-prd-akm.name
-    }
-    member {
         name = fortios_firewall_address.res-vrt-prd-vcr.name
     }
 
