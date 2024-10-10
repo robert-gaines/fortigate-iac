@@ -260,7 +260,7 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-wlan-admin-to-nas" {
+resource "fortios_firewall_policy" "permit-admin-to-nas" {
   action             = "accept"
   logtraffic         = "all"
   name               = "permit-admin-to-nas"
@@ -290,6 +290,10 @@ resource "fortios_firewall_policy" "permit-wlan-admin-to-nas" {
 
   srcaddr {
     name = "res-vrt-prd-swn"
+  }
+
+  srcaddr {
+    name = "res-phy-prd-rpi-1"
   }
 
   srcintf {
