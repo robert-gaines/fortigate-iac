@@ -284,6 +284,10 @@ resource "fortios_firewall_policy" "permit-wlan-admin-to-nas" {
     name = "SMB"
   }
 
+  service {
+    name = "NFS"
+    }
+
   srcaddr {
     name = "res-vrt-prd-swn"
   }
