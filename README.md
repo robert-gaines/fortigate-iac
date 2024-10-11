@@ -1,2 +1,2 @@
 # fortigate-iac
-Terraform for Firewall Configuration
+Terraform for firewall configuration
