@@ -1,2 +1,2 @@
-# residence-iac
-Residential Lab - Infrastructure as Code
+# fortigate-iac
+Terraform for Firewall Configuration
