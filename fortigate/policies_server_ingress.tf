@@ -236,6 +236,14 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 
   service {
+    name = "tcp-8080"
+  }
+
+  service {
+    name = "ephemeral-range-tcp"
+  }
+
+  service {
     name = "identity-management-services"
   }
 

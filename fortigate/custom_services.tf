@@ -218,3 +218,13 @@ resource "fortios_firewallservice_custom" "velociraptor-web" {
   tcp_portrange       = "8889"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "tcp-8080" {
+  color               = 0
+  category            = "General" 
+  name                = "tcp-8080"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "8080"
+  visibility          = "enable"
+}
