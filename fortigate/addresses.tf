@@ -157,16 +157,6 @@ resource "fortios_firewall_address" "res-phy-prd-nas" {
     subnet   = "10.128.10.3/32"
 }
 
-resource "fortios_firewall_address" "res-vrt-prd-spk" {
-    name     = "res-vrt-prd-spk"
-    subnet   = "10.128.10.5/32"
-}
-
-resource "fortios_firewall_address" "res-vrt-prd-ssr" {
-    name     = "res-vrt-prd-ssr"
-    subnet   = "10.128.10.6/32"
-}
-
 resource "fortios_firewall_address" "res-phy-prd-nsm" {
     name     = "res-phy-prd-nsm"
     subnet   = "10.128.10.7/32"
@@ -545,16 +535,10 @@ resource "fortios_firewall_addrgrp" "SecurityServers" {
     visibility    = "enable"
 
     member {
-        name = fortios_firewall_address.res-vrt-prd-spk.name
-    }
-    member {
         name = fortios_firewall_address.res-phy-prd-nsm.name
     }
     member {
         name = fortios_firewall_address.res-vrt-prd-wzh.name
-    }
-    member {
-        name = fortios_firewall_address.res-vrt-prd-ssr.name
     }
     member {
         name = fortios_firewall_address.res-vrt-prd-vcr.name
