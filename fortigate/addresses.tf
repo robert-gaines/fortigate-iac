@@ -520,6 +520,9 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
             name = fortios_firewall_address.Stamus-Threat-Intel.name
          }
   member {
+            name = fortios_firewall_address.threatfox-api-abuse-ch.name
+         }
+  member {
             name = fortios_firewall_address.Elastic-Artifacts.name
          }
   member {
