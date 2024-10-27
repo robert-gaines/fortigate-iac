@@ -391,6 +391,12 @@ resource "fortios_firewall_address" "openvas-feed" {
     fqdn = "feed.openvas.org"
 }
 
+resource "fortios_firewall_address" "threatfox-api-abuse-ch" {
+    name = "threatfox-api.abuse.ch"
+    type = "fqdn"
+    fqdn = "threatfox-api.abuse.ch"
+}
+
 # Country Address Objects #
 
 resource "fortios_firewall_address" "UnitedStates" {
