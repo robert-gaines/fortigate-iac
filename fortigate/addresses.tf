@@ -157,6 +157,21 @@ resource "fortios_firewall_address" "res-phy-prd-nas" {
     subnet   = "10.128.10.3/32"
 }
 
+resource "fortios_firewall_address" "res-vrt-prd-vsr" {
+    name     = "res-vrt-prd-vsr"
+    subnet   = "10.128.10.4/32"
+}
+
+resource "fortios_firewall_address" "res-vrt-prd-gsm" {
+    name     = "res-vrt-prd-gsm"
+    subnet   = "10.128.10.5/32"
+}
+
+resource "fortios_firewall_address" "res-vrt-prd-cms" {
+    name     = "res-vrt-prd-cms"
+    subnet   = "10.128.10.6/32"
+}
+
 resource "fortios_firewall_address" "res-phy-prd-nsm" {
     name     = "res-phy-prd-nsm"
     subnet   = "10.128.10.7/32"
@@ -172,11 +187,6 @@ resource "fortios_firewall_address" "res-phy-prd-idm" {
     subnet   = "10.128.10.10/32"
 }
 
-resource "fortios_firewall_address" "res-phy-prd-cfp" {
-    name     = "res-vrt-prd-cfp"
-    subnet   = "10.128.10.14/32"
-}
-
 resource "fortios_firewall_address" "res-phy-prd-cds" {
     name     = "res-vrt-prd-cds"
     subnet   = "10.128.10.15/32"
@@ -189,7 +199,7 @@ resource "fortios_firewall_address" "res-phy-prd-vms" {
 
 resource "fortios_firewall_address" "res-vrt-prd-vcr" {
     name     = "res-vrt-prd-vcr"
-    subnet   = "10.128.10.17/32"
+    subnet   = "10.128.10.9/32"
 }
 
 resource "fortios_firewall_address" "res-vrt-prd-wsr" {
