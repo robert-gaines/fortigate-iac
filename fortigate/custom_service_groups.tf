@@ -5,16 +5,16 @@ resource "fortios_firewallservice_group" "security-service-agents" {
     name              = "security-service-agents"
 
     member {
-                name  = fortios_firewallservice_custom.splunk-forwarder.name
+               name  = fortios_firewallservice_custom.wazuh-agent.name
            }
     member {
-                name  = fortios_firewallservice_custom.wazuh-agent.name
+               name  = fortios_firewallservice_custom.elastic-agent.name
            }
     member {
-                name  = fortios_firewallservice_custom.elastic-agent.name
+               name  = fortios_firewallservice_custom.elastic-web.name
            }
     member {
-                name  = fortios_firewallservice_custom.elastic-web.name
+               name  = fortios_firewallservice_custom.velociraptor-client.name
            }
 }
 
@@ -25,9 +25,6 @@ resource "fortios_firewallservice_group" "security-server-consoles" {
 
      member  {
                 name  = fortios_firewallservice_custom.kibana-default-web.name
-             }
-     member  {
-                name  = fortios_firewallservice_custom.splunk-web-interface.name
              }
      member  {
                 name  = fortios_firewallservice_custom.velociraptor-web.name

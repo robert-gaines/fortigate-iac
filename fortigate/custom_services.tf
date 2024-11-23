@@ -39,6 +39,36 @@ resource "fortios_firewallservice_custom" "elastic-agent" {
   visibility          = "enable"
 }
 
+resource "fortios_firewallservice_custom" "velociraptor-client" {
+  color               = 0
+  category            = "General" 
+  name                = "velociraptor-client"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "8000"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "gravwell-client-cleartext" {
+  color               = 0
+  category            = "General" 
+  name                = "gravwell-client-cleartext"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "4023"
+  visibility          = "enable"
+}
+
+resource "fortios_firewallservice_custom" "gravwell-client-tls" {
+  color               = 0
+  category            = "General" 
+  name                = "gravwell-client-tls"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "4024"
+  visibility          = "enable"
+}
+
 resource "fortios_firewallservice_custom" "elastic-web" {
   color               = 0
   category            = "General" 
