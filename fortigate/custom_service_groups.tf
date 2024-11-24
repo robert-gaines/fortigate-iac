@@ -16,6 +16,12 @@ resource "fortios_firewallservice_group" "security-service-agents" {
     member {
                name  = fortios_firewallservice_custom.velociraptor-client.name
            }
+    member {
+               name  = fortios_firewallservice_custom.gravwell-client-cleartext.name
+           }
+    member {
+               name  = fortios_firewallservice_custom.gravwell-client-tls.name
+           }
 }
 
 resource "fortios_firewallservice_group" "security-server-consoles" {

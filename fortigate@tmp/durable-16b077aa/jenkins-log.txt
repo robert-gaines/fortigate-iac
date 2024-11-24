@@ -1,0 +1,1042 @@
++ export TF_VAR_FORTIOS_TOKEN=dptNbQydb8bbm8k5tgx7x197xh9GQt
++ terraform init
+[0m[1mInitializing the backend...[0m
+[0m[1mInitializing provider plugins...[0m
+- Reusing previous version of fortinetdev/fortios from the dependency lock file
+- Using previously-installed fortinetdev/fortios v1.19.1
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
++ terraform plan
+[0m[1mfortios_firewallservice_custom.kibana-default-web: Refreshing state... [id=kibana-default-web][0m
+[0m[1mfortios_firewall_address.res-phy-prd-wap: Refreshing state... [id=res-phy-prd-wap][0m
+[0m[1mfortios_firewall_address.honeypot-conpot-ethernetip: Refreshing state... [id=honeypot-conpot-ethernetip][0m
+[0m[1mfortios_logsyslogd3_setting.syslog-config-three: Refreshing state... [id=LogSyslogd3Setting][0m
+[0m[1mfortios_firewall_address.NorthKorea: Refreshing state... [id=NorthKorea][0m
+[0m[1mfortios_firewallservice_custom.velociraptor-client: Refreshing state... [id=velociraptor-client][0m
+[0m[1mfortios_systemdhcp_server.wireless-gpn-dhcp: Refreshing state... [id=9][0m
+[0m[1mfortios_firewallservice_custom.tcp-8080: Refreshing state... [id=tcp-8080][0m
+[0m[1mfortios_firewall_policy.permit-admin-to-wkstns: Refreshing state... [id=55][0m
+[0m[1mfortios_firewall_policy.permit-wlan-gpn-to-dns: Refreshing state... [id=14][0m
+[0m[1mfortios_firewall_address.CARINet_CIDR_Range_One: Refreshing state... [id=CARINet_CIDR_Range_One][0m
+[0m[1mfortios_firewallservice_custom.BACNET: Refreshing state... [id=BACNET][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-3: Refreshing state... [id=res-phy-prd-rpi-3][0m
+[0m[1mfortios_firewall_address.honeypot-conpot-bacnet: Refreshing state... [id=honeypot-conpot-bacnet][0m
+[0m[1mfortios_firewall_policy.permit-adm-win-exporter: Refreshing state... [id=57][0m
+[0m[1mfortios_firewall_address.threatfox-api-abuse-ch: Refreshing state... [id=threatfox-api.abuse.ch][0m
+[0m[1mfortios_firewall_address.Protonmail-FQDN-5: Refreshing state... [id=account.proton.me][0m
+[0m[1mfortios_firewall_policy.permit-deception-to-jenkins: Refreshing state... [id=51][0m
+[0m[1mfortios_wirelesscontroller_apcfgprofile.wireless-ap-profile-primary: Refreshing state... [id=wireless-ap-profile-primary][0m
+[0m[1mfortios_firewallservice_custom.ETHERNETIP: Refreshing state... [id=ETHERNETIP][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wkstn-to-svr-web: Refreshing state... [id=16][0m
+[0m[1mfortios_firewall_policy.permit-vpn-clients-to-bastion: Refreshing state... [id=47][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wkstn-to-iot: Refreshing state... [id=64][0m
+[0m[1mfortios_webfilter_profile.webfilter-primary: Refreshing state... [id=webfilter-primary][0m
+[0m[1mfortios_firewall_policy.permit-wlan-mgt-to-dns: Refreshing state... [id=2][0m
+[0m[1mfortios_firewall_address.res-vrt-prd-swn: Refreshing state... [id=res-vrt-prd-swn][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-2: Refreshing state... [id=res-phy-prd-rpi-2][0m
+[0m[1mfortios_firewall_address.Virtuo_CIDR_Range_One: Refreshing state... [id=Virtuo_CIDR_Range_One][0m
+[0m[1mfortios_antivirus_profile.av-flow: Refreshing state... [id=av-flow][0m
+[0m[1mfortios_firewall_policy.permit-wkstn-to-iot-wlan: Refreshing state... [id=63][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wkstn-to-sec-consoles: Refreshing state... [id=8][0m
+[0m[1mfortios_firewall_policy.deny-cloud-providers-to-webserver: Refreshing state... [id=38][0m
+[0m[1mfortios_firewall_address.workstations: Refreshing state... [id=workstations][0m
+[0m[1mfortios_system_zone.workstations: Refreshing state... [id=workstations][0m
+[0m[1mfortios_firewall_address.res-phy-prd-hvr-pmx-1: Refreshing state... [id=res-phy-prd-hvr-pmx-1][0m
+[0m[1mfortios_firewall_address.res-phy-prd-idm: Refreshing state... [id=res-vrt-prd-idm][0m
+[0m[1mfortios_firewallservice_custom.ephemeral-range-tcp: Refreshing state... [id=ephemeral-range-tcp][0m
+[0m[1mfortios_firewall_address.ProxmoxForum-FQDN: Refreshing state... [id=forum.proxmox.com][0m
+[0m[1mfortios_firewall_policy.permit-workstations-rdp-swn: Refreshing state... [id=46][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-11: Refreshing state... [id=res-phy-prd-rpi-11][0m
+[0m[1mfortios_firewall_address.ProxmoxPVE-FQDN: Refreshing state... [id=pve.proxmox.com][0m
+[0m[1mfortios_firewall_policy.permit-prometheus-to-admin: Refreshing state... [id=6][0m
+[0m[1mfortios_firewallservice_custom.velociraptor-web: Refreshing state... [id=velociraptor-web][0m
+[0m[1mfortios_firewall_policy.permit-win-exporter-to-wlan: Refreshing state... [id=60][0m
+[0m[1mfortios_firewall_address.res-vrt-prd-vsr: Refreshing state... [id=res-vrt-prd-vsr][0m
+[0m[1mfortios_firewallservice_custom.LinePrinterRead: Refreshing state... [id=LinePrinterRead][0m
+[0m[1mfortios_firewall_address.management: Refreshing state... [id=management][0m
+[0m[1mfortios_firewallservice_custom.MODBUS: Refreshing state... [id=MODBUS][0m
+[0m[1mfortios_firewallservice_custom.S7-PLC: Refreshing state... [id=S7-PLC][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-8: Refreshing state... [id=res-phy-prd-rpi-8][0m
+[0m[1mfortios_firewall_vip.honeypot-vip-conpot-ethernetip: Refreshing state... [id=conpot-ethernetip:44818][0m
+[0m[1mfortios_firewall_policy.permit-vpn-clients-to-wan: Refreshing state... [id=43][0m
+[0m[1mfortios_waf_profile.waf-primary: Refreshing state... [id=waf-primary][0m
+[0m[1mfortios_firewallservice_custom.RSYNC: Refreshing state... [id=RSYNC][0m
+[0m[1mfortios_firewall_vip.webserver-vip-http: Refreshing state... [id=res-vrt-prd-wsr:80][0m
+[0m[1mfortios_system_interface.administration: Refreshing state... [id=v50-admin][0m
+[0m[1mfortios_firewallservice_custom.splunk-forwarder: Refreshing state... [id=splunk-forwarder][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-4: Refreshing state... [id=res-phy-prd-rpi-4][0m
+[0m[1mfortios_firewallservice_custom.elastic-web: Refreshing state... [id=elastic-web][0m
+[0m[1mfortios_firewall_policy.permit-fortilink-to-wan: Refreshing state... [id=41][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wln-to-fgn-hosts: Refreshing state... [id=32][0m
+[0m[1mfortios_firewall_address.res-vrt-prd-gsm: Refreshing state... [id=res-vrt-prd-gsm][0m
+[0m[1mfortios_firewall_vip.honeypot-vip-conpot-plc: Refreshing state... [id=conpot-plc:102][0m
+[0m[1mfortios_firewall_policy.permit-deception-to-smtp-relay: Refreshing state... [id=52][0m
+[0m[1mfortios_firewall_policy.deny-legit-scanners-to-hps: Refreshing state... [id=62][0m
+[0m[1mfortios_firewall_address.honeypot-conpot-plc: Refreshing state... [id=honeypot-conpot-plc][0m
+[0m[1mfortios_system_externalresource.honeypot-intruders: Refreshing state... [id=honeypot-intruders][0m
+[0m[1mfortios_system_interface.servers: Refreshing state... [id=v10-servers][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wkstn-to-nas: Refreshing state... [id=13][0m
+[0m[1mfortios_firewall_policy.permit-deception-to-servers: Refreshing state... [id=20][0m
+[0m[1mfortios_firewall_address.Iran: Refreshing state... [id=Iran][0m
+[0m[1mfortios_firewall_policy.permit-workstations-to-admin: Refreshing state... [id=7][0m
+[0m[1mfortios_firewallservice_custom.wazuh-agent: Refreshing state... [id=wazuh-agent][0m
+[0m[1mfortios_firewallservice_custom.prometheus-exporter: Refreshing state... [id=prometheus-exporter][0m
+[0m[1mfortios_system_externalresource.firehol-blocklist: Refreshing state... [id=firehol-blocklist][0m
+[0m[1mfortios_firewall_address.honeypot-range: Refreshing state... [id=honeypot-range][0m
+[0m[1mfortios_switchcontroller_fortilinksettings.fortilink: Refreshing state... [id=fortilink][0m
+[0m[1mfortios_firewall_policy.permit-servers-to-wan: Refreshing state... [id=24][0m
+[0m[1mfortios_firewall_policy.permit-management-to-wan: Refreshing state... [id=25][0m
+[0m[1mfortios_firewallservice_custom.puppet-primary: Refreshing state... [id=puppet-primary][0m
+[0m[1mfortios_system_global.res-phy-prd-fwp-global: Refreshing state... [id=SystemGlobal][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-6: Refreshing state... [id=res-phy-prd-rpi-6][0m
+[0m[1mfortios_firewallservice_custom.IPP: Refreshing state... [id=IPP][0m
+[0m[1mfortios_firewall_address.res-phy-prd-vms: Refreshing state... [id=res-vrt-prd-vms][0m
+[0m[1mfortios_firewall_policy.permit-administration-to-deception: Refreshing state... [id=10][0m
+[0m[1mfortios_systemdhcp_server.v70-wireless-dhcp: Refreshing state... [id=3][0m
+[0m[1mfortios_firewall_address.Protonmail-FQDN-2: Refreshing state... [id=mail.proton.me][0m
+[0m[1mfortios_system_zone.servers: Refreshing state... [id=servers][0m
+[0m[1mfortios_firewallservice_custom.dynamic-range-tcp: Refreshing state... [id=dynamic-range-tcp][0m
+[0m[1mfortios_firewall_address.ssl-vpn-address-range: Refreshing state... [id=ssl-vpn-address-range][0m
+[0m[1mfortios_systemdhcp_server.wireless-wkn-dhcp: Refreshing state... [id=12][0m
+[0m[1mfortios_firewall_policy.permit-admin-to-nas: Refreshing state... [id=67][0m
+[0m[1mfortios_systemdhcp_server.wireless-iot-dhcp: Refreshing state... [id=10][0m
+[0m[1mfortios_logsyslogd3_filter.syslog-filter-three: Refreshing state... [id=LogSyslogd3Filter][0m
+[0m[1mfortios_firewall_address.wireless-management: Refreshing state... [id=wireless-management][0m
+[0m[1mfortios_firewall_policy.permit-webserver-to-fgn-hosts: Refreshing state... [id=35][0m
+[0m[1mfortios_system_externalresource.proofpoint-emerging-threats: Refreshing state... [id=proofpoint-emerging-threats][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wkstn-to-dc: Refreshing state... [id=17][0m
+[0m[1mfortios_firewall_policy.permit-workstations-to-fgn-hosts: Refreshing state... [id=30][0m
+[0m[1mfortios_firewall_policy.permit-administration-to-webservers: Refreshing state... [id=3][0m
+[0m[1mfortios_firewall_vip.honeypot-vip-conpot-modbus: Refreshing state... [id=conpot-modbus:502][0m
+[0m[1mfortios_firewall_address.servers: Refreshing state... [id=servers][0m
+[0m[1mfortios_system_interface.webservers: Refreshing state... [id=v40-webservers][0m
+[0m[1mfortios_firewall_policy.permit-webserver-to-wan: Refreshing state... [id=29][0m
+[0m[1mfortios_firewallservice_custom.elastic-agent: Refreshing state... [id=elastic-agent][0m
+[0m[1mfortios_system_interface.wireless: Refreshing state... [id=v70-wireless][0m
+[0m[1mfortios_firewall_policy.deny-threat-objects-to-webserver: Refreshing state... [id=36][0m
+[0m[1mfortios_firewall_policy.permit-workstations-to-wan: Refreshing state... [id=28][0m
+[0m[1mfortios_firewall_policy.permit-administration-to-wan: Refreshing state... [id=26][0m
+[0m[1mfortios_antivirus_profile.av-proxy: Refreshing state... [id=av-proxy][0m
+[0m[1mfortios_firewall_policy.permit-wlan-gpn-to-sec-svrs: Refreshing state... [id=11][0m
+[0m[1mfortios_system_zone.deception: Refreshing state... [id=deception][0m
+[0m[1mfortios_firewall_address.res-vrt-prd-dss: Refreshing state... [id=res-vrt-prd-dss][0m
+[0m[1mfortios_system_zone.administration: Refreshing state... [id=administration][0m
+[0m[1mfortios_firewall_address.Ubuntu-FQDN: Refreshing state... [id=ports.ubuntu.com][0m
+[0m[1mfortios_firewall_address.WebReconVPS_04282024_104_36_85_120: Refreshing state... [id=104.36.85.120][0m
+[0m[1mfortios_firewall_address.res-vrt-prd-vcr: Refreshing state... [id=res-vrt-prd-vcr][0m
+[0m[1mfortios_firewall_address.Synology-MYDS: Refreshing state... [id=myds.synology.com][0m
+[0m[1mfortios_firewall_policy.permit-prometheus-to-webserver: Refreshing state... [id=9][0m
+[0m[1mfortios_firewallservice_custom.proxmox-console: Refreshing state... [id=proxmox-console][0m
+[0m[1mfortios_firewall_address.wireless-general-purpose: Refreshing state... [id=wireless-general-purpose][0m
+[0m[1mfortios_firewall_address.res-phy-prd-nas: Refreshing state... [id=res-phy-prd-nas][0m
+[0m[1mfortios_firewall_policy.permit-workstations-to-servers: Refreshing state... [id=4][0m
+[0m[1mfortios_firewall_policy.permit-wan-to-honeypots: Refreshing state... [id=54][0m
+[0m[1mfortios_firewall_address.DMZ: Refreshing state... [id=DMZ][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wkstn-rdp-swn: Refreshing state... [id=42][0m
+[0m[1mfortios_firewall_policy.permit-vpn-clients-to-swn: Refreshing state... [id=48][0m
+[0m[1mfortios_firewall_vip.honeypot-vip-conpot-bacnet: Refreshing state... [id=conpot-bacnet:47808][0m
+[0m[1mfortios_firewallservice_group.identity-management-services: Refreshing state... [id=identity-management-services][0m
+[0m[1mfortios_firewall_address.MalwareBot_04282024_38_68_52_153: Refreshing state... [id=38.68.52.153][0m
+[0m[1mfortios_firewall_address.wireless-iot: Refreshing state... [id=wireless-iot][0m
+[0m[1mfortios_vpnssl_settings.ra-vpn-config: Refreshing state... [id=VpnSslSettings][0m
+[0m[1mfortios_firewallservice_custom.prometheus-windows-exporter: Refreshing state... [id=prometheus-windows-exporter][0m
+[0m[1mfortios_firewall_address.res-vrt-prd-wsr: Refreshing state... [id=res-vrt-prd-wsr][0m
+[0m[1mfortios_ips_sensor.ips-primary: Refreshing state... [id=ips-primary][0m
+[0m[1mfortios_logsyslogd2_filter.syslog-filter-two: Refreshing state... [id=LogSyslogd2Filter][0m
+[0m[1mfortios_firewall_address.Protonmail-FQDN-4: Refreshing state... [id=*.proton.me][0m
+[0m[1mfortios_system_dns.res-phy-prd-fwp-dns: Refreshing state... [id=SystemDns][0m
+[0m[1mfortios_firewall_policy.permit-deception-to-fgn-hosts: Refreshing state... [id=34][0m
+[0m[1mfortios_system_externalresource.checkpoint-tor-nodes: Refreshing state... [id=checkpoint-tor-nodes][0m
+[0m[1mfortios_firewall_sslsshprofile.certificate-inspection-primary: Refreshing state... [id=certificate-inspection-primary][0m
+[0m[1mfortios_system_interface.dmz: Refreshing state... [id=dmz][0m
+[0m[1mfortios_ips_global.res-phy-prd-fwpglobal-ips: Refreshing state... [id=IpsGlobal][0m
+[0m[1mfortios_firewall_address.administration: Refreshing state... [id=administration][0m
+[0m[1mfortios_firewall_address.Stamus-Threat-Intel: Refreshing state... [id=ti.stamus-networks.io][0m
+[0m[1mfortios_firewall_address.webservers: Refreshing state... [id=webservers][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-1: Refreshing state... [id=res-phy-prd-rpi-1][0m
+[0m[1mfortios_firewall_address.Sneaker_Server_CIDR_One: Refreshing state... [id=Sneaker_Server_CIDR_One][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wkstn-to-sec-svrs: Refreshing state... [id=18][0m
+[0m[1mfortios_firewall_address.Canada: Refreshing state... [id=Canada][0m
+[0m[1mfortios_logsyslogd_setting.syslog-config-one: Refreshing state... [id=LogSyslogdSetting][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-10: Refreshing state... [id=res-phy-prd-rpi-10][0m
+[0m[1mfortios_firewall_policy.permit-wlan-wkstn-to-admin: Refreshing state... [id=15][0m
+[0m[1mfortios_firewallservice_custom.synology-console: Refreshing state... [id=synology-console][0m
+[0m[1mfortios_firewall_address.Protonmail-FQDN-1: Refreshing state... [id=protonmail.com][0m
+[0m[1mfortios_firewall_address.res-vrt-prd-cms: Refreshing state... [id=res-vrt-prd-cms][0m
+[0m[1mfortios_firewall_address.China: Refreshing state... [id=China][0m
+[0m[1mfortios_firewall_address.openvas-feed: Refreshing state... [id=feed.openvas.org][0m
+[0m[1mfortios_firewall_address.greenbone-community-feed: Refreshing state... [id=feed.community.greenbone.net][0m
+[0m[1mfortios_system_interface.workstations: Refreshing state... [id=v20-wkstns][0m
+[0m[1mfortios_firewall_policy.permit-deception-to-wan: Refreshing state... [id=33][0m
+[0m[1mfortios_firewall_address.honeypot-conpot-modbus: Refreshing state... [id=honeypot-conpot-modbus][0m
+[0m[1mfortios_firewall_address.res-vrt-prd-wzh: Refreshing state... [id=res-vrt-prd-wzh][0m
+[0m[1mfortios_firewall_policy.deny-misc-threats-to-webserver: Refreshing state... [id=40][0m
+[0m[1mfortios_system_interface.wan1: Refreshing state... [id=wan1][0m
+[0m[1mfortios_firewall_address.CogentCO_Hostile_VPS: Refreshing state... [id=CogentCO_Hostile_VPS][0m
+[0m[1mfortios_firewall_address.res-phy-prd-nsm: Refreshing state... [id=res-phy-prd-nsm][0m
+[0m[1mfortios_system_zone.webservers: Refreshing state... [id=webservers][0m
+[0m[1mfortios_firewallservice_custom.splunk-web-interface: Refreshing state... [id=splunk-web-interface][0m
+[0m[1mfortios_logsyslogd2_setting.syslog-config-two: Refreshing state... [id=LogSyslogd2Setting][0m
+[0m[1mfortios_firewall_policy.permit-workstations-to-dmz: Refreshing state... [id=45][0m
+[0m[1mfortios_firewall_address.Godaddy_CIDR_Range_One: Refreshing state... [id=Godaddy_CIDR_Range_One][0m
+[0m[1mfortios_system_interface.deception: Refreshing state... [id=v60-deception][0m
+[0m[1mfortios_firewall_policy.permit-wireless-iot-to-wan: Refreshing state... [id=31][0m
+[0m[1mfortios_system_zone.management: Refreshing state... [id=management][0m
+[0m[1mfortios_firewall_address.SouthKorea: Refreshing state... [id=SouthKorea][0m
+[0m[1mfortios_firewall_address.Proxmox-FQDN: Refreshing state... [id=proxmox.com][0m
+[0m[1mfortios_firewall_policy.permit-general-purpose-to-wan: Refreshing state... [id=22][0m
+[0m[1mfortios_application_list.app-control-primary: Refreshing state... [id=app-control-primary][0m
+[0m[1mfortios_firewall_policy.permit-prometheus-to-deception: Refreshing state... [id=12][0m
+[0m[1mfortios_firewall_address.Russia: Refreshing state... [id=Russia][0m
+[0m[1mfortios_firewall_address.Elastic-Artifacts: Refreshing state... [id=artifacts.elastic.co][0m
+[0m[1mfortios_firewall_address.Protonmail-FQDN-3: Refreshing state... [id=*.proton.mail][0m
+[0m[1mfortios_firewall_policy.permit-servers-to-fgn-hosts: Refreshing state... [id=23][0m
+[0m[1mfortios_firewall_address.res-phy-prd-hvr-pmx-3: Refreshing state... [id=res-phy-prd-hvr-pmx-3][0m
+[0m[1mfortios_firewall_policy.permit-wan-to-webserver: Refreshing state... [id=37][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-5: Refreshing state... [id=res-phy-prd-rpi-5][0m
+[0m[1mfortios_firewall_address.UnitedStates: Refreshing state... [id=UnitedStates][0m
+[0m[1mfortios_system_zone.vpn: Refreshing state... [id=vpn][0m
+[0m[1mfortios_firewall_address.res-phy-prd-cds: Refreshing state... [id=res-vrt-prd-cds][0m
+[0m[1mfortios_logsyslogd_filter.syslog-filter-one: Refreshing state... [id=LogSyslogdFilter][0m
+[0m[1mfortios_system_externalresource.cymru-bogons: Refreshing state... [id=cymru-bogons][0m
+[0m[1mfortios_system_externalresource.feodo-botnet-c2: Refreshing state... [id=feodo-botnet-c2][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-7: Refreshing state... [id=res-phy-prd-rpi-7][0m
+[0m[1mfortios_firewall_address.res-phy-prd-swp: Refreshing state... [id=res-phy-prd-swp][0m
+[0m[1mfortios_firewall_policy.permit-swn-to-adds: Refreshing state... [id=49][0m
+[0m[1mfortios_firewall_address.res-phy-prd-hvr-pmx-2: Refreshing state... [id=res-phy-prd-hvr-pmx-2][0m
+[0m[1mfortios_firewallservice_custom.LDAPS: Refreshing state... [id=LDAPS][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-12: Refreshing state... [id=res-phy-prd-rpi-12][0m
+[0m[1mfortios_firewall_policy.permit-webservers-to-servers: Refreshing state... [id=19][0m
+[0m[1mfortios_firewall_address.wireless-workstations: Refreshing state... [id=wireless-workstations][0m
+[0m[1mfortios_firewall_policy.permit-wkstn-rdp-to-wlan: Refreshing state... [id=61][0m
+[0m[1mfortios_firewall_policy.permit-wireless-workstations-to-wan: Refreshing state... [id=21][0m
+[0m[1mfortios_system_zone.wireless: Refreshing state... [id=wireless][0m
+[0m[1mfortios_firewall_address.OpenVAS-Wildcard-FQDN: Refreshing state... [id=*.openvas.org][0m
+[0m[1mfortios_firewall_policy.permit-admin-to-servers: Refreshing state... [id=5][0m
+[0m[1mfortios_firewall_policy.permit-openvas-sync: Refreshing state... [id=58][0m
+[0m[1mfortios_system_interface.management: Refreshing state... [id=v30-management][0m
+[0m[1mfortios_firewall_vip.webserver-vip-https: Refreshing state... [id=res-vrt-prd-wsr:443][0m
+[0m[1mfortios_firewall_address.Ionos_Hostile_VPS: Refreshing state... [id=Ionos_Hostile_VPS][0m
+[0m[1mfortios_firewall_policy.permit-prometheus-to-wkstns: Refreshing state... [id=56][0m
+[0m[1mfortios_firewall_policy.permit-wlan-mgt-to-fgn-hosts: Refreshing state... [id=27][0m
+[0m[1mfortios_firewall_policy.deny-threat-feeds-to-webserver: Refreshing state... [id=39][0m
+[0m[1mfortios_firewall_address.Greenbone-Wildcard-FQDN: Refreshing state... [id=*.greenbone.net][0m
+[0m[1mfortios_firewall_address.deception: Refreshing state... [id=deception][0m
+[0m[1mfortios_firewall_address.res-phy-prd-rpi-9: Refreshing state... [id=res-phy-prd-rpi-9][0m
+[0m[1mfortios_firewallservice_group.security-server-consoles: Refreshing state... [id=security-server-consoles][0m
+[0m[1mfortios_firewallservice_group.honeypot-services: Refreshing state... [id=honeypot-services][0m
+[0m[1mfortios_firewallservice_group.print-services: Refreshing state... [id=print-services][0m
+[0m[1mfortios_firewallservice_group.security-service-agents: Refreshing state... [id=security-service-agents][0m
+[0m[1mfortios_firewall_vipgrp.honeypot-vip-group: Refreshing state... [id=honeypot-vip-group][0m
+[0m[1mfortios_firewallservice_group.server-web-consoles: Refreshing state... [id=server-web-consoles][0m
+[0m[1mfortios_firewall_addrgrp.SecurityServers: Refreshing state... [id=SecurityServers][0m
+[0m[1mfortios_firewall_addrgrp.ThreatActorCountries: Refreshing state... [id=ThreatActorCountries][0m
+[0m[1mfortios_firewall_addrgrp.PermittedCountries: Refreshing state... [id=PermittedCountries][0m
+[0m[1mfortios_firewall_vipgrp.webserver-vip-group: Refreshing state... [id=webserver-vip-group][0m
+[0m[1mfortios_firewall_addrgrp.SupplementaryBlockList: Refreshing state... [id=SupplementaryBlockList][0m
+[0m[1mfortios_firewall_addrgrp.deception-hosts: Refreshing state... [id=deception-hosts][0m
+[0m[1mfortios_firewall_addrgrp.PermittedForeignHosts: Refreshing state... [id=PermittedForeignHosts][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+  [33m~[0m update in-place[0m
+
+Terraform will perform the following actions:
+
+[1m  # fortios_antivirus_profile.av-flow[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_antivirus_profile" "av-flow" {
+      [32m+[0m[0m av_block_log                     = "enable"
+        id                               = "av-flow"
+      [32m+[0m[0m inspection_mode                  = "flow-based"
+        name                             = "av-flow"
+        [90m# (27 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_antivirus_profile.av-proxy[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_antivirus_profile" "av-proxy" {
+      [32m+[0m[0m av_block_log                     = "enable"
+        id                               = "av-proxy"
+      [32m+[0m[0m inspection_mode                  = "proxy-based"
+        name                             = "av-proxy"
+        [90m# (27 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.Canada[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "Canada" {
+        id                    = "Canada"
+        name                  = "Canada"
+      [33m~[0m[0m type                  = "geography" [33m->[0m[0m "geo"
+        [90m# (42 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.China[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "China" {
+        id                    = "China"
+        name                  = "China"
+      [33m~[0m[0m type                  = "geography" [33m->[0m[0m "geo"
+        [90m# (42 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.DMZ[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "DMZ" {
+      [32m+[0m[0m end_ip                = "255.255.255.192"
+        id                    = "DMZ"
+        name                  = "DMZ"
+      [32m+[0m[0m start_ip              = "192.168.255.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.Iran[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "Iran" {
+        id                    = "Iran"
+        name                  = "Iran"
+      [33m~[0m[0m type                  = "geography" [33m->[0m[0m "geo"
+        [90m# (42 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.NorthKorea[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "NorthKorea" {
+        id                    = "NorthKorea"
+        name                  = "NorthKorea"
+      [33m~[0m[0m type                  = "geography" [33m->[0m[0m "geo"
+        [90m# (42 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.Russia[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "Russia" {
+        id                    = "Russia"
+        name                  = "Russia"
+      [33m~[0m[0m type                  = "geography" [33m->[0m[0m "geo"
+        [90m# (42 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.SouthKorea[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "SouthKorea" {
+        id                    = "SouthKorea"
+        name                  = "SouthKorea"
+      [33m~[0m[0m type                  = "geography" [33m->[0m[0m "geo"
+        [90m# (42 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.UnitedStates[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "UnitedStates" {
+        id                    = "UnitedStates"
+        name                  = "UnitedStates"
+      [33m~[0m[0m type                  = "geography" [33m->[0m[0m "geo"
+        [90m# (42 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.administration[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "administration" {
+      [32m+[0m[0m end_ip                = "255.255.255.240"
+        id                    = "administration"
+        name                  = "administration"
+      [32m+[0m[0m start_ip              = "10.128.50.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.deception[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "deception" {
+      [32m+[0m[0m end_ip                = "255.255.252.0"
+        id                    = "deception"
+        name                  = "deception"
+      [32m+[0m[0m start_ip              = "10.128.60.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.honeypot-range[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "honeypot-range" {
+        id                    = "honeypot-range"
+        name                  = "honeypot-range"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (42 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.management[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "management" {
+      [32m+[0m[0m end_ip                = "255.255.255.252"
+        id                    = "management"
+        name                  = "management"
+      [32m+[0m[0m start_ip              = "10.128.30.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.servers[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "servers" {
+      [32m+[0m[0m end_ip                = "255.255.255.0"
+        id                    = "servers"
+        name                  = "servers"
+      [32m+[0m[0m start_ip              = "10.128.10.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.ssl-vpn-address-range[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "ssl-vpn-address-range" {
+      [32m+[0m[0m end_ip                = "255.255.255.240"
+        id                    = "ssl-vpn-address-range"
+        name                  = "ssl-vpn-address-range"
+      [32m+[0m[0m start_ip              = "10.128.110.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.webservers[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "webservers" {
+      [32m+[0m[0m end_ip                = "255.255.255.252"
+        id                    = "webservers"
+        name                  = "webservers"
+      [32m+[0m[0m start_ip              = "10.128.40.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.wireless-general-purpose[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "wireless-general-purpose" {
+      [32m+[0m[0m end_ip                = "255.255.255.240"
+        id                    = "wireless-general-purpose"
+        name                  = "wireless-general-purpose"
+      [32m+[0m[0m start_ip              = "10.128.100.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.wireless-iot[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "wireless-iot" {
+      [32m+[0m[0m end_ip                = "255.255.255.192"
+        id                    = "wireless-iot"
+        name                  = "wireless-iot"
+      [32m+[0m[0m start_ip              = "10.128.90.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.wireless-management[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "wireless-management" {
+      [32m+[0m[0m end_ip                = "255.255.255.252"
+        id                    = "wireless-management"
+        name                  = "wireless-management"
+      [32m+[0m[0m start_ip              = "10.128.70.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.wireless-workstations[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "wireless-workstations" {
+      [32m+[0m[0m end_ip                = "255.255.255.240"
+        id                    = "wireless-workstations"
+        name                  = "wireless-workstations"
+      [32m+[0m[0m start_ip              = "10.128.80.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_address.workstations[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_address" "workstations" {
+      [32m+[0m[0m end_ip                = "255.255.255.240"
+        id                    = "workstations"
+        name                  = "workstations"
+      [32m+[0m[0m start_ip              = "10.128.20.0"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (40 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_addrgrp.PermittedCountries[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_addrgrp" "PermittedCountries" {
+        id                    = "PermittedCountries"
+        name                  = "PermittedCountries"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_addrgrp.PermittedForeignHosts[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
+        id                    = "PermittedForeignHosts"
+        name                  = "PermittedForeignHosts"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+        [90m# (15 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_addrgrp.SecurityServers[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_addrgrp" "SecurityServers" {
+        id                    = "SecurityServers"
+        name                  = "SecurityServers"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+        [90m# (3 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_addrgrp.SupplementaryBlockList[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
+        id                    = "SupplementaryBlockList"
+        name                  = "SupplementaryBlockList"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+        [90m# (8 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_addrgrp.ThreatActorCountries[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_addrgrp" "ThreatActorCountries" {
+        id                    = "ThreatActorCountries"
+        name                  = "ThreatActorCountries"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+        [90m# (5 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_addrgrp.deception-hosts[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_addrgrp" "deception-hosts" {
+        id                    = "deception-hosts"
+        name                  = "deception-hosts"
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+        [90m# (4 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_policy.permit-webserver-to-fgn-hosts[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_policy" "permit-webserver-to-fgn-hosts" {
+        id                             = "35"
+        name                           = "permit-webserver-to-fgn-hosts"
+        [90m# (148 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m dstaddr {
+          [31m-[0m[0m name = "all" [90m-> null[0m[0m
+        }
+      [32m+[0m[0m dstaddr {
+          [32m+[0m[0m name = "PermittedForeignHosts"
+        }
+
+        [90m# (5 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_policy.permit-wlan-wkstn-to-dc[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_policy" "permit-wlan-wkstn-to-dc" {
+        id                             = "17"
+        name                           = "permit-wlan-wkstn-to-dc"
+        [90m# (148 unchanged attributes hidden)[0m[0m
+
+      [32m+[0m[0m service {
+          [32m+[0m[0m name = "DNS"
+        }
+
+        [90m# (5 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_sslsshprofile.certificate-inspection-primary[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_sslsshprofile" "certificate-inspection-primary" {
+        id                             = "certificate-inspection-primary"
+        name                           = "certificate-inspection-primary"
+        [90m# (23 unchanged attributes hidden)[0m[0m
+
+      [33m~[0m[0m ftps {
+          [32m+[0m[0m ports                       = "990"
+            [90m# (15 unchanged attributes hidden)[0m[0m
+        }
+
+      [33m~[0m[0m imaps {
+          [32m+[0m[0m ports                       = "993"
+            [90m# (15 unchanged attributes hidden)[0m[0m
+        }
+
+      [33m~[0m[0m pop3s {
+          [32m+[0m[0m ports                       = "995"
+            [90m# (15 unchanged attributes hidden)[0m[0m
+        }
+
+      [33m~[0m[0m smtps {
+          [32m+[0m[0m ports                       = "465"
+            [90m# (15 unchanged attributes hidden)[0m[0m
+        }
+
+      [33m~[0m[0m ssl {
+          [32m+[0m[0m invalid_server_cert         = "block"
+          [33m~[0m[0m min_allowed_ssl_version     = "tls-1.1" [33m->[0m[0m "tls-1.0"
+            [90m# (14 unchanged attributes hidden)[0m[0m
+        }
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_vip.honeypot-vip-conpot-bacnet[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_vip" "honeypot-vip-conpot-bacnet" {
+      [33m~[0m[0m extport                               = "0-65535" [33m->[0m[0m "47808"
+        id                                    = "conpot-bacnet:47808"
+        name                                  = "conpot-bacnet:47808"
+        [90m# (84 unchanged attributes hidden)[0m[0m
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_vip.honeypot-vip-conpot-ethernetip[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_vip" "honeypot-vip-conpot-ethernetip" {
+      [33m~[0m[0m extport                               = "0-65535" [33m->[0m[0m "44818"
+        id                                    = "conpot-ethernetip:44818"
+        name                                  = "conpot-ethernetip:44818"
+        [90m# (84 unchanged attributes hidden)[0m[0m
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_vip.honeypot-vip-conpot-modbus[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_vip" "honeypot-vip-conpot-modbus" {
+      [33m~[0m[0m extport                               = "0-65535" [33m->[0m[0m "502"
+        id                                    = "conpot-modbus:502"
+        name                                  = "conpot-modbus:502"
+        [90m# (84 unchanged attributes hidden)[0m[0m
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_vip.honeypot-vip-conpot-plc[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_vip" "honeypot-vip-conpot-plc" {
+      [33m~[0m[0m extport                               = "0-65535" [33m->[0m[0m "502"
+        id                                    = "conpot-plc:102"
+        name                                  = "conpot-plc:102"
+        [90m# (84 unchanged attributes hidden)[0m[0m
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_vip.webserver-vip-http[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_vip" "webserver-vip-http" {
+      [33m~[0m[0m extport                               = "0-65535" [33m->[0m[0m "443"
+        id                                    = "res-vrt-prd-wsr:80"
+        name                                  = "res-vrt-prd-wsr:80"
+        [90m# (84 unchanged attributes hidden)[0m[0m
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewall_vip.webserver-vip-https[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewall_vip" "webserver-vip-https" {
+      [33m~[0m[0m extport                               = "0-65535" [33m->[0m[0m "443"
+        id                                    = "res-vrt-prd-wsr:443"
+        name                                  = "res-vrt-prd-wsr:443"
+        [90m# (84 unchanged attributes hidden)[0m[0m
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.BACNET[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "BACNET" {
+        id                    = "BACNET"
+        name                  = "BACNET"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 17
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.ETHERNETIP[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "ETHERNETIP" {
+        id                    = "ETHERNETIP"
+        name                  = "ETHERNETIP"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.IPP[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "IPP" {
+        id                    = "IPP"
+        name                  = "IPP"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.LDAPS[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "LDAPS" {
+        id                    = "LDAPS"
+        name                  = "LDAPS"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.LinePrinterRead[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "LinePrinterRead" {
+        id                    = "LinePrinterRead"
+        name                  = "LinePrinterRead"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.MODBUS[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "MODBUS" {
+        id                    = "MODBUS"
+        name                  = "MODBUS"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.RSYNC[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "RSYNC" {
+        id                    = "RSYNC"
+        name                  = "RSYNC"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.S7-PLC[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "S7-PLC" {
+        id                    = "S7-PLC"
+        name                  = "S7-PLC"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.dynamic-range-tcp[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "dynamic-range-tcp" {
+        id                    = "dynamic-range-tcp"
+        name                  = "dynamic-range-tcp"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.elastic-agent[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "elastic-agent" {
+        id                    = "elastic-agent"
+        name                  = "elastic-agent"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.elastic-web[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "elastic-web" {
+        id                    = "elastic-web"
+        name                  = "elastic-web"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.ephemeral-range-tcp[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "ephemeral-range-tcp" {
+        id                    = "ephemeral-range-tcp"
+        name                  = "ephemeral-range-tcp"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.gravwell-client-cleartext[0m will be created
+[0m  [32m+[0m[0m resource "fortios_firewallservice_custom" "gravwell-client-cleartext" {
+      [32m+[0m[0m app_service_type      = (known after apply)
+      [32m+[0m[0m category              = "General"
+      [32m+[0m[0m check_reset_range     = (known after apply)
+      [32m+[0m[0m color                 = 0
+      [32m+[0m[0m dynamic_sort_subtable = "false"
+      [32m+[0m[0m fabric_object         = (known after apply)
+      [32m+[0m[0m fqdn                  = (known after apply)
+      [32m+[0m[0m get_all_tables        = "false"
+      [32m+[0m[0m helper                = (known after apply)
+      [32m+[0m[0m icmpcode              = (known after apply)
+      [32m+[0m[0m icmptype              = (known after apply)
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m iprange               = (known after apply)
+      [32m+[0m[0m name                  = "gravwell-client-cleartext"
+      [32m+[0m[0m protocol              = "TCP"
+      [32m+[0m[0m protocol_number       = 6
+      [32m+[0m[0m proxy                 = (known after apply)
+      [32m+[0m[0m sctp_portrange        = (known after apply)
+      [32m+[0m[0m session_ttl           = (known after apply)
+      [32m+[0m[0m tcp_halfclose_timer   = (known after apply)
+      [32m+[0m[0m tcp_halfopen_timer    = (known after apply)
+      [32m+[0m[0m tcp_portrange         = "4023"
+      [32m+[0m[0m tcp_rst_timer         = (known after apply)
+      [32m+[0m[0m tcp_timewait_timer    = (known after apply)
+      [32m+[0m[0m udp_idle_timer        = (known after apply)
+      [32m+[0m[0m udp_portrange         = (known after apply)
+      [32m+[0m[0m uuid                  = (known after apply)
+      [32m+[0m[0m vdomparam             = (known after apply)
+      [32m+[0m[0m visibility            = "enable"
+    }
+
+[1m  # fortios_firewallservice_custom.gravwell-client-tls[0m will be created
+[0m  [32m+[0m[0m resource "fortios_firewallservice_custom" "gravwell-client-tls" {
+      [32m+[0m[0m app_service_type      = (known after apply)
+      [32m+[0m[0m category              = "General"
+      [32m+[0m[0m check_reset_range     = (known after apply)
+      [32m+[0m[0m color                 = 0
+      [32m+[0m[0m dynamic_sort_subtable = "false"
+      [32m+[0m[0m fabric_object         = (known after apply)
+      [32m+[0m[0m fqdn                  = (known after apply)
+      [32m+[0m[0m get_all_tables        = "false"
+      [32m+[0m[0m helper                = (known after apply)
+      [32m+[0m[0m icmpcode              = (known after apply)
+      [32m+[0m[0m icmptype              = (known after apply)
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m iprange               = (known after apply)
+      [32m+[0m[0m name                  = "gravwell-client-tls"
+      [32m+[0m[0m protocol              = "TCP"
+      [32m+[0m[0m protocol_number       = 6
+      [32m+[0m[0m proxy                 = (known after apply)
+      [32m+[0m[0m sctp_portrange        = (known after apply)
+      [32m+[0m[0m session_ttl           = (known after apply)
+      [32m+[0m[0m tcp_halfclose_timer   = (known after apply)
+      [32m+[0m[0m tcp_halfopen_timer    = (known after apply)
+      [32m+[0m[0m tcp_portrange         = "4024"
+      [32m+[0m[0m tcp_rst_timer         = (known after apply)
+      [32m+[0m[0m tcp_timewait_timer    = (known after apply)
+      [32m+[0m[0m udp_idle_timer        = (known after apply)
+      [32m+[0m[0m udp_portrange         = (known after apply)
+      [32m+[0m[0m uuid                  = (known after apply)
+      [32m+[0m[0m vdomparam             = (known after apply)
+      [32m+[0m[0m visibility            = "enable"
+    }
+
+[1m  # fortios_firewallservice_custom.kibana-default-web[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "kibana-default-web" {
+        id                    = "kibana-default-web"
+        name                  = "kibana-default-web"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.prometheus-exporter[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "prometheus-exporter" {
+        id                    = "prometheus-exporter"
+        name                  = "prometheus-exporter"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.prometheus-windows-exporter[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "prometheus-windows-exporter" {
+        id                    = "prometheus-windows-exporter"
+        name                  = "prometheus-windows-exporter"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.proxmox-console[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "proxmox-console" {
+        id                    = "proxmox-console"
+        name                  = "proxmox-console"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.puppet-primary[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "puppet-primary" {
+        id                    = "puppet-primary"
+        name                  = "puppet-primary"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.splunk-forwarder[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "splunk-forwarder" {
+        id                    = "splunk-forwarder"
+        name                  = "splunk-forwarder"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.splunk-web-interface[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "splunk-web-interface" {
+        id                    = "splunk-web-interface"
+        name                  = "splunk-web-interface"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.synology-console[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "synology-console" {
+        id                    = "synology-console"
+        name                  = "synology-console"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.tcp-8080[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "tcp-8080" {
+        id                    = "tcp-8080"
+        name                  = "tcp-8080"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.velociraptor-client[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "velociraptor-client" {
+        id                    = "velociraptor-client"
+        name                  = "velociraptor-client"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.velociraptor-web[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "velociraptor-web" {
+        id                    = "velociraptor-web"
+        name                  = "velociraptor-web"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_firewallservice_custom.wazuh-agent[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_firewallservice_custom" "wazuh-agent" {
+        id                    = "wazuh-agent"
+        name                  = "wazuh-agent"
+      [33m~[0m[0m protocol              = "TCP/UDP/SCTP" [33m->[0m[0m "TCP"
+      [33m~[0m[0m protocol_number       = 0 [33m->[0m[0m 6
+      [32m+[0m[0m visibility            = "enable"
+        [90m# (24 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_logsyslogd2_filter.syslog-filter-two[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_logsyslogd2_filter" "syslog-filter-two" {
+      [32m+[0m[0m dns                   = "enable"
+      [32m+[0m[0m filter_type           = "include"
+        id                    = "LogSyslogd2Filter"
+      [32m+[0m[0m ssh                   = "enable"
+        [90m# (15 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_logsyslogd2_setting.syslog-config-two[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_logsyslogd2_setting" "syslog-config-two" {
+        id                      = "LogSyslogd2Setting"
+      [32m+[0m[0m interface               = "servers"
+        [90m# (16 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_logsyslogd3_filter.syslog-filter-three[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_logsyslogd3_filter" "syslog-filter-three" {
+      [32m+[0m[0m dns                   = "enable"
+      [32m+[0m[0m filter_type           = "include"
+        id                    = "LogSyslogd3Filter"
+      [32m+[0m[0m ssh                   = "enable"
+        [90m# (15 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_logsyslogd3_setting.syslog-config-three[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_logsyslogd3_setting" "syslog-config-three" {
+        id                      = "LogSyslogd3Setting"
+      [32m+[0m[0m interface               = "servers"
+        [90m# (16 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_logsyslogd_filter.syslog-filter-one[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_logsyslogd_filter" "syslog-filter-one" {
+      [32m+[0m[0m dns                   = "enable"
+      [32m+[0m[0m filter_type           = "include"
+        id                    = "LogSyslogdFilter"
+      [32m+[0m[0m ssh                   = "enable"
+        [90m# (15 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_logsyslogd_setting.syslog-config-one[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_logsyslogd_setting" "syslog-config-one" {
+        id                      = "LogSyslogdSetting"
+      [32m+[0m[0m interface               = "servers"
+        [90m# (16 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # fortios_system_dns.res-phy-prd-fwp-dns[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_system_dns" "res-phy-prd-fwp-dns" {
+      [32m+[0m[0m dns_over_tls             = "disable"
+        id                       = "SystemDns"
+        [90m# (23 unchanged attributes hidden)[0m[0m
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_vpnssl_settings.ra-vpn-config[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_vpnssl_settings" "ra-vpn-config" {
+        id                            = "VpnSslSettings"
+      [32m+[0m[0m tlsv1_3                       = "enable"
+        [90m# (72 unchanged attributes hidden)[0m[0m
+
+        [90m# (3 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # fortios_webfilter_profile.webfilter-primary[0m will be updated in-place
+[0m  [33m~[0m[0m resource "fortios_webfilter_profile" "webfilter-primary" {
+        id                            = "webfilter-primary"
+      [32m+[0m[0m inspection_mode               = "flow-based"
+        name                          = "webfilter-primary"
+      [32m+[0m[0m youtube_channel_status        = "disable"
+        [90m# (31 unchanged attributes hidden)[0m[0m
+
+      [33m~[0m[0m ftgd_wf {
+          [33m~[0m[0m exempt_quota         = "g21" [33m->[0m[0m "17"
+          [32m+[0m[0m rate_image_urls      = "enable"
+            [90m# (6 unchanged attributes hidden)[0m[0m
+
+            [90m# (2 unchanged blocks hidden)[0m[0m
+        }
+
+      [33m~[0m[0m web {
+          [32m+[0m[0m blacklist           = "disable"
+            [90m# (11 unchanged attributes hidden)[0m[0m
+        }
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+
+[1mPlan:[0m 2 to add, 70 to change, 0 to destroy.
+[0m[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
