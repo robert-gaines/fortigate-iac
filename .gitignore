@@ -39,3 +39,7 @@ terraform.rc
 
 # Ignore .txt
 *.txt
+
+# Ignore weird Jenkins directory
+fortigate@tmp
+
