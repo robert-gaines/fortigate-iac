@@ -141,34 +141,38 @@ resource "fortios_firewall_policy" "permit-deception-to-jenkins" {
   }
 }
 
-# resource "fortios_firewall_policy" "permit-deception-syslog-to-siem" {
-#   action             = "accept"
-#   logtraffic         = "all"
-#   name               = "permit-deception-syslog-to-siem"
-#   schedule           = "always"
-#   nat                = "disable"
-#   utm_status         = "enable" 
-#   inspection_mode    = "flow" 
-#   av_profile         = "av-flow"
-#   ips_sensor         = "ips-primary"  
-#   ssl_ssh_profile    = "certificate-inspection-primary"  
+resource "fortios_firewall_policy" "permit-deception-nfs" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-deception-nfs"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
 
-#   dstintf {
-#     name = "servers"
-#   }
+  dstintf {
+    name = "servers"
+  }
 
-#   service {
-#     name = "SYSLOG"
-#   }
+  dstaddr {
+    name = "res-phy-prd-nas"
+  }
 
-#   srcaddr {
-#     name = "deception"
-#   }
+  service {
+    name = "NFS"
+  }
 
-#   srcintf {
-#     name = "deception"
-#   }
-# }
+  srcaddr {
+    name = "deception"
+  }
+
+  srcintf {
+    name = "deception"
+  }
+}
 
 resource "fortios_firewall_policy" "permit-deception-to-smtp-relay" {
   action             = "accept"
