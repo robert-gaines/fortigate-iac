@@ -98,7 +98,7 @@ resource "fortios_system_interface" "deception" {
 }
 
 resource "fortios_system_interface" "wireless" {
-  ip          = "10.128.70.1 255.255.252.0"
+  ip          = "10.128.70.1 255.255.255.252"
   name        = "v70-wireless"
   role        = "lan"
   type        = "vlan"

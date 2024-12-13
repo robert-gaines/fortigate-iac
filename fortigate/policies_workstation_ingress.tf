@@ -4,7 +4,7 @@ resource "fortios_firewall_policy" "permit-prometheus-to-wkstns" {
   logtraffic         = "all"
   name               = "permit-prometheus-to-wkstns"
   schedule           = "always"
-  nat                = "enable"
+  nat                = "disable"
   utm_status         = "enable" 
   inspection_mode    = "flow" 
   av_profile         = "av-flow"
