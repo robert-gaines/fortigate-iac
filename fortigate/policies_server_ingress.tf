@@ -453,6 +453,39 @@ resource "fortios_firewall_policy" "permit-swn-to-adds" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-admin-to-wlan-gpn" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-admin-to-wlan-gpn"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "servers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "SSH"
+  }
+
+  srcaddr {
+    name = "wireless-general-purpose"
+  }
+
+  srcintf {
+    name = "wireless"
+  }
+}
+
 resource "fortios_firewall_policy" "permit-wlan-wkstn-to-dc" {
   action             = "accept"
   logtraffic         = "all"
