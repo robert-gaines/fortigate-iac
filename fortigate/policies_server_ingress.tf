@@ -232,18 +232,6 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
   }
 
   service {
-    name = "SMB"
-  }
-
-  service {
-    name = "tcp-8080"
-  }
-
-  service {
-    name = "ephemeral-range-tcp"
-  }
-
-  service {
     name = "identity-management-services"
   }
 
@@ -257,6 +245,121 @@ resource "fortios_firewall_policy" "permit-admin-to-servers" {
 
   service {
     name = "security-service-agents"
+  }
+
+  srcaddr {
+    name = "administration"
+  }
+
+  srcintf {
+    name = "administration"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-admin-to-identity" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-admin-to-identity"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "servers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "SSH"
+  }
+
+  service {
+    name = "identity-management-services"
+  }
+
+  srcaddr {
+    name = "administration"
+  }
+
+  srcintf {
+    name = "administration"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-admin-to-jenkins" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-admin-to-jenkins"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "servers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "tcp-8080"
+  }
+
+  service {
+    name = "HTTP"
+  }
+
+  service {
+    name = "HTTPS"
+  }
+
+  service {
+    name = "ephemeral-range-tcp"
+  }
+
+  srcaddr {
+    name = "administration"
+  }
+
+  srcintf {
+    name = "administration"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-admin-to-puppet" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-admin-to-puppet"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "servers"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "puppet-primary"
   }
 
   srcaddr {
