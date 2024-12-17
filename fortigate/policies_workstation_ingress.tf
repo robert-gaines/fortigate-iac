@@ -23,6 +23,10 @@ resource "fortios_firewall_policy" "permit-prometheus-to-wkstns" {
     name = "prometheus-windows-exporter"
   }
 
+  service {
+    name = "prometheus-exporter"
+  }
+
   srcaddr {
     name = "servers"
   }
