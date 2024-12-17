@@ -6,5 +6,5 @@ resource "fortios_system_netflow" "netflow-primary" {
     inactive_flow_timeout = 15
     source_ip = "10.128.10.1"
     template_tx_counter = 20
-    template_tx_timeout = 30
+    template_tx_timeout = 60
 }
