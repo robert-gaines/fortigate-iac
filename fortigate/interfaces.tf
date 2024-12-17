@@ -30,6 +30,7 @@ resource "fortios_system_interface" "servers" {
   status      = "up"
   interface   = "fortilink"
   color       = 2
+  netflow_sampler = "both"
 }
 
 resource "fortios_system_interface" "workstations" {
