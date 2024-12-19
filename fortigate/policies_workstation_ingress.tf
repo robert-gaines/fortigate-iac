@@ -97,15 +97,15 @@ resource "fortios_firewall_policy" "permit-wireless-to-wkstns" {
     name = "RDP"
   }
 
-    service {
+  service {
     name = "SSH"
   }
 
   srcaddr {
-    name = "administration"
+    name = "wireless-workstations"
   }
 
   srcintf {
-    name = "administration"
+    name = "wireless"
   }
 }
