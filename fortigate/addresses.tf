@@ -649,6 +649,30 @@ resource "fortios_firewall_address" "Godaddy_CIDR_Range_One" {
     comment = "Malicious Web Activity - 07062024"
 }
 
+resource "fortios_firewall_address" "Godaddy_CIDR_Range_Two" {
+    name    = "Godaddy_CIDR_Range_Two"
+    subnet  = "70.32.80.0/20"
+    comment = "Malicious Web Activity - 12222024"
+}
+
+resource "fortios_firewall_address" "MSFT_Malicious_VPS_12212024" {
+    name    = "MSFT_Malicious_VPS_12212024"
+    subnet  = "172.172.130.74/32"
+    comment = "Malicious Web Activity - 12212024"
+}
+
+resource "fortios_firewall_address" "Metreon_VPN_12202024" {
+    name    = "Metreon_VPN_12202024"
+    subnet  = "45.131.194.168/32"
+    comment = "Malicious Web Activity - 12202024"
+}
+
+resource "fortios_firewall_address" "ucloud_cn_12192024" {
+    name    = "ucloud_cn_12192024"
+    subnet  = "152.32.234.184"
+    comment = "Malicious Web Activity - 12192024"
+}
+
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     allow_routing = "disable"
     color         = 6
