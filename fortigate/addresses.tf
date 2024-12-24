@@ -669,7 +669,7 @@ resource "fortios_firewall_address" "Metreon_VPN_12202024" {
 
 resource "fortios_firewall_address" "ucloud_cn_12192024" {
     name    = "ucloud_cn_12192024"
-    subnet  = "152.32.234.184"
+    subnet  = "152.32.234.184/32"
     comment = "Malicious Web Activity - 12192024"
 }
 
