@@ -12,13 +12,6 @@ resource "fortios_system_netflow" "netflow-primary" {
         interface_select_method = "auto"
         interface="servers"
     }
-}
-
-resource "fortios_system_netflow" "netflow-secondary" {
-    active_flow_timeout = 60
-    inactive_flow_timeout = 15
-    template_tx_counter = 20
-    template_tx_timeout = 60
 
     collectors {
         id = "2"
