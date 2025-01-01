@@ -99,6 +99,10 @@ resource "fortios_firewall_policy" "permit-deception-to-servers" {
     name = "identity-management-services"
   }
 
+  service {
+    name = "SYSLOG"
+  }
+
   srcaddr {
     name = "deception-hosts"
   }

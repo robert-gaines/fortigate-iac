@@ -12,12 +12,4 @@ resource "fortios_system_netflow" "netflow-primary" {
         interface_select_method = "auto"
         interface="servers"
     }
-
-    collectors {
-        id = "2"
-        collector_ip = "10.128.10.5"
-        collector_port = 2055
-        interface_select_method = "auto"
-        interface="servers"
-    }
 }
