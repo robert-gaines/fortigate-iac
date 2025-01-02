@@ -55,6 +55,10 @@ resource "fortios_firewall_policy" "permit-prometheus-to-deception" {
     name = "prometheus-exporter"
   }
 
+  service {
+    name = "tcp-8080"
+  }
+
   srcaddr {
     name = "res-phy-prd-rpi-3"
   }

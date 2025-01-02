@@ -89,3 +89,16 @@ resource "fortios_firewallservice_group" "print-services" {
     member {   name = "HTTPS" }
 }
 
+resource "fortios_firewallservice_group" "identity-management-services" {
+
+    color = 0
+    name  = "identity-management-services"
+
+    member { name = "DNS" }
+    member { name = "LDAP" }
+    member { name = "LDAPS" }
+    member { name = "LDAP_UDP" }
+    member { name = "KERBEROS" }
+    
+}
+

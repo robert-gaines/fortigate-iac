@@ -71,10 +71,10 @@ resource "fortios_firewall_policy" "permit-webservers-to-servers" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-deception-to-servers" {
+resource "fortios_firewall_policy" "permit-deception-to-id-svcs" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-deception-to-servers"
+  name               = "permit-deception-to-id-svcs"
   schedule           = "always"
   nat                = "disable"
   utm_status         = "enable" 
@@ -84,7 +84,11 @@ resource "fortios_firewall_policy" "permit-deception-to-servers" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
-    name = "servers"
+    name = "res-vrt-prd-idm"
+  }
+
+  dstaddr {
+    name = "res-vrt-prd-dss"
   }
 
   dstintf {
@@ -92,15 +96,143 @@ resource "fortios_firewall_policy" "permit-deception-to-servers" {
   }
 
   service {
-    name = "security-service-agents"
+    name = "identity-management-services"
   }
 
-  service {
-    name = "identity-management-services"
+  srcaddr {
+    name = "deception-hosts"
+  }
+
+  srcintf {
+    name = "deception"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-deception-to-siem" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-deception-to-siem"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-gsm"
+  }
+
+  dstintf {
+    name = "servers"
   }
 
   service {
     name = "SYSLOG"
+  }
+
+  srcaddr {
+    name = "deception-hosts"
+  }
+
+  srcintf {
+    name = "deception"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-deception-to-hids" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-deception-to-hids"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-wzh"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "wazuh-agent"
+  }
+
+  srcaddr {
+    name = "deception-hosts"
+  }
+
+  srcintf {
+    name = "deception"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-deception-to-edr" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-deception-to-edr"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-phy-prd-nsm"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "elastic-agent"
+  }
+
+  service {
+    name = "elastic-web"
+  }
+
+  srcaddr {
+    name = "deception-hosts"
+  }
+
+  srcintf {
+    name = "deception"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-deception-to-vcr" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-deception-to-vcr"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-phy-prd-nsm"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "velociraptor-client"
   }
 
   srcaddr {
