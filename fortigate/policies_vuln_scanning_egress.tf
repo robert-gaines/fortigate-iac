@@ -1,7 +1,7 @@
-resource "fortios_firewall_policy" "permit-openvas-to-workstations" {
+resource "fortios_firewall_policy" "permit-vms-to-workstations" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-workstations"
+  name               = "permit-vms-to-workstations"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
@@ -28,10 +28,10 @@ resource "fortios_firewall_policy" "permit-openvas-to-workstations" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-openvas-to-management" {
+resource "fortios_firewall_policy" "permit-vms-to-management" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-management"
+  name               = "permit-vms-to-management"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
@@ -58,10 +58,10 @@ resource "fortios_firewall_policy" "permit-openvas-to-management" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-openvas-to-webservers" {
+resource "fortios_firewall_policy" "permit-vms-to-webservers" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-webservers"
+  name               = "permit-vms-to-webservers"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
@@ -88,10 +88,10 @@ resource "fortios_firewall_policy" "permit-openvas-to-webservers" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-openvas-to-admin" {
+resource "fortios_firewall_policy" "permit-vms-to-admin" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-admin"
+  name               = "permit-vms-to-admin"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
@@ -118,10 +118,10 @@ resource "fortios_firewall_policy" "permit-openvas-to-admin" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-openvas-to-deception" {
+resource "fortios_firewall_policy" "permit-vms-to-deception" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-deception"
+  name               = "permit-vms-to-deception"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
@@ -148,10 +148,10 @@ resource "fortios_firewall_policy" "permit-openvas-to-deception" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-openvas-to-wireless-mgt" {
+resource "fortios_firewall_policy" "permit-vms-to-wireless-mgt" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-wireless-mgt"
+  name               = "permit-vms-to-wireless-mgt"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
@@ -178,10 +178,10 @@ resource "fortios_firewall_policy" "permit-openvas-to-wireless-mgt" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-openvas-to-wlan-wkstn" {
+resource "fortios_firewall_policy" "permit-vms-to-wlan-wkstn" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-wlan-wkstn"
+  name               = "permit-vms-to-wlan-wkstn"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
@@ -208,10 +208,10 @@ resource "fortios_firewall_policy" "permit-openvas-to-wlan-wkstn" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-openvas-to-wlan-iot" {
+resource "fortios_firewall_policy" "permit-vms-to-wlan-iot" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-wlan-iot"
+  name               = "permit-vms-to-vms-iot"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
@@ -238,10 +238,10 @@ resource "fortios_firewall_policy" "permit-openvas-to-wlan-iot" {
   }
 }
 
-resource "fortios_firewall_policy" "permit-openvas-to-wlan-gp" {
+resource "fortios_firewall_policy" "permit-vms-to-wlan-gp" {
   action             = "accept"
   logtraffic         = "all"
-  name               = "permit-openvas-to-wlan-gp"
+  name               = "permit-vms-to-wlan-gp"
   schedule           = "vulnerability-scanning"
   nat                = "disable"
   utm_status         = "disable" 
