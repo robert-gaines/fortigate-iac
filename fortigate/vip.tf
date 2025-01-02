@@ -106,7 +106,7 @@ resource "fortios_firewall_vip" "honeypot-vip-cowrie-ssh" {
 }
 
 resource "fortios_firewall_vip" "honeypot-vip-dionaea-smb" {
-  name             = "dionea-smb:445"
+  name             = "dionaea-smb:445"
   extintf          = "wan1" 
   extip            = "192.168.255.1"
   extport          = "445" 
