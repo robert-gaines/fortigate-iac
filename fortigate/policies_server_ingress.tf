@@ -335,7 +335,7 @@ resource "fortios_firewall_policy" "permit-deception-to-smtp-relay" {
   }
 
   srcaddr {
-    name = "deception"
+    name = "deception-hosts"
   }
 
   srcintf {
