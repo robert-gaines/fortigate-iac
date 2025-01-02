@@ -71,6 +71,12 @@ resource "fortios_firewallservice_group" "honeypot-services" {
     member {
                 name  = fortios_firewallservice_custom.S7-PLC.name
            }
+    member {
+                name  = "SSH"
+           }
+    member {
+                name  = "SMB"
+           }
 }
 
 resource "fortios_firewallservice_group" "print-services" {

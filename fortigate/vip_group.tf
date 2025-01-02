@@ -38,7 +38,7 @@ resource "fortios_firewall_vipgrp" "honeypot-vip-group" {
     name = fortios_firewall_vip.honeypot-vip-cowrie-ssh.name
   }
 
-    member {
+  member {
     name = fortios_firewall_vip.honeypot-vip-dionaea-smb.name
   }
 
