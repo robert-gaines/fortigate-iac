@@ -72,10 +72,19 @@ resource "fortios_firewallservice_group" "honeypot-services" {
                 name  = fortios_firewallservice_custom.S7-PLC.name
            }
     member {
-                name  = "SSH"
+                name  = "cowrie-ssh"
            }
     member {
                 name  = "SMB"
+           }
+    member {
+                name  = "MS-SQL"
+           }
+    member {
+                name  = "DCE-RPC"
+           }
+    member {
+                name  = "HTTP"
            }
 }
 

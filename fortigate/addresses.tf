@@ -202,6 +202,11 @@ resource "fortios_firewall_address" "res-phy-prd-vms" {
     subnet   = "10.128.10.16/32"
 }
 
+resource "fortios_firewall_address" "res-phy-prd-csr" {
+    name     = "res-vrt-prd-csr"
+    subnet   = "10.128.10.17/32"
+}
+
 resource "fortios_firewall_address" "res-phy-prd-psr" {
     name     = "res-vrt-prd-psr"
     subnet   = "10.128.10.18/32"

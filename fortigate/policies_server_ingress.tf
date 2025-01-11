@@ -277,6 +277,43 @@ resource "fortios_firewall_policy" "permit-deception-to-jenkins" {
   }
 }
 
+resource "fortios_firewall_policy" "permit-deception-to-webhook" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-deception-to-webhook"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "res-vrt-prd-csr"
+  }
+
+  dstintf {
+    name = "servers"
+  }
+
+  service {
+    name = "HTTP"
+  }
+
+  service {
+    name = "HTTPS"
+  }
+
+  srcaddr {
+    name = "res-phy-prd-rpi-9"
+  }
+
+  srcintf {
+    name = "deception"
+  }
+}
+
 resource "fortios_firewall_policy" "permit-deception-nfs" {
   action             = "accept"
   logtraffic         = "all"

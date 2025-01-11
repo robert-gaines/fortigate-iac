@@ -248,3 +248,13 @@ resource "fortios_firewallservice_custom" "tcp-8080" {
   tcp_portrange       = "8080"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "cowrie-ssh" {
+  color               = 0
+  category            = "General" 
+  name                = "cowrie-ssh"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "2222"
+  visibility          = "enable"
+}

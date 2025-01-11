@@ -19,6 +19,16 @@ resource "fortios_system_interface" "wan1" {
   status      = "up"
 }
 
+resource "fortios_system_interface" "internal2" {
+  ip          = "10.128.128.1 255.255.255.252"
+  name        = "internal2"
+  role        = "lan"
+  type        = "physical"
+  vdom        = "root"
+  mode        = "static"
+  status      = "up"
+}
+
 resource "fortios_system_interface" "servers" {
   ip          = "10.128.10.1 255.255.255.0"
   name        = "v10-servers"

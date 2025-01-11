@@ -33,6 +33,11 @@ resource "fortios_system_zone" "wireless" {
   name      = "wireless"
 }
 
+resource "fortios_system_zone" "work" {
+  intrazone = "deny"
+  name      = "work"
+}
+
 resource "fortios_system_zone" "vpn" {
   intrazone = "deny"
   name      = "vpn"

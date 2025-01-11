@@ -59,3 +59,20 @@ resource "fortios_systemdhcp_server" "wireless-gpn-dhcp" {
     start_ip = "10.128.100.2"
   }
 }
+
+resource "fortios_systemdhcp_server" "work-dhcp" {
+  # Work Zone DHCP Server
+  dns_service     = "default"
+  ntp_service     = "default"
+  interface       = "internal2"
+  netmask         = "255.255.255.252"
+  status          = "enable"
+  default_gateway = "10.128.128.1"
+  dns_server1     = "208.67.222.222"
+  dns_server2     = "208.67.220.220" 
+  ip_range {
+    end_ip   = "10.128.128.2"
+    id       = 1
+    start_ip = "10.128.128.2"
+  }
+}
