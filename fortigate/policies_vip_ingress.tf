@@ -20,6 +20,10 @@ resource "fortios_firewall_policy" "permit-wan-to-webserver" {
   }
 
   service {
+    name = "HTTP"
+  }
+
+  service {
     name = "HTTPS"
   }
 

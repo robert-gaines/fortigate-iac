@@ -47,7 +47,44 @@ resource "fortios_firewall_policy" "permit-webservers-to-servers" {
   ssl_ssh_profile    = "certificate-inspection-primary"  
 
   dstaddr {
+    name = "res-vrt-prd-dss"
+  }
+
+  dstaddr {
+    name = "res-vrt-prd-idm"
+  }
+
+  dstintf {
     name = "servers"
+  }
+
+  service {
+    name = "identity-management-services"
+  }
+
+  srcaddr {
+    name = "res-vrt-prd-wsr"
+  }
+
+  srcintf {
+    name = "webservers"
+  }
+}
+
+resource "fortios_firewall_policy" "permit-websvr-to-sec-servers" {
+  action             = "accept"
+  logtraffic         = "all"
+  name               = "permit-websvr-to-sec-servers"
+  schedule           = "always"
+  nat                = "disable"
+  utm_status         = "enable" 
+  inspection_mode    = "flow" 
+  av_profile         = "av-flow"
+  ips_sensor         = "ips-primary"  
+  ssl_ssh_profile    = "certificate-inspection-primary"  
+
+  dstaddr {
+    name = "SecurityServers"
   }
 
   dstintf {
@@ -59,11 +96,11 @@ resource "fortios_firewall_policy" "permit-webservers-to-servers" {
   }
 
   service {
-    name = "identity-management-services"
+    name = "SYSLOG"
   }
 
   srcaddr {
-    name = "webservers"
+    name = "res-vrt-prd-wsr"
   }
 
   srcintf {
