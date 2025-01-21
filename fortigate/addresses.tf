@@ -392,30 +392,6 @@ resource "fortios_firewall_address" "Synology-MYDS" {
     fqdn = "myds.synology.com"
 }
 
-resource "fortios_firewall_address" "Greenbone-Wildcard-FQDN" {
-    name = "*.greenbone.net"
-    type = "fqdn"
-    fqdn = "*.greenbone.net"
-}
-
-resource "fortios_firewall_address" "OpenVAS-Wildcard-FQDN" {
-    name = "*.openvas.org"
-    type = "fqdn"
-    fqdn = "*.openvas.org"
-}
-
-resource "fortios_firewall_address" "greenbone-community-feed" {
-    name = "feed.community.greenbone.net"
-    type = "fqdn"
-    fqdn = "feed.community.greenbone.net"
-}
-
-resource "fortios_firewall_address" "openvas-feed" {
-    name = "feed.openvas.org"
-    type = "fqdn"
-    fqdn = "feed.openvas.org"
-}
-
 resource "fortios_firewall_address" "threatfox-api-abuse-ch" {
     name = "threatfox-api.abuse.ch"
     type = "fqdn"
@@ -440,6 +416,12 @@ resource "fortios_firewall_address" "Canada" {
     name    = "Canada"
     type    = "geo"
     country = "CA"
+}
+
+resource "fortios_firewall_address" "UnitedKingdom" {
+    name    = "UnitedKingdom"
+    type    = "geo"
+    country = "GB"
 }
 
 resource "fortios_firewall_address" "Russia" {
@@ -511,6 +493,9 @@ resource "fortios_firewall_addrgrp" "PermittedCountries" {
   member {
             name = fortios_firewall_address.Canada.name
          }
+  member {
+            name = fortios_firewall_address.UnitedKingdom.name
+         }
 }
 
 resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
@@ -560,10 +545,7 @@ resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {
             name = fortios_firewall_address.Synology-MYDS.name
          }
   member {
-            name = fortios_firewall_address.Greenbone-Wildcard-FQDN.name
-         }
-  member {
-            name = fortios_firewall_address.OpenVAS-Wildcard-FQDN.name
+            name = fortios_firewall_address.ubuntu-ntp.name
          }
 }
 

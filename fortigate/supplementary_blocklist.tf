@@ -85,9 +85,27 @@ resource "fortios_firewall_address" "hostpapa_AS36352_01172025" {
 }
 
 resource "fortios_firewall_address" "racknerd_tx_AS36352_01182025" {
-    name    = "hostpapa_AS36352_01182025"
+    name    = "racknerd_tx_AS36352_01182025"
     subnet  = "172.245.56.0/22"
     comment = "Fortigate Auth Bypass Exploit Attempt - 01182025"
+}
+
+resource "fortios_firewall_address" "nktelectom_AS216475_01192025" {
+    name    = "nktelectom_AS216475_01192025"
+    subnet  = "172.245.56.0/22"
+    comment = "WebApp Tampering - 01192025"
+}
+
+resource "fortios_firewall_address" "net1de_AS213613_01212025" {
+    name    = "net1de_AS213613_01212025"
+    subnet  = "109.236.61.0/24"
+    comment = "WebApp Tampering - 01212025"
+}
+
+resource "fortios_firewall_address" "bitsight_AS211680_01212025" {
+    name    = "bitsight_AS211680_01212025"
+    subnet  = "45.156.129.0/24"
+    comment = "WebApp Tampering - 01212025"
 }
 
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
@@ -139,6 +157,14 @@ resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
 
     member {
         name = fortios_firewall_address.racknerd_tx_AS36352_01182025.name
+    }
+
+    member {
+        name = fortios_firewall_address.net1de_AS213613_01212025.name
+    }
+
+    member {
+        name = fortios_firewall_address.bitsight_AS211680_01212025.name
     }
 
 }
