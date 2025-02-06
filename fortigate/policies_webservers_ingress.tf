@@ -23,6 +23,10 @@ resource "fortios_firewall_policy" "permit-prometheus-to-webserver" {
     name = "prometheus-exporter"
   }
 
+  service {
+    name = "prometheus-traefik"
+  }
+
   srcaddr {
     name = "res-phy-prd-rpi-3"
   }

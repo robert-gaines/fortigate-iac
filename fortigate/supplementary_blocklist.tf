@@ -108,6 +108,18 @@ resource "fortios_firewall_address" "bitsight_AS211680_01212025" {
     comment = "WebApp Tampering - 01212025"
 }
 
+resource "fortios_firewall_address" "hostglobal_AS202306_01282025" {
+    name    = "hostglobal_AS202306_01282025"
+    subnet  = "78.153.140.179/32"
+    comment = "WebApp Tampering - 01282025"
+}
+
+resource "fortios_firewall_address" "vpsvaulthost_AS215925_01292025" {
+    name    = "vpsvaulthost_AS215925_01292025"
+    subnet  = "87.121.84.7/32"
+    comment = "IPS Triggered - 01292025"
+}
+
 resource "fortios_firewall_addrgrp" "SupplementaryBlockList" {
     allow_routing = "disable"
     color         = 6

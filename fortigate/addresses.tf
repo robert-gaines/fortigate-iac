@@ -493,9 +493,6 @@ resource "fortios_firewall_addrgrp" "PermittedCountries" {
   member {
             name = fortios_firewall_address.Canada.name
          }
-  member {
-            name = fortios_firewall_address.UnitedKingdom.name
-         }
 }
 
 resource "fortios_firewall_addrgrp" "PermittedForeignHosts" {

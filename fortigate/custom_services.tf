@@ -258,3 +258,13 @@ resource "fortios_firewallservice_custom" "cowrie-ssh" {
   tcp_portrange       = "2222"
   visibility          = "enable"
 }
+
+resource "fortios_firewallservice_custom" "prometheus-traefik" {
+  color               = 0
+  category            = "General" 
+  name                = "prometheus-traefik"
+  protocol            = "TCP"
+  protocol_number     = 6
+  tcp_portrange       = "8081"
+  visibility          = "enable"
+}
